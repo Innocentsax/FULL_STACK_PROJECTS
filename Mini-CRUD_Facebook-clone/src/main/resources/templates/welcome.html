@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h2>Facebook welcome page</h2>
+<h3>You are welcome to my facebook page</h3>
+<p>Please login below!</p>
+<form th:action="@{/welcome}" method="post">
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required autofocus>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+        <button type="submit">Login</button>
+    </div>
+</form>
+
+<p>Don't have an account? <a href="/registration">Create Account</a></p>
+</body>
+</html>

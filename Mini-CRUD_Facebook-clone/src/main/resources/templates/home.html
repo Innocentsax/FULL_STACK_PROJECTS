@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h2>Welcome <span th:text="${userName}"></span>.</h2>
+<div>
+    <a href="/posts">View All Posts</a>
+</div>
+<div><a href="/posts/create">Create New Post</a></div>
+<hr>
+<h2>Posts:</h2>
+<div th:each="post : ${posts}">
+    <div>
+        <h3 th:text="${post.user.name}"></h3>
+        <p th:text="${post.content}"></p>
+
+        <!-- Like Button -->
+        <form th:action="@{/likes/increment/{postId}(postId=${post.id})}" method="post">
+            <input type="hidden" name="postId" th:value="${post.id}" />
+            <button type="submit" th:text="${post.likesList.contains(currentUser) ? 'Unlike' : 'Like'}"></button>
+        </form>
+
+        <!-- Like Count -->
+        <p> <span th:text="${post.likeCount}"></span></p>
+
+        <!-- Comment Form -->
+        <form th:action="@{/comments/create}" method="post">
+            <input type="hidden" name="postId" th:value="${post.id}" />
+            <textarea name="commentText" placeholder="Enter your comment"></textarea>
+            <button type="submit">Comment</button>
+        </form>
+
+        <ul>
+            <li th:each="comment : ${post.commentfacs}">
+                <p th:text="${comment.text}"></p>
+                <!-- Add delete button for each comment -->
+                <form th:action="@{/comments/delete/{commentId}(commentId=${comment.id})}" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+<hr>
+<div>
+    <a href="/welcome">Logout</a>
+</div>
+</body>
+</html>
+
+
+
+
+
+<!--//Main-->
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Home</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Welcome <span th:text="${userName}"></span>.</h2>-->
+<!--<div>-->
+<!--    <a href="/posts">View All Posts</a>-->
+<!--</div>-->
+<!--<div><a href="/posts/create">Create New Post</a></div>-->
+<!--<hr>-->
+<!--<h2>Posts:</h2>-->
+<!--<div th:each="post : ${posts}">-->
+<!--    <div>-->
+<!--        <h3 th:text="${post.user.name}"></h3>-->
+<!--        <p th:text="${post.content}"></p>-->
+
+<!--        <form th:action="@{/comments/create}" method="post">-->
+<!--            <input type="hidden" name="postId" th:value="${post.id}" />-->
+<!--            <textarea name="commentText" placeholder="Enter your comment"></textarea>-->
+<!--            <button type="submit">Comment</button>-->
+<!--        </form>-->
+
+<!--        <ul>-->
+<!--            <li th:each="comment : ${post.commentfacs}">-->
+<!--                <p th:text="${comment.text}"></p>-->
+<!--                &lt;!&ndash; Add delete button for each comment &ndash;&gt;-->
+<!--                <form th:action="@{/comments/delete/{commentId}(commentId=${comment.id})}" method="post">-->
+<!--                    <button type="submit">Delete</button>-->
+<!--                </form>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<hr>-->
+<!--<div>-->
+<!--    <a href="/welcome">Logout</a>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Home</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Welcome <span th:text="${userName}"></span>.</h2>-->
+<!--<div>-->
+<!--    <a href="/posts">View All Posts</a>-->
+<!--</div>-->
+<!--<div><a href="/posts/create">Create New Post</a></div>-->
+<!--<hr>-->
+<!--<h2>Posts:</h2>-->
+<!--<div th:each="post : ${posts}">-->
+<!--    <div>-->
+<!--        <h3 th:text="${post.user.name}"></h3>-->
+<!--        <p th:text="${post.content}"></p>-->
+
+<!--        <form th:action="@{/comments/create}" method="post">-->
+<!--            <input type="hidden" name="postId" th:value="${post.id}" />-->
+<!--            <textarea name="commentText" placeholder="Enter your comment"></textarea>-->
+<!--            <button type="submit">Comment</button>-->
+<!--        </form>-->
+
+
+<!--        <ul>-->
+<!--            <li th:each="comment : ${post.commentfacs}">-->
+<!--                <p th:text="${comment.text}"></p>-->
+<!--            </li>-->
+<!--        </ul>-->
+
+<!--    </div>-->
+<!--</div>-->
+<!--<hr>-->
+<!--<div>-->
+<!--    <a href="/welcome">Logout</a>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+

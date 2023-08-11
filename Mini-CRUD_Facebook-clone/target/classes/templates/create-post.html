@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Post</title>
+</head>
+<body>
+<h2>Create Post</h2>
+<form th:action="@{/posts/create}" th:object="${post}" method="post">
+  <div>
+    <label for="content">Content:</label>
+    <textarea id="content" th:field="*{content}" required></textarea>
+  </div>
+  <!-- Add more fields if needed -->
+  <div>
+    <button type="submit">Create</button>
+  </div>
+</form>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Create Post</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Create a New Post</h2>-->
+
+<!--<form th:action="@{/posts}" th:object="${post}" method="post">-->
+<!--  <div>-->
+<!--    <label for="content">Content:</label>-->
+<!--    <input type="text" id="content" th:field="*{content}" required>-->
+<!--  </div>-->
+<!--  &lt;!&ndash; Add more fields as needed &ndash;&gt;-->
+<!--  <div>-->
+<!--    <button type="submit">Create</button>-->
+<!--  </div>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Posts</title>
+</head>
+<body>
+<h2>Posts</h2>
+<div th:if="${error}">
+  <p th:text="${error}" class="error-message"></p>
+</div>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Content</th>
+    <th>User</th>
+    <!-- Add more columns if needed -->
+    <th>Actions</th>
+  </tr>
+  <tr th:each="post : ${posts}">
+    <td th:text="${post.id}"></td>
+    <td th:text="${post.content}"></td>
+    <td th:text="${post.user.name}"></td>
+    <!-- Add more columns if needed -->
+    <td>
+      <a th:href="@{/posts/{id}/edit(id=${post.id})}">Edit</a>
+      <form th:action="@{/posts/{id}/delete(id=${post.id})}" method="post" onsubmit="return confirm('Are you sure you want to delete this post?');">
+        <button type="submit">Delete</button>
+      </form>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+<!--<table>-->
+<!--  <tr th:each="post : ${posts}">-->
+<!--    <td th:text="${post.id}"></td>-->
+<!--    <td th:text="${post.content}"></td>-->
+<!--    <td th:text="${post.user.name}"></td>-->
+<!--    <td>-->
+<!--      <form th:action="@{/posts/__${post.id}__/delete}" method="post">-->
+<!--        <input type="hidden" name="_method" value="delete" />-->
+<!--        <button type="submit">Delete</button>-->
+<!--      </form>-->
+<!--    </td>-->
+<!--  </tr>-->
+<!--</table>-->
+
+
