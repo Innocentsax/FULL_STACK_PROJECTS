@@ -2,7 +2,7 @@
 
 <img src="https://github.com/Innocentsax/FULL_STACK_PROJECTS/blob/main/Static_web_application_with_SpringBoot/cons1.png">
 
-## Tool
+## Tools
 
 + ___HTML___
 + ___CSS___
@@ -15,7 +15,7 @@
 
 <img src="https://github.com/Innocentsax/FULL_STACK_PROJECTS/blob/main/Static_web_application_with_SpringBoot/con2.png">
 
-## Tool
+## Tools
 
 + ___Java___
 + ___SpringBoot___
