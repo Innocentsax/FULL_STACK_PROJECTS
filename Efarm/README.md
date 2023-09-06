@@ -7,7 +7,7 @@ bringing you the best in quality, taste, and sustainability.
 
 
 
-<img src="https://github.com/Innocentsax/FULL_STACK_PROJECTS/blob/main/Efarm/images/pexels-min-an-1093837.jpg">
+<img src="https://github.com/Innocentsax/FULL_STACK_PROJECTS/blob/main/Efarm/images/slider-bg.jpg">
 ## Our Mission:
 
 At FreshFarmConnect, we're on a mission to reconnect you with 
