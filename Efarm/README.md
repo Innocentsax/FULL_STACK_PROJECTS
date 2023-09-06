@@ -1,6 +1,6 @@
 # E-FARM
 
-<img src="https://github.com/Innocentsax/FULL_STACK_PROJECTS/blob/main/Efarm/images/about-img.jpg">
+<img width="1000" height="200" src="https://github.com/Innocentsax/FULL_STACK_PROJECTS/blob/main/Efarm/images/about-img.jpg">
 
 
 
