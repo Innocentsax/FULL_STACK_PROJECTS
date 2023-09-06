@@ -1,5 +1,9 @@
 # E-FARM
 
+<img src="https://github.com/Innocentsax/FULL_STACK_PROJECTS/blob/main/Efarm/images/about-img.jpg">
+
+
+
 <img src="https://github.com/Innocentsax/FULL_STACK_PROJECTS/blob/main/Efarm/images/pexels-min-an-1093837.jpg">
 Welcome to E-FARM, your premier online marketplace for 
 farm-fresh goodness. We're your direct link to local producers and sellers, 
