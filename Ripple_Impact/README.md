@@ -12,3 +12,6 @@ Managing talents in customer services, accounts, IT, sales and media
 
 ### Recruitment
 Recruiting and headhunting talent for organizations across several sectors
+
+### HR Consulting
+Providing strategic performance management consulting and deploying our intelligence system to measure critical analytics
