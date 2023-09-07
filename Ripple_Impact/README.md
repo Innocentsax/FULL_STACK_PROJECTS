@@ -9,3 +9,6 @@ Providing strategic insights for our client to balance the intersection between 
 
 ### Outsourcing
 Managing talents in customer services, accounts, IT, sales and media
+
+### Recruitment
+Recruiting and headhunting talent for organizations across several sectors
