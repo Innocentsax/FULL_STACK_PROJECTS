@@ -15,3 +15,6 @@ Recruiting and headhunting talent for organizations across several sectors
 
 ### HR Consulting
 Providing strategic performance management consulting and deploying our intelligence system to measure critical analytics
+
+<img src="https://github.com/Innocentsax/FULL_STACK_PROJECTS/blob/main/Ripple_Impact/Pimp-purpose.jpeg" height="350" width="1000">
+
