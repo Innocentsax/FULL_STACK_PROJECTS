@@ -1,0 +1,17 @@
+# Google api smtp integration service
+spring:
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    port: 587
+    username: decagonprojectsq14@gmail.com
+    password: rcwbhhnfjinbmnum
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+        debug: true
+    test-connection: false
+    protocol: smtp
