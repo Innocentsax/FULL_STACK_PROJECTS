@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+  db:
+    container_name: postgresql-container
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=goCash
+      - POSTGRES_PASSWORD=hassan@93
+      - POSTGRES_USER=postgres
+    volumes:
+      - /Users/goCash_container:/var/lib/postgresql/data
+    restart: always
+  backend:
+    build: .
+    container_name: goCash_container
+    image: bank_app
+    ports:
+      - "8089:8088"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/goCash
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=hassan@93
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      - db
