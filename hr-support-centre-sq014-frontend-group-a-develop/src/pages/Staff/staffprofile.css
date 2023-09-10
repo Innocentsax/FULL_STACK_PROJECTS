@@ -1,0 +1,107 @@
+#first-table{
+    table-layout: fixed;
+
+    border-collapse: collapse;
+    margin-bottom: 18px;
+}
+
+
+#first-table th:nth-child(2) ,#first-table  th:nth-child(3){
+
+    text-align:center;
+    padding:10px;
+}
+
+#first-table > th{
+    color:#0000ff;
+}
+
+
+#first-table td{
+    text-align: center;
+}
+
+
+#second-table{
+    table-layout: fixed;
+
+    border-collapse: collapse;
+
+    width: 100%;
+}
+
+
+#second-table th{
+    color:#0000ff;
+
+
+}
+
+
+
+
+#first-table td{
+    text-align: center;
+}
+#form-one > div{
+    display: block;
+}
+
+#form-one > div{
+    display:flex;
+    justify-content: space-between;
+}
+
+#form-one  label, #form-one input{
+    display:block;
+}
+
+#form-one  label{
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#form-one input{
+    width: 280px;
+    height: 38px;
+    border: 1px solid grey;
+    padding: 12px;
+
+}
+
+#form-one select{
+    width: 280px;
+    height: 38px;
+    border: 1px solid grey;
+    padding-left: 12px;
+
+
+}
+
+#last-row{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#last-row input{
+    width: 100%;
+
+}
+
+#additional{
+    display: flex;
+    flex-direction: column;
+}
+
+#additional select{
+    width: 100%;
+}
+
+#buttons{
+    display: flex;
+
+    justify-content:flex-end !important;
+
+}
