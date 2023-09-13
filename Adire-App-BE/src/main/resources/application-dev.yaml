@@ -1,0 +1,46 @@
+server:
+  port: 9090
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 178688632571-jmhkftmvgd028u2frl7ehs7jvqempa0v.apps.googleusercontent.com
+            clientSecret: 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
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
+  datasource:
+    password:
+    url: jdbc:postgresql://localhost:5432/adire
+    username: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+      properties:
+        hibernate:
+          format_sql: true
+    show-sql: false
+  oauth2:
+    redirectUri: http://localhost:3000/oauth2/redirect
+  cors:
+    allowed-origins: http://localhost:3000
+  logging:
+    level:
+      org.springframework.security: OFF
+  mailjet:
+    username: 89e92a03156cc41a9fe06e634ca21bae
+    password: 80598c729159b77c7e1c013fc0d1df0a
+  jwt:
+    secret: "v9y$B&E)H@MbQeThWmZq4t7w!z%C*F-JaNdRfUjXn2r5u8x/A?D(G+KbPeShVkYp"
+  googleDefaultPassword: "password"
+
+

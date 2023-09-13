@@ -1,0 +1,46 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 178688632571-jmhkftmvgd028u2frl7ehs7jvqempa0v.apps.googleusercontent.com
+            clientSecret: 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
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  datasource:
+    password: ${DB_PASSWORD:Joy2Dworld}
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/adire
+    username: ${DB_USERNAME:postgres}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+      properties:
+        hibernate:
+          format_sql: true
+    show-sql: false
+  oauth2:
+    redirectUri: http://localhost:3000/oauth2/redirect
+  cors:
+    allowed-origins: http://localhost:3000
+  logging:
+    level:
+      org.springframework.security: OFF
+  mailjet:
+    username: 972e88cc4cfb029e330de7d54db69db8
+    password: 67963bec82b3d66c0c7eef6c2190dac8
+  jwt:
+    secret: "v9y$B&E)H@MbQeThWmZq4t7w!z%C*F-JaNdRfUjXn2r5u8x/A?D(G+KbPeShVkYp"
+  googleDefaultPassword: "password"
+server:
+  port: ${PORT:8080}
+
