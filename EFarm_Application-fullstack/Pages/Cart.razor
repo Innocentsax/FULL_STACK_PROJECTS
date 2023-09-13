@@ -1,0 +1,143 @@
+﻿@page "/basket"
+@page "/cart"
+@inject IApiService  apiService
+@inject AppState state
+@inject ToastService toast
+
+<PageTitle>My Cart</PageTitle>
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">MY E-FARM CART</h1>
+    </div>
+</section>
+
+<div class="container-fluid  mt-100 mb-4">
+    @if (Basket is null || !Basket.Items.Any())
+    {
+				 <div class="row">
+				 
+					<div class="col-md-12">
+					
+							<div class="card">
+						 
+						<div class="card-body cart">
+								<div class="col-sm-12 empty-cart-cls text-center">
+									<img src="https://i.imgur.com/dCdflKN.png" width="130" 
+                                    height="130" class="img-fluid mb-4 mr-3">
+									<h3><strong>Your Cart is Empty</strong></h3>
+									<h4>Add something to make me happy :)</h4>
+									<NavLink href="/" class="btn btn-primary cart-btn-transform m-3" 
+                                    >continue shopping</NavLink>
+									
+								
+								</div>
+						</div>
+				</div>
+						
+					
+					</div>
+				 
+				 </div>
+				
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"> </th>
+                                <th scope="col">Product</th>
+                                 
+                                <th scope="col" class="text-center">Quantity</th>
+                                <th scope="col" class="text-right">Price</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Basket.Items)
+                            {
+                                <tr>
+                                    <td><img src="@item.Product?.PictureUri" width="90" /> </td>
+                                    <td>@item.Product?.Name</td>
+
+                                    <td class="text-right">
+                                        <InputNumber class="form-control text-right"  @onchange="()=>UpdateQuantity(item)"
+                                        @bind-Value=item.Quantity></InputNumber>
+                                       </td>
+                                    <td class="text-right">$@item.SubTotal</td>
+                                    <td class="text-right">
+                                        <button class="btn btn-sm btn-danger"
+                                        @onclick="()=>Remove(item)"><i class="fa fa-trash"></i> </button> </td>
+                                </tr>
+                            }
+                            <tr>
+                                <td colspan="3" class="font-weight-bold  text-right">Total</td>
+                                <td class="text-right">$@Basket.Total</td>
+                                <td></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col mb-2">
+                <div class="row">
+                    <div class="col-sm-12  col-md-6">
+                        <NavLink href="/" class="btn btn-block btn-light">Continue Shopping</NavLink>
+                    </div>
+                    <div class="col-sm-12 col-md-6 text-right">
+                        <NavLink href="/checkout" class="btn btn-lg btn-block btn-success text-uppercase">Checkout</NavLink>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+@code {
+    public BasketDto Basket { get; set; }
+
+    public async void Remove(BasketItemDto item) {
+        if(  await apiService.RemoveItem(item.Id))
+        {
+            await InvokeAsync(() =>
+             {
+                 toast.Error($"{item.Quantity} {item.Product?.Name} removed.");
+                 state.TriggerChange();
+             });
+        };
+    }
+    public async void UpdateQuantity(BasketItemDto item)
+    {
+        var isSuccess =await apiService.UpdateQuantity(item);
+        if (isSuccess)
+            await InvokeAsync(() =>
+              {
+                  state.TriggerChange();
+              });
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        Basket = await apiService.GetBasket();
+        state.OnStateChange += ChangeHandler;
+    }
+    private async void ChangeHandler()
+    {
+        await InvokeAsync(() => GetBasket());
+    }
+
+    private async void GetBasket(){
+
+        Basket = await apiService.GetBasket();
+        await InvokeAsync(StateHasChanged);
+    }
+}

@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-products {
+    padding: 80px 0 54px;
+}
+
+    .section-products .header {
+        margin-bottom: 50px;
+    }
+
+        .section-products .header h3 {
+            font-size: 1rem;
+            color: #fe302f;
+            font-weight: 500;
+        }
+
+        .section-products .header h2 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: #444444;
+        }
+
+    .section-products .single-product {
+        margin-bottom: 26px;
+    }
+
+        .section-products .single-product .part-1 {
+            position: relative;
+            height: 290px;
+            max-height: 290px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+            .section-products .single-product .part-1::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                transition: all 0.3s;
+            }
+
+        .section-products .single-product:hover .part-1::before {
+            transform: scale(1.2,1.2) rotate(5deg);
+        }
+
+    .section-products .part-1::before {
+        background-size: cover;
+        transition: all 0.3s;
+    }
+
+    .section-products #product-2 .part-1::before {
+        background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    .section-products #product-3 .part-1::before {
+        background: url("https://i.ibb.co/L8Nrb7p/1.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    .section-products #product-4 .part-1::before {
+        background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    .section-products .single-product .part-1 .discount,
+    .section-products .single-product .part-1 .new {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        color: #ffffff;
+        background-color: #fe302f;
+        padding: 2px 8px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+    }
+
+    .section-products .single-product .part-1 .new {
+        left: 0;
+        background-color: #444444;
+    }
+
+    .section-products .single-product .part-1 ul {
+        position: absolute;
+        bottom: -41px;
+        left: 20px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        opacity: 0;
+        transition: bottom 0.5s, opacity 0.5s;
+    }
+
+    .section-products .single-product:hover .part-1 ul {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    .section-products .single-product .part-1 ul li {
+        display: inline-block;
+        margin-right: 4px;
+    }
+
+        .section-products .single-product .part-1 ul li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #ffffff;
+            color: #444444;
+            text-align: center;
+            box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+            transition: color 0.2s;
+        }
+
+            .section-products .single-product .part-1 ul li a:hover {
+                color: #fe302f;
+            }
+
+    .section-products .single-product .part-2 .product-title {
+        font-size: 1rem;
+    }
+
+    .section-products .single-product .part-2 h4 {
+        display: inline-block;
+        font-size: 1rem;
+    }
+
+    .section-products .single-product .part-2 .product-old-price {
+        position: relative;
+        padding: 0 7px;
+        margin-right: 2px;
+        opacity: 0.6;
+    }
+
+        .section-products .single-product .part-2 .product-old-price::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #444444;
+            transform: translateY(-50%);
+        }
+
+.bloc_left_price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.category_block li:hover {
+    background-color: #007bff;
+}
+
+    .category_block li:hover a {
+        color: #ffffff;
+    }
+
+.category_block li a {
+    color: #343a40;
+}
+
+.add_to_cart_block .price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    margin-bottom: 0;
+}
+
+.add_to_cart_block .price_discounted {
+    color: #343a40;
+    text-align: center;
+    text-decoration: line-through;
+    font-size: 140%;
+}
+
+.product_rassurance {
+    padding: 10px;
+    margin-top: 15px;
+    background: #ffffff;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+}
+
+    .product_rassurance .list-inline {
+        margin-bottom: 0;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+        .product_rassurance .list-inline li:hover {
+            color: #343a40;
+        }
+
+.reviews_product .fa-star {
+    color: gold;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+footer {
+    background: #117a8b !important;
+    padding: 20px;
+}
+
+    footer a {
+        color: #20c997 !important;
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    footer p {
+        color: #ffffff !important;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    footer h5 {
+        color: #ffffff !important;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+.thankyou-page ._header {
+    background: #4ab74a;
+    padding: 100px 30px;
+    text-align: center;
+}
+
+    .thankyou-page ._header .logo {
+        max-width: 200px;
+        margin: 0 auto 50px;
+    }
+
+        .thankyou-page ._header .logo img {
+            width: 100%;
+        }
+
+    .thankyou-page ._header h1 {
+        font-size: 65px;
+        font-weight: 800;
+        color: white;
+        margin: 0;
+    }
+
+.thankyou-page ._body {
+    margin: -70px 0 30px;
+}
+
+    .thankyou-page ._body ._box {
+        margin: auto;
+        max-width: 80%;
+        padding: 50px;
+        background: white;
+        border-radius: 3px;
+        box-shadow: 0 0 35px rgba(10, 10, 10,0.12);
+        -moz-box-shadow: 0 0 35px rgba(10, 10, 10,0.12);
+        -webkit-box-shadow: 0 0 35px rgba(10, 10, 10,0.12);
+    }
+
+        .thankyou-page ._body ._box h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #4ab74a;
+        }
+
+.thankyou-page ._footer {
+    text-align: center;
+    padding: 50px 30px;
+}
+
+    .thankyou-page ._footer .btn {
+        background: #4ab74a;
+        color: white;
+        border: 0;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 0;
+        letter-spacing: 0.8px;
+        padding: 20px 33px;
+        text-transform: uppercase;
+    }
+.spinner {
+    border: 16px solid silver;
+    border-top: 16px solid #337AB7;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 700ms linear infinite;
+    top: 40%;
+    left: 55%;
+    position: absolute;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}

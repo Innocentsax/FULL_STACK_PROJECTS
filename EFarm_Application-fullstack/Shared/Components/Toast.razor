@@ -1,0 +1,80 @@
+﻿@implements IDisposable
+@inject ToastService ToastService
+
+
+<div class="cs-toast @(_isVisible ? "cs-toast-visible" : null) @_backgroundCssClass" @onclick="HideToast">
+    <div class="cs-toast-icon">
+        <i class="fa fa-@_iconCssClass" aria-hidden="true"></i>
+    </div>
+    <div class="cs-toast-body">
+        <h5>@_heading</h5>
+        <p>@_message</p>
+    </div>
+</div>
+
+@code {
+    private string? _heading;
+    private string? _message;
+    private bool _isVisible;
+    private string? _backgroundCssClass;
+    private string? _iconCssClass;
+
+    protected override void OnInitialized()
+    {
+        ToastService.OnShow += ShowToast;
+        ToastService.OnHide += HideToast;
+    }
+
+    private async void ShowToast(string message, ToastLevel level)
+    {
+        BuildToastSettings(level, message);
+        _isVisible = true;
+        await InvokeAsync(StateHasChanged);
+     //   StateHasChanged();
+    }
+
+    private async void HideToast()
+    {
+        _isVisible = false;
+       await InvokeAsync(StateHasChanged);
+       // StateHasChanged();
+    }
+
+    private void BuildToastSettings(ToastLevel level, string message)
+    {
+        switch (level)
+        {
+            case ToastLevel.Info:
+                _backgroundCssClass = $"bg-info";
+                _iconCssClass = "info";
+                _heading = "Info";
+                break;
+            case ToastLevel.Success:
+                _backgroundCssClass = $"bg-success";
+                _iconCssClass = "check";
+                _heading = "Success";
+                break;
+            case ToastLevel.Warning:
+                _backgroundCssClass = $"bg-warning";
+                _iconCssClass = "exclamation";
+                _heading = "Warning";
+                break;
+            case ToastLevel.Error:
+                _backgroundCssClass = "bg-danger";
+                _iconCssClass = "times";
+                _heading = "Error";
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(level), level, null);
+        }
+
+        _message = message;
+    }
+
+    void IDisposable.Dispose()
+    {
+        ToastService.OnShow -= ShowToast;
+        ToastService.OnHide -= HideToast;
+    }
+
+}

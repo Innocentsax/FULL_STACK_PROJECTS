@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.WebUtilities;
+@inject IApiService apiService
+@inject AppState state
+@inject NavigationManager NavManager
+<div class="input-group input-group-sm">
+    <input type="text" class="form-control"  @bind-value="SearchTerm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+    <div class="input-group-append">
+        <button type="button" class="btn btn-secondary btn-number" @onclick="HandleSearch">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+</div>
+
+@code {
+    string? SearchTerm { get; set; }
+
+    public void HandleSearch()
+    {
+        if (!string.IsNullOrEmpty(SearchTerm))
+            NavManager.NavigateTo($"/shop?q={SearchTerm}", false);
+        else
+        {
+            NavManager.NavigateTo("/shop", true, true);
+        }
+
+    }
+
+}

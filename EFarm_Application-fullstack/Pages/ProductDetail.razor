@@ -1,0 +1,86 @@
+﻿@page "/product/{Id:int}"
+@inject IApiService apiService;
+@inject NavigationManager navigationManager
+@inject AppState state;
+@inject ToastService toast
+
+
+<div class="container">
+    
+    @if(Product is null)
+    {
+        <div class="spinner"></div>
+    }
+    else
+    {
+
+        <PageTitle>@Product.Name</PageTitle>
+        <div class="row">
+            <div class="col-xs-4 item-photo">
+                <img style="max-width:100%;" src="@Product.PictureUri" />
+            </div>
+            <div class="col-xs-5" style="border:0px solid gray">
+                <h3>@Product.Name</h3>
+                <h5>                         <small style="color:#337ab7"> @Product.Description</small></h5>
+
+
+
+                <h3>$@Product.Price</h3>
+                <div class="section">
+                    <h6 class="title-attr"><small>Quantity</small></h6>
+                    <div class="my-3">
+                        <InputNumber class="form-control text-right" min="1"
+                        @bind-Value="Quantity"></InputNumber>
+                    </div>
+                </div>
+
+
+                <div class="section" style="padding-bottom:20px;">
+                    <button class="btn btn-success" @onclick="AddItem">
+                        Add To Cart
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    }
+
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    public int Quantity { get; set; } = 1;
+    public ProductDto    Product{ get; set; }
+
+    public async Task AddItem()
+    {
+        if (Product is null) return;
+        var IsSuccess = await apiService.AddToBasket(
+        new BasketItemDto
+        {
+            ProductId = Product.Id,
+            UnitPrice = Product.Price,
+            Quantity = Quantity
+        });
+        if (IsSuccess)
+        {
+            await InvokeAsync(() =>
+        {
+            toast.Success($"{Quantity} {Product.Name} added to cart!");
+            state.OnStateChange += StateHasChanged;
+
+            state.TriggerChange();
+        });
+        }
+
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id <= 0)
+            navigationManager.NavigateTo("/");
+        else
+            Product = await apiService.GetProduct(Id);
+    }
+}

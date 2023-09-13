@@ -1,0 +1,45 @@
+﻿
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+        <NavLink class="navbar-brand" href="/">E-Farm  Shop</NavLink>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/">Home</NavLink>
+                </li>
+
+                <li class="nav-item active">
+                    <NavLink class="nav-link" href="/shop" Match="NavLinkMatch.All">
+                        Shop
+                    </NavLink>
+                </li>
+                <li class="nav-item active">
+                    <NavLink class="nav-link" href="/basket" Match="NavLinkMatch.All">
+                        Cart
+                    </NavLink>
+                </li>
+                 
+            </ul>
+
+            <div class="form-inline my-2 my-lg-0">
+               <Search/>
+                <BasketDisplay />
+            </div>
+        </div>
+    </div>
+</nav>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

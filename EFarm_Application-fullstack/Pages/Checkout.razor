@@ -1,0 +1,44 @@
+﻿@page "/checkout" 
+@inject IApiService  apiService
+@inject AppState state
+
+ 
+@if (!IsSuccess)
+{
+    <p class="text-center my-5">Checking out....</p>
+}
+else
+{
+    <div class="container my-10" >
+    <div class="thankyou-page">
+        <div class="_header">
+            
+            <h1>Thank You!</h1>
+        </div>
+        <div class="_body">
+            <div class="_box">
+                <h2>
+                    <strong>Please check your email</strong> for further instructions on how to complete your account setup.
+                </h2>
+                <p>
+                    Thanks a bunch for your purchase. 
+                    It means a lot to us, just like you do! 
+                    We really appreciate you trusting us today. Thanks for being you.
+                </p>
+            </div>
+        </div>
+        <div class="_footer">
+            <p>Having trouble? <a href="">Contact us</a> </p>
+            <a class="btn" href="">Back to homepage</a>
+        </div>
+    </div></div>
+}
+
+@code {
+    public bool IsSuccess { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        IsSuccess = await apiService.ClearBasket();
+        if (IsSuccess) state.TriggerChange();
+    }
+}
