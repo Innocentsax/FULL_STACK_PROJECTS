@@ -1,0 +1,80 @@
+.container{
+    width: 80%;
+    margin: auto;
+  }
+ 
+.container{
+    width: 90%;
+    margin: auto;
+  }
+  .product__archive_container{
+      background-color: #F5F5F5;
+      height: 10rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .product__archive_container > h1{
+      font-size: 24px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      color: #000;
+  }
+  .product__archive_header{
+      padding: 80px 0px 80px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .product__archive_header p{
+      opacity: 0.5;
+  }
+  .product__archive_header select{
+  padding:15px;
+  margin: 0;
+  border-radius:4px;
+  color: black;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  }
+  .product__archive ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+  }
+  .product__archive li{
+      list-style: none;
+      text-align: center;
+  }
+  .product__archive li h2{
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-top: 0.3rem;
+  }
+  .product__archive li p{
+      color: #292929;
+      font-weight: 600;
+      margin-top: 0.3rem;
+  }
+  .product__archive li button{
+      color: #292929;
+      background-color: #FFFFFF00;
+      font-family: "Jost", Sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border-style: solid;
+      border-width: 0px 0px 1px 0px;
+      border-radius: 0px 0px 0px 0px;
+      padding: 0px 0px 5px 0px;
+      margin-top: 15px;
+      cursor: pointer;
+  }

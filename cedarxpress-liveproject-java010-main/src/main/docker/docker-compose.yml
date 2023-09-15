@@ -1,0 +1,22 @@
+version: '2'
+services:
+  app:
+    image: 'cedarxpress-postgres:latest'
+    build:
+      context: .
+    ports:
+      - "8081:8080"
+    container_name: cedarxpress
+    depends_on:
+      - cedarxpressdb
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://cedarxpressdb:5432/compose-cedarxpress
+      - SPRING_DATASOURCE_USERNAME=compose-cedarxpress
+      - SPRING_DATASOURCE_PASSWORD=compose-12345
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+  cedarxpressdb:
+    image: 'postgres:latest'
+    container_name: cedarxpressdb
+    environment:
+      - POSTGRES_USER=compose-cedarxpress
+      - POSTGRES_PASSWORD=compose-12345

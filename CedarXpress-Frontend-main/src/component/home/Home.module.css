@@ -1,0 +1,576 @@
+:root{
+  --primary-color: #292929;
+  --secondary-color:#F5F5F5;
+  --text-primary: #7A7A7A;
+  --text-secondary: #EAEAEA;
+  --text-accent: #D1BC92;
+  --circle-color:#ece8e0;
+  --color: #7A7A83;
+  --white-bg:#ffffff;
+  --success-action-btn:#82B440;
+  --font-family: 'Heebo', sans-serif;
+  --line-height: 0.9rem;
+
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--secondary-color);
+  position:relative;
+
+}
+.fixedPosition{
+  position:fixed;
+  width: 100%;
+  z-index: 9999;
+
+
+}
+
+.RedBorder{
+  border: 10px solid red;
+}
+.navTop{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  color: var(--white-bg);
+  padding: 7px 40px;
+  background-color: var(--primary-color);
+}
+.customeNav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 100px;
+  background-color: var(--white-bg);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  box-shadow: 0px 0px 20px 0px  #f0efef;
+}
+
+.primaryTextColor{
+  color: var(--primary-color) !important;
+}
+.noBg{
+  background-color: inherit;
+  border: none;
+}
+.noBg:hover, .noBg:focus, .noBg:active{
+   background-color: inherit;
+  border: none;
+  border-color: inherit ;
+}
+
+.navItem {
+  display: inline-block;
+  position: relative;
+}
+.active::before{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: 2px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  background-color:  var(--primary-color);
+}
+
+.navItem:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: var(--primary-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navItem:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.navH3{
+  font-family: 'Heebo';
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin-bottom: 0px;
+  line-height: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  
+}
+.centerText{
+  text-align: center;
+}
+.sideNavH3{
+  font-size: 2rem;
+  margin: 3rem 0px;
+
+}
+.social{
+  display: flex;
+  justify-content: center;
+}
+.social .navTopIcons{
+  font-size: 2.3rem;
+
+}
+.sideNav .galary{
+  margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.sideNav .contact{
+  text-align: center;
+  font-family: var(--font-family);
+
+}
+.fontSm{
+  font-size: .7rem;
+  text-decoration: none;
+}
+.navTopIcons{
+  color: var(--white-bg);
+  font-size: 1.4rem;
+}
+.navTop > *{
+margin-bottom: 5px;
+}
+.shoppingcart{
+  position: relative;
+}
+.shoppingcart::before{
+  content: '0';
+  top: -6px;
+  right: -27px;
+  position: absolute;
+  background-color: rgb(255, 187, 0);
+  width: 17px;
+  height: 17px;
+  font-size: .6rem;
+  color: var(--white-bg);
+  font-weight: 900;
+  border-radius: 100%;
+}
+.adminWrapper{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+
+}
+.adminContainer{
+  margin-top: 200px;
+  width: 500px;
+  height: 550px;
+  background-color: var(--white-bg);
+  padding: 20px 40px;
+  z-index: 9999;
+}
+.adminContainer h2{
+font-size: 1rem;
+text-align: center;
+
+}
+.adminContainer form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.adminContainer form input{
+  margin-top: 20px;
+  padding: 20px 30px;
+  border: none;
+  background-color: var(--secondary-color);
+}
+.adminContainer form input:focus{
+  outline: none;
+  background-color: var(--circle-color);
+}
+.adminContainer form input[type='submit']{
+  background-color: var(--primary-color);
+  color: var(--circle-color);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+/*HERO SECTION*/
+.wrapper{
+  min-height: 90vh;
+  background-color: var(--secondary-color);
+}
+.twoColums{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  min-height: 95vh;
+  position: relative;
+  padding: 150px 0px;
+
+}
+.heroTitleSection, .heroImageIection{
+position: relative;
+z-index: 1;
+}
+.heroImageSection{
+  position: relative;
+  display: flex;
+  z-index: 1;
+}
+
+.heroImageSection::before{
+  content: '';
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: var(--circle-color);
+  position: absolute;
+  z-index: -1;
+}
+.heroImages{
+  z-index: 9999;
+  height: 450px;
+}
+.sitter{
+  height: 350px;
+  transform: translate(15%, 70%);
+}
+.lamp{
+  transform: translateY(10%); 
+}
+.heroTitleSection{
+  position: relative;
+  padding-left: 150px;
+  padding-top: 170px;
+}
+.heroTextContainer{
+  position: absolute;
+  bottom: 20;
+}
+.heroTextContainer .heroTextContainerTitle{
+  font-family: var(--font-family);
+  font-size: 2.4rem;
+  line-height: 59px;
+  letter-spacing: .7px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.heroTextContainer .heroTextContainerText{
+   font-family:Montserrat;
+   font-weight: 100;
+   color: #7A7A7A;
+   font-size: 1rem;
+   margin-bottom: 30px;
+}
+.heroTextContainer .actionBtn  {
+padding: 15px 44px;
+text-transform: uppercase;
+font-size: .7rem;
+border-radius: 0;
+}
+
+.minContainer{
+  min-height: 700px;
+  background-color: var(--white-bg);
+}
+.CardRow{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  background-color: var(--white-bg);
+  min-height: 330px;
+  width: 80%;
+  top: -10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 30px;
+}
+.CardOverlap{
+  transform: translateY(-40px);
+}
+.BigTitle{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  color: #7A7A7A;
+  top: -10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+.BigTitle::after{
+  position: absolute;
+  content: '';
+  background-color: #e3e3e3;
+  top: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  z-index: -1;
+}
+.BigTitle h3{
+  background-color: var(--white-bg);
+  width: 230px;
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+  font-weight: 400;  
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.advertDiv{
+display: flex;
+justify-content: space-between;
+background-color: var(--secondary-color);
+width: 350px;
+height: 170px;
+}
+.advertDiv .carddescription{
+  flex-basis: 50%;
+  padding: 45px 0 25px 24px;
+}
+.imgContainer{
+flex-basis: 50%;
+position: relative;
+}
+ .h4{
+  font-family: "Poppins";
+  color: var(--text-accent);
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-size: .7rem;
+}
+ .name{
+font-family: var(--font-family);
+text-transform: uppercase;
+font-weight: 600;
+font-size: 1rem;
+letter-spacing: .1rem;
+}
+.showMore{
+font-size: .6rem;
+background-color: inherit;
+font-weight: 300;
+text-transform: uppercase;
+font-family: var(--primary-color);
+}
+.advertDiv .imgContainer img{
+  position: absolute;
+  width: 230px;
+  height: 200px;
+transform: translateY(5%);
+left: -15px;
+
+}
+/*RATE CARD*/
+.rateCard{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+.varticalCard{
+  padding: 0;
+  position: relative;
+}
+.CardHeader img{
+  width: 100%;
+}
+
+.CardBody{
+text-align: center;
+padding: 20px 30px;
+}
+.CardBody > *{
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+.CardBody > h4{
+  font-size: 1rem;
+  font-family: "Heebo";
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.CardBody  .price{
+  font-size: .7rem;
+  font-family: "Heebo";
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+.featureCard{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+.featureCard > div{
+  min-height: 350px;
+  background-color: #f5f5f5;
+  z-index: 2;
+  position: relative;
+}
+.featureCard > div img{
+  width: 100%;
+  z-index: 1;
+}
+.featureText{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index:3;
+  padding: 70px 50px;
+} 
+.badge{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-accent);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  transform: translate(15% 50%);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: .7rem;
+  color: var(--white-bg);
+  z-index: 1;
+}
+.sideNav{
+  position: fixed;
+  top: 45px;
+  width: 35%;
+  height: 100vh;
+  left:0;
+  background-color: var(--primary-color);
+  color: #fff;
+  z-index: 9999;
+}
+.sideNav > .sideNavH3, .centerText, .galary, .contact, .social{
+  margin: 7px  70px;
+}
+.header{
+  display: flex;
+  justify-content: end;
+  border: none;
+}
+.galary{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #292929;
+  gap: 10px;
+}
+.galaryItem{
+  background-color: red;
+  height: 100px;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1020px) {
+  
+  .navTop,.fontSm{
+    display: none;
+  }
+  .customeNav{
+    padding: 0px 20px;
+    margin: 0px;
+    justify-content: space-between;
+    color: var(--color);
+  }
+  .twoColums{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 0 0 20px;
+
+  }
+  .heroTitleSection{
+    padding: 10px;
+  }
+  .lamp{
+    display: none;
+  }
+  .heroImageSection::before{
+    display: none;
+  }
+  .sideNav{
+  width: 100%;
+}
+  .CardRow{
+    padding: 20px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0px;
+    row-gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .customeNav{
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+  .sideNav{
+  width: 100%;
+}
+  .navH3{
+    color: var(--primary-color);
+    font-size: .9rem;
+  }
+  .navTop,.fontSm, .navRightBtn{
+    display: none;
+  }
+  .twoColums{
+    padding-left: 20px;
+
+  }
+  .heroTitleSection{
+    padding: 0px;
+  }
+  .heroImageSection{
+    display: none;
+  }
+  .advertDiv{
+    width: 100%;
+  }
+  .CardRow{
+    padding: 20px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 30px;
+
+  }
+}
