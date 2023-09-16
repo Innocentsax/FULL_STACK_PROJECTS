@@ -1,0 +1,5 @@
+tr img{
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+}

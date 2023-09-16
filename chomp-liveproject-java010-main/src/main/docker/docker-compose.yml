@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  app:
+    image: 'chomp-app-postgres:latest'
+    build:
+      context: .
+    ports:
+      - "8081:8080"
+    container_name: chompApp
+    depends_on:
+      - chompDb
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://chompDb:5432/chomp-app
+      - SPRING_DATASOURCE_USERNAME=chomp-app
+      - SPRING_DATASOURCE_PASSWORD=chomp-app
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  chompDb:
+    image: 'postgres:latest'
+    container_name: chompDb
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=chomp-app
+      - POSTGRES_PASSWORD=chomp-app

@@ -1,0 +1,78 @@
+.menuCard{
+    background-color: #fff;
+    height: 15rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 2rem;
+    border-radius: .5rem;
+
+}
+
+.menuCard__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.menuCard__left-header{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.menuCard__container img{
+    width: 200px;
+    object-fit: cover;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: .5rem;
+}
+
+.menuCard__left-header h6{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0rem !important;
+}
+
+.menuCard__left-header p{
+    color: #35b8be;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: .5rem !important;
+}
+
+.menuItem__left-bottom{
+    display: flex;
+    gap: 1rem;
+}
+
+.menuCard__left > p{
+    color: #546285;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.menuItem__left-bottom a{
+    text-decoration: none;
+    color: #35b8be;
+    margin-top: 1rem;
+}
+
+.menuItem__left-bottom input[type=number]{
+    width: 3rem;
+    padding-left: .5rem;
+}
+
+.menuItem__left-bottom input[type=number]:focus{
+    outline: none;
+}
+
+.menuItem__left-bottom button{
+    background-color: #35b8be !important;
+    background-image: url(../../asset/buttomdesign.svg);
+    border-color: #35b8be;
+    font-weight: bold;
+    width: 8rem;
+}
+
+.menuItem__left-bottom input[type=number]::-webkit-inner-spin-button{
+}

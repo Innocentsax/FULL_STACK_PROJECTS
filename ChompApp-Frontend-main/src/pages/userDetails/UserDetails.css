@@ -1,0 +1,52 @@
+.userDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 7rem !important;
+}
+
+.userDetails__header{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.userDetails__header h2{
+    color: #35b8be;
+}
+
+.userDetails .custom-card{
+    width: 450px !important;
+    max-width: 100%;
+    border: none;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.custom-card hr{
+    margin: .4rem 0 1rem 0 !important;
+    color: #959bac;
+}
+
+.userDetails__body{
+     display: flex;
+     flex-direction: column;
+    gap: 1rem;
+}
+
+.userDetails__contentent{
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.userDetails__contentent label{
+    color: #35b8be;
+    font-weight: bold;
+}
+
+.userDetails__contentent h5{
+    margin-bottom: 0rem !important;
+    opacity: .8;
+    text-transform: lowercase;
+}
