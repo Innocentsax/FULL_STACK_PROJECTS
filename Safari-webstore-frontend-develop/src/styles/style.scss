@@ -1,0 +1,25 @@
+// base rule sets here
+@import "./Base/variables";
+@import "./Base/base";
+@import "./Base/typograhpy";
+@import "./Base/animations";
+@import "./Base/utilities";
+
+// components here!!!
+@import "./Components/button";
+@import "./Components/hero";
+@import "./Components/cards";
+@import "./Components/back-to-top";
+@import "./Components/card-product";
+@import "./Components/pagination";
+@import "./Components/input-field";
+@import "./Components/label";
+@import './Components/alert';
+
+// layouts here
+@import "./Layout/footer";
+@import "./Layout/nav-bar";
+
+// pages here!!!
+@import './Pages/sign-in-sign-up';
+@import './Pages/account-information';

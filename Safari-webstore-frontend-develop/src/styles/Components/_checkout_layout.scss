@@ -1,0 +1,342 @@
+.checkout {
+  padding-top: 64px !important;
+}
+.checkout-container {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 18px;
+  color: #000000;
+  padding-left: 31px;
+  padding-right: 31px;
+}
+.shipping-address {
+  margin-bottom: 67px;
+  padding-top: 64px;
+}
+.checkout-checkbox {
+  padding-bottom: 47px !important;
+}
+.door {
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+.door-fee {
+  padding-right: 32px;
+}
+.delivery-method {
+  padding-top: 64px !important;
+  padding-bottom: 35px !important;
+}
+.order-summary {
+  padding-top: 64px;
+  padding-bottom: 35px;
+  margin-left: 100px;
+}
+.checkout-ammount {
+  font-weight: 200;
+}
+.checkout-discount {
+  font-size: 14px;
+  line-height: 18px;
+  color: #686868;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.checkout-redirect-notice {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+.checkout-pod-notice {
+  margin-top: 16px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+.pod {
+  margin-top: 4px;
+}
+.pod-p {
+  margin-bottom: 66px;
+}
+.shipping-address-icon {
+  margin-right: 16px;
+  margin-left: 31px;
+  margin-top: -10px;
+}
+.address-icon {
+  margin-top: -5px;
+}
+.delivery-check-icon {
+  padding-left: 32px !important;
+}
+
+.order-section-img {
+  margin-left: 10px !important;
+}
+.order-summary-divider {
+  margin-top: 64px;
+  border-bottom: 1px solid #c4c4c4;
+}
+.order-summary-divider-totals {
+  margin-top: -120px;
+  border-bottom: 1px solid #c4c4c4;
+}
+.gift-notice {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+.gift-package {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #000000;
+  margin-top: 16px;
+}
+.place-order {
+  margin-top: 64px;
+  text-align: center;
+  padding: 12px 137px 11px 137px !important;
+  background: #ed165f;
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+}
+.gift-section {
+  padding-top: 31px !important;
+}
+.gift-yes {
+  padding: 10px;
+  background: #ed165f;
+  border-radius: 5px;
+  margin-right: 45px;
+  color: #fff;
+  border: 2px solid #ed165f;
+}
+.gift-no {
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  color: #000;
+  border: 2px solid #000;
+}
+.cart-checkout-totals {
+  padding-top: 32px !important;
+  margin-bottom: -100px !important;
+}
+.checkout-total-cost {
+  color: #ed165f;
+}
+.qty {
+  background: #ed165f;
+  color: #fff;
+  padding: 4px 7px 4px 7px;
+  margin-left: 11px;
+  margin-right: 8px;
+  border: none;
+}
+.inputqty {
+  width: 11%;
+  padding: 2px 7px 2px 8px;
+  background: #e1e1e1;
+  border: none;
+}
+.payment-method-text {
+  margin-left: 10px;
+}
+  
+  
+  .checkout-container {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 18px;
+    color: #000000;
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+  
+  .shipping-address {
+    margin-bottom: 67px;
+    padding-top: 64px;
+  }
+  
+  .checkout-checkbox {
+    padding-bottom: 47px !important;
+  }
+  
+  .door {
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+  }
+  
+  .door-fee {
+    padding-right: 32px;
+  }
+  
+  .delivery-method {
+    padding-top: 64px !important;
+    padding-bottom: 35px !important;
+  }
+  
+  .order-summary {
+    padding-top: 64px;
+    padding-bottom: 35px;
+    margin-left: 100px;
+  }
+  
+  .checkout-ammount {
+    font-weight: 200;
+  }
+  
+  .checkout-discount {
+    font-size: 14px;
+    line-height: 18px;
+    color: #686868;
+    font-weight: 400;
+    margin-top: 4px;
+  }
+  
+  .checkout-redirect-notice {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+  }
+  
+  .checkout-pod-notice {
+    margin-top: 16px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+  }
+  
+  .pod {
+    margin-top: 4px;
+  }
+  
+  .pod-p {
+    margin-bottom: 66px;
+  }
+  
+  .shipping-address-icon {
+    margin-right: 16px;
+    margin-left: 31px;
+    margin-top: -10px;
+  }
+  
+  .address-icon {
+    margin-top: -5px;
+  }
+  
+  .delivery-check-icon {
+    padding-left: 32px !important;
+  }
+  
+  .order-section-img {
+    margin-left: 10px !important;
+  }
+  
+  .order-summary-divider {
+    margin-top: 64px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+  
+  .order-summary-divider-totals {
+    margin-top: -120px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+  
+  .gift-notice {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #000000;
+  }
+  .gift-package {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #000000;
+    margin-top: 16px;
+  }
+  
+  .place-order {
+    margin-top: 64px;
+    text-align: center;
+    padding: 12px 117px 11px 117px !important;
+    background: #ed165f;
+    border-radius: 6px;
+    color: #fff;
+    border: none;
+  }
+  
+  .gift-section {
+    padding-top: 31px !important;
+  }
+  
+  .gift-yes {
+    padding: 10px;
+    background: #ed165f;
+    border-radius: 5px;
+    margin-right: 45px;
+    color: #fff;
+    border: 2px solid #ed165f;
+  }
+  
+  .gift-no {
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    color: #000;
+    border: 2px solid #000;
+  }
+  
+  .cart-checkout-totals {
+    padding-top: 32px !important;
+    margin-bottom: -100px !important;
+  }
+  
+  .checkout-total-cost {
+    color: #ed165f;
+  }
+  
+  .qty {
+    background: #ed165f;
+    color: #fff;
+    padding: 4px 7px 4px 7px;
+    margin-left: 11px;
+    margin-right: 8px;
+    border: none;
+  }
+  
+  .inputqty {
+    width: 11%;
+    padding: 2px 7px 2px 8px;
+    background: #e1e1e1;
+    border: none;
+  }
+  
+  .payment-method-text {
+    margin-left: 10px;
+  }

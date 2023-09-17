@@ -1,0 +1,140 @@
+// .cart-layout {
+//     margin-left: 30px;
+//     margin-right: 30px;
+//     margin-top: 64px;
+//     min-height: 600px;
+// }
+
+
+.cart-title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #000000;
+    margin-bottom: 78px;
+    margin-top: 64px !important;
+
+
+}
+
+.carts {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    padding: 20px 0 20px 0 !important;
+}
+
+.table-title {
+    background-color: #fff !important;
+    color: #686868;
+    margin-bottom: 16px;
+
+}
+.cart-favourites {
+  font-size: 11px;
+  color: #ED165F;
+}
+.cart-remove {
+  color: #ED165F;
+  font-size: 11px;
+}
+
+.cart-container {
+ width: 90% !important;
+}
+
+.cart-total {
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+}
+
+
+.cart-total-section {
+ margin-top: 64px;
+}
+.cart-totals {
+  padding-left: 64px;
+  line-height: 28px !important;
+
+}
+
+.cart-delivery-notice {
+ color: #686868;
+ margin-top: 17px;
+ margin-bottom: 64px;
+
+
+}
+
+
+//  #cart-table {
+
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-top: 78px;
+//     border-collapse: collapse;
+//   }
+
+//   #cart-table td {
+//     font-style: normal;
+//     font-weight: 600;
+//     font-size: 20px;
+//     line-height: 30px;
+//     /* identical to box height, or 90% */
+    
+//     letter-spacing: 0.2px;
+    
+//     color: #000000;
+//     padding-bottom: 8px;
+//   }
+  
+//   #cart-table td, #cart-table th {
+//     padding: 20px;
+//     padding-left: 30px;
+//   }
+  
+  .cart-item {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+
+  }
+  
+  .ui.fixed.table {
+    table-layout: fixed;
+}
+
+.ui.table {
+    border: none !important;
+}
+  
+//   #cart-table th {
+//     padding-top: 12px;
+//     padding-bottom: 16px;
+//     text-align: left;
+//     color: #686868;
+//     padding-left: 20px;
+//   }
+
+.cart-size {
+    color: #686868;
+
+  }
+
+  .cart-border-left {
+    border-left: 1.5px solid #E1E1E1;
+  }
+
+  .cart-remove:hover {
+    color: #ED165F;
+
+  }
+
+  @media screen and (max-width:767px) {
+
+    .cart-border-left {
+      border-left: none !important;
+    }
+  
+    
+  }
+

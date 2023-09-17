@@ -1,0 +1,82 @@
+.sign-in-sign-up {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: auto;
+  width: 70%;
+  font-family: Mulish;
+  margin-bottom: 100px;
+
+  .page-title {
+    margin: 50px 0;
+    display: block;
+
+    &__main {
+      font-weight: 800;
+      font-size: xx-large;
+      margin: 10px auto;
+    }
+    &__sub {
+      font-weight: normal;
+      font-size: 18px;
+    }
+  }
+
+  .form-page {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .form-title {
+      text-align: left;
+      font-weight: bold;
+      margin: 20px auto;
+    }
+  }
+
+  .sign-in {
+    width: 45%;
+  }
+  .sign-up {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .sign-in-sign-up {
+    // width: 100%;
+
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    //   align-items: center;
+    margin: auto;
+    width: 90%;
+  }
+  .form-page {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .sign-in {
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+  .sign-up {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .sign-in-sign-up {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    margin: auto;
+    width: 90%;
+  }
+
+}
+
+

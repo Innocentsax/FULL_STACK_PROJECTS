@@ -1,0 +1,83 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+*{
+    box-sizing: border-box;
+}
+.right-container{
+    width: 85%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+    align-items: baseline;
+    padding: 10px;
+}
+.product{
+    margin-top: 30px;
+    margin-inline: 15px;
+width: 410px;
+height: 261px;
+background: #FFFFFF;
+box-shadow: rgba(107, 78, 78, 0.1) 0px 2px 5px;
+display: grid;
+grid-template-columns: auto;
+justify-content: baseline;
+align-content: space-between;
+padding-bottom: 25px;
+}
+.productImage{
+    width: 86.85px;
+    height: 86.85px;
+}
+.pro-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-top: 30px;
+    margin-left: 0;
+}
+.productDetails{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+.control{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    align-content: center;
+    align-items: baseline;
+}
+.control input{
+width: 171px;
+height: 47px;
+background: #ED165F;
+border-radius: 6px;
+color: white;
+border: none;
+font-family: Mulish;
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 2px;
+text-transform: uppercase;
+/* UI/Background */
+/* color: #FFFFFF;
+}
+.bottom{
+    cursor: pointer;
+    font-family: Mulish;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 18px;
+/* identical to box height, or 112% */
+/* letter-spacing: 0.2px;
+color: #ED165F;
+}
+.bottom i{
+    margin-right: 15px;
+} */ 

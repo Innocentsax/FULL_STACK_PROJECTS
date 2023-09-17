@@ -1,0 +1,17 @@
+export const colors = [
+  {value: 'Green', label:'Green'},
+  {value: 'Red', label:'Red'},
+  {value: 'Yellow', label:'Yellow'},
+  {value: 'Brown', label:'Brown'},
+  {value: 'Orange', label:'Orange'},
+  {value: 'Blue', label:'Blue'},
+  {value: 'Violet', label:'Violet'},
+  {value: 'Indigo', label:'Indigo'},
+  {value: 'Purple', label:'Purple'},
+  {value: 'White', label:'White'},
+  {value: 'Beige', label:'Beige'},
+  {value: 'Gold', label:'Gold'},
+  {value: 'Pink', label:'Pink'},
+  {value: 'Taupe', label:'Taupe'},
+  {value: 'Grey', label: 'Grey'},
+]

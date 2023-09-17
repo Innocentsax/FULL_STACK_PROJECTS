@@ -1,0 +1,274 @@
+@import url(https://fonts.googleapis.com/css?family=Mulish);
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+  align-items: baseline;
+  grid-row-gap: 5px !important;
+}
+.box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+  justify-items: center;
+  align-items: baseline;
+  align-content: space-around;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.box .productRow {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 10vw auto;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding-left: 30px;
+  padding-block: 5px;
+}
+.content {
+  width: 100%;
+}
+.productDetails {
+  height: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  grid-row-gap: 10px;
+  padding-block: 10px !important;
+}
+.productDetails h6 {
+  margin-block: 0 !important;
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 18px;
+  /* identical to box height, or 90% */
+
+  letter-spacing: 0.2px;
+
+  color: #000000;
+}
+.productDetails small:first-of-type {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #686868;
+}
+.productDetails small:last-of-type {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ed165f;
+}
+.rule {
+  background-color: black;
+  border: 1px solid #c4c4c4;
+}
+.box .productRow .productImage {
+  height: 12vh;
+  object-fit: cover;
+}
+.price {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: 100% !important;
+  justify-items: center;
+  align-content: space-around !important;
+  border-block: 2px solid #ccc;
+  padding-block: 10px;
+}
+.priceBreakDown small :first-of-type {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-align: left;
+}
+.priceBreakDown small :last-of-type {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  color: #000000;
+}
+.priceBreakDown:last-of-type small:first-of-type {
+  margin-left: -13px;
+}
+.priceBreakDown:nth-last-of-type(2) small:last-of-type {
+  margin-left: -5px;
+}
+.priceBreakDown {
+  display: grid;
+  grid-template-columns: 40px 40px;
+  justify-content: center;
+  grid-column-gap: 80px;
+  margin-block: 7px;
+}
+.priceBreakDown,
+.total {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: 45% 45% !important;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+.total {
+  margin-block: -10px;
+}
+.total h6 {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #000000;
+}
+.total h6:last-of-type {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ed165f;
+}
+
+.control {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: flex-start;
+  align-items: baseline;
+  align-content: center;
+}
+.control .inputs {
+  background-color: #ed165f;
+  color: white;
+  margin-inline: 5px;
+  text-align: center !important;
+  width: 1.8vw;
+  font-size: 14px;
+  font-weight: bolder;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+.control .inputs:nth-of-type(2) {
+  text-align: center;
+  font-size: 12px;
+  width: 40px;
+  background-color: #c9c9c9;
+  color: black;
+  padding: 4px 0px;
+}
+
+.control small {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.midRow {
+  margin-top: 10px;
+  padding-left: 5px;
+}
+.midRow div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.midRow div small {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+.midRow div div {
+  margin-inline: 10px;
+}
+
+.midRow div div input:first-of-type {
+  background-color: #ed165f;
+  color: white;
+  border: none;
+}
+.midRow div div input {
+  padding: 5px;
+  width: 40px;
+  font-size: medium;
+  text-align: center;
+}
+.midRow div div input:first-of-type {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+.midRow div div input:last-of-type {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+.midRow p {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #000000;
+  text-align: left;
+}
+.submit {
+  padding-block: 10px;
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ed165f;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}

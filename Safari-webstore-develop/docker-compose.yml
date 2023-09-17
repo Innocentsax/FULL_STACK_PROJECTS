@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  safari_web_store_api:
+    container_name: safari-web-store
+    image: safari-web-store
+    build: ./
+    ports:
+      - "8045:8080"
+    depends_on:
+      - postgresqldb
+  postgresqldb:
+    image: postgres
+    ports:
+      - "5440:5432"
+    environment:
+      - POSTGRES_PASSWORD=safari
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=safari_web_storeDB

@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    padding-top: 40px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-items: flex-start;
+}
+.thirdRow div:first-of-type{
+    margin-bottom: 30px;
+}
+@media screen and (max-device-width: 698px) {
+    .container{
+    display: grid;
+    grid-template-columns: 97%;
+    justify-content: center;
+
+}
+}

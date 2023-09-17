@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="stash"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>log/wakacast.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <FileNamePattern>log/wakacast.%d{yyyy-MM-dd}.%i.log.gz
+            </FileNamePattern>
+            <!-- keep 30 days' worth of history -->
+            <MaxHistory>30</MaxHistory>
+            <!-- or whenever the file size reaches 10MB -->
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>%date [%thread] %-5level %logger{36} - %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="stash" />
+    </root>
+</configuration>
+
+
+
+
+

@@ -1,0 +1,76 @@
+.myorders h3 {
+    margin-top: 50px !important;
+    padding-bottom: 30px !important;
+  }
+  .order-title {
+    padding-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #000000;
+  }
+  .order-image {
+    width: 50px;
+  }
+  .order-status {
+    background: orange;
+    border-radius: 1px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 24px;
+  }
+  .order-size {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #686868;
+  }
+  .order-ammount {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 8px;
+    color: #ed165f;
+  }
+  .order-date {
+    padding-top: 8px;
+  }
+  .order-payment {
+    padding-top: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
+  .payment-details {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    /* identical to box height, or 200% */
+    color: #686868;
+  }
+  .order-again-btn {
+    background: #ed165f;
+    color: #fff;
+    margin-left: 20px !important;
+    margin-right: 30px;
+  }
+  .order-btn {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 6px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .request-return-btn {
+    background-color: #fff;
+    color: #000000;
+    border: 2px solid #ed165f;
+  }
+

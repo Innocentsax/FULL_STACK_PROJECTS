@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;800&display=swap');
+*{
+    box-sizing: border-box;
+}
+@media screen and (max-device-width:720px) {
+    .sideMenu{
+        display: none;
+    }
+    .productContainer{
+        
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        justify-content: center;
+        justify-items: center;
+        align-items: baseline;
+        
+    }
+    .header{
+        margin-inline: auto;
+    }
+}
+.h1Title{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 18px;
+    letter-spacing: 3px;
+    color: #000000;
+    margin-top: 158px;
+    margin-left: 50px;
+    width: 157px;
+    height: 18px;
+    /* left: 50px;
+    top: 158px; */
+}
+
+.category{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 18px;
+    color: #000000;
+    margin-top: 82px;
+    margin-left: 50px;
+    width: 107px;
+    height: 18px;
+    /* left: 50px;
+    top: 240px; */
+}
+
+.clothContainer{
+    display: flex;
+    /* border: 1px blue solid; */
+}
+
+.sideMenu{
+    width: 301px;
+    border-radius: 2px solid;
+    /* border: 1px red solid; */
+    margin-left: 50px;
+    
+}
+
+.clotheSize{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 1rem;
+}
+
+.colorStyle{
+width: 30px;
+height: 30px;
+border: 1px solid;
+margin-bottom: 10px;
+}
+
+.priceStyle {
+    /* width: 46px; */
+    align-content: center;
+    height: 18px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+
+
+    color: #000000;
+}
+
+.apply {
+    width: 67px;
+    height: 27px;
+    margin-left: 10px;
+    /* top: 1681px;  */
+    color: white;
+    border: none;
+
+    background: #ED165F;
+    border-radius: 2px;
+}
+
+/* .prices {
+    width: 20px;
+    height: 18px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+} */
+
+.colorDivStyle{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.1rem;
+}
+
+.price{
+    /* width: 50px; */
+    margin-bottom: 20px; 
+    width: 61px;
+    height: 27px;
+    /* text-align: center; */
+    /* left: 50px;
+    top: 1681px; */
+
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.clear {
+    /* position: absolute; */
+    width: 35px;
+    height: 18px;
+    margin-left: 200px;
+    margin-right: 10px;
+    /* top: 1408px; */
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+
+
+    color: #C4C4C4;
+}
+
+.cancel {
+    width: 2px;
+    height: 2px;
+    color: #C4C4C4;
+    /* margin-left: 300px; */
+    /* transform: rotate(-90deg); */
+}
+
+.heart {
+    margin-left: 150px;
+    color: red;
+}
+
+.heart:hover{
+    cursor: pointer;
+}
+
+.hearts {
+    /* margin-left: 150px; */
+    color: red;
+}
+
+.cart {
+    margin-left: 20px;
+}
+
+.cart:hover {
+    background-color: #ED165F;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.hoverStyle {
+    text-align: left;
+    background-color: white;
+    border: none;
+    margin-bottom: 15px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #686868;
+}
+
+.colorStyle:hover{
+    border: none;
+    cursor: pointer;
+}
+
+.hoverStyle:hover{
+    color: #ED165F;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.apply{
+    cursor: pointer;
+    
+}
+
+.hoverStyle:active{
+    color: red !important;
+}
+
+.hoverSize:hover{
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.categoryStyle {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.productCard{
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 14px;
+    letter-spacing: 0.2px;
+    border-radius: 5px;
+    width: 297px;
+    height: 576px;
+    position: relative;
+
+}
+
+.productCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.imgStyle{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    /* flex: 200px; */
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem */
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    justify-content: space-evenly;
+    margin: 20px; */
+}
+
+.optionDiv {
+    display: flex;
+    
+}
+.productName{
+    font-family: Mulish;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 14px;
+/* identical to box height, or 70% */
+
+text-align: center;
+letter-spacing: 0.2px;
+
+color: #000000;
+}
+
+.choice{
+    position: absolute;
+    top: 40%;
+    right: 35%;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    align-items: baseline;
+    align-content: space-between;
+    
+}
+
+/* .choice:hover{
+    color: white;
+} */
+
+.choice .heart{
+    text-align: center;
+    margin: 20px auto;
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+
+}
+.choice button{
+    cursor: pointer;
+    padding: 7px;
+    border: none;
+    background-color: white;
+    margin: auto;
+}
+.productImage{
+    z-index: -12;
+}
+
+select {
+    border: none;
+}
+
+.checkBox {
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    width: 27px;
+    height: 27px;
+    margin-bottom: 20px;
+}
+
+.sortDiv {
+    width: 195px;
+    height: 37px;
+    margin-left: 1000px;
+    margin-top: 63px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+
+    color: #000000;
+}
+
+@media  screen and (max-width: 720px) and (min-width: 400px){
+    .imgStyle{
+        /* display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap; */
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem */
+    }
+}
+@media  screen and (max-width: 396px){
+    .imgStyle{
+        /* display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap; */
+        /* display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem */
+    }
+}

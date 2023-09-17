@@ -1,0 +1,40 @@
+.category-color {
+  margin-top: 64px;
+  font-size: 20px;
+  line-height: 18px;
+  color: #000000;
+  font-weight: 400;
+  margin-top: 64px;
+  font-weight: 400;
+  margin-top: 64px;
+  border-bottom: none;
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: start;
+}
+
+.CategoryColor_section1,
+.CategoryColor_section2,
+.CategoryColor_section3,
+.CategoryColor_section4 {
+  display: grid;
+  margin-top: 14px;
+  margin-right: 0px;
+  grid-template-columns: repeat(3, 1fr);
+}
+// .colors {
+// float: right;
+// margin-top: 10px;
+// margin-left: 7px;
+// }
+
+.colors {
+  float: right;
+  margin-top: 10px;
+  margin-left: -7px !important;
+  margin-right: 15px;
+}
+
+.categoryColorContainer {
+  margin-top: 32px !important;
+}

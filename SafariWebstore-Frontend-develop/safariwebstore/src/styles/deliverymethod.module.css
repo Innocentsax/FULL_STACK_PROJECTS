@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: flex-end;
+  align-content: flex-end;
+  padding: 0px 0px 20px 10px;
+  margin-top: 0;
+  width: 100%;
+  min-width: 425px;
+  height: 183px;
+  background: #ffffff;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container .topRow {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .topRow h6 {
+  font-size: 21px;
+  padding-left: 20px;
+}
+.container .bottomRow {
+  display: flex;
+  flex-flow: row;
+}
+.container .bottomRow .input,
+.container .bottomRow small {
+  margin-right: 20px;
+}

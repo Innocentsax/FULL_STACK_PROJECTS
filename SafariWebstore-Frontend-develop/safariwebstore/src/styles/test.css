@@ -1,0 +1,45 @@
+.container{
+margin: 5% auto;
+display: flex;
+flex-flow: column;
+justify-content: center;
+align-items: center;
+}
+.search-wrapper{
+    
+    width: 50%;
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: baseline;
+}
+.row{
+    display: grid;
+    grid-template-columns: 5rem 15rem;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content:space-evenly;
+    align-content: space-between;
+    align-items: baseline;
+    margin-top: 10px;
+}
+.row label{
+    width: 100%;
+}
+.row input{
+    width: 100%;
+}
+.book{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.book .line{
+    display: grid;
+    grid-template-columns: 5rem 15rem;
+    justify-content:space-evenly;
+    align-content: space-between;
+    align-items: baseline;
+    margin-top: 10px;
+}

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+.container {
+  display: none;
+}
+#close-icon {
+  color: white;
+  position: absolute;
+  right: 7vw;
+  top: 3vh;
+  z-index: 100;
+  cursor: pointer;
+}
+
+@media screen and (max-device-width: 678px) {
+  /* .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 289;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ed165f;
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-content: flex-start;
+    grid-row-gap: 40px;
+    margin: 0;
+    padding: 0;
+  } */
+  .link {
+    color: white !important;
+    font-weight: 600 !important;
+  }
+  .item:hover {
+    width: 100%;
+    border: 2px solid white;
+  }
+  #logo {
+    margin-top: 1.5vh;
+    margin-right: auto;
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  font-family: "Mulish", sans-serif;
+}
+
+.link:visited,
+.link:active {
+  color: black;
+}
+
+.heade-style {
+  display: inline-block;
+}
+
+.input-style {
+  box-shadow: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: inherit;
+}
+
+.cart-item-count {
+  font-family: "Mulish", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 18px;
+  /* identical to box height, or 75% */
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+
+h6 {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height, or 112% */
+  letter-spacing: 0.2px;
+  color: #686868;
+}
+
+.price {
+  font-family: "Roboto";
+}

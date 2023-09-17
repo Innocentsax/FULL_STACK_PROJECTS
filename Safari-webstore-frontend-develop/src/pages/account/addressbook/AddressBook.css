@@ -1,0 +1,138 @@
+.shell-wrapper {
+  width: 960px;
+  height: auto;
+  padding: 2.5rem;
+  margin-top: 1.5rem;
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: inherit;
+      flex-shrink: inherit;
+}
+
+.shell-wrapper .shell-title {
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+.shell-wrapper .self-shell {
+  width: 200px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.btn-address {
+  margin-top: 2.0rem;
+  width: 260px;
+  word-spacing: 0.5em;
+  padding: 1rem;
+  color: #fff;
+  background: #ED165F;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.pagination {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.pagination :hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.pagination :first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination :last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.pagination button {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+.pagination button.active {
+  background-color: #ED165F;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .shell-wrapper {
+    width: 600px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shell-wrapper {
+    width: 480px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .shell-wrapper {
+    width: 300px;
+    height: auto;
+    padding: 2.5rem;
+    margin-top: 1.5rem;
+    -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .shell-wrapper .shell-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .shell-wrapper .self-shell {
+    width: 200px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/*# sourceMappingURL=AddressBook.css.map */

@@ -1,0 +1,19 @@
+.categoriesNavlinks {
+  font-size: 16px;
+  line-height: 18px;
+  list-style-type: none;
+  margin-bottom: 10px;
+  margin-left: 9px;
+}
+
+.categoriesNavlinks a {
+  color: #686868;
+}
+
+.categoriesNavlinks a:hover {
+  color: #ed165f;
+}
+
+.category-name {
+  cursor: pointer !important;
+}

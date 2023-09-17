@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2
+jwt:
+  secret: wakaCast247
+
+sendgrid:
+  key: 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

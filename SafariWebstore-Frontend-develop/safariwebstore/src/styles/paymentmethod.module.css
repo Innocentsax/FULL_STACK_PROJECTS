@@ -1,0 +1,55 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-flow:column;
+    justify-content: flex-start;
+    align-items:baseline;
+    padding-left: 15px;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+
+}
+.bottowRow{
+
+    font-family: Mulish;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+
+
+color: #000000;
+}
+.container .topRow,
+.midRow .midRowHeader,
+.bottowRow {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    align-items: center;
+}
+.container .topRow h6,.midRow .midRowHeader h6{
+    margin-left: 20px;
+}
+.container .midRow{
+    padding-block: 0;
+    height: auto;
+}
+.midRow .midRowHeader{
+    margin-block: 0;
+    height: auto;
+    line-height: 0;
+}
+.midRow .midRowHeader h6{
+    line-height: 0;
+}
+.list{
+    font-family: Mulish;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 18px;
+/* identical to box height, or 180% */
+
+
+color: #000000;
+}

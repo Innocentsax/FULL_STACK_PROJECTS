@@ -1,0 +1,18 @@
+export const sizes = [
+  {value: 'XXS', label:'XXS'},
+  // {value: 'XXL', label:'XXL'},
+  {value: 'XS', label:'XS'},
+  {value: 'S', label:'S'},
+  {value: 'M', label:'M'},
+  {value: 'L', label:'L'},
+  {value: 'XL', label:'XL'},
+  {value: '23', label:'23'},
+  {value: '24', label:'24'},
+  {value: '25', label:'25'},
+  {value: '26', label:'26'},
+  {value: '27', label:'27'},
+  {value: '29', label:'29'},
+  {value: '30', label:'30'},
+  {value: '31', label:'31'},
+  {value: '32', label:'32'},
+]

@@ -1,0 +1,20 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    display: grid;
+    /* Replace 80 with your footer height, or with auto for variable-height footers */
+    grid-template-rows: 1fr 80px;
+    /* These two are important */
+    min-height: 100vh;
+    position: relative;
+}
+.close{
+    color: white;
+}
+#logo{
+    color: white;
+    position: absolute;
+    top: 0;
+}

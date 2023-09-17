@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+@media screen and (max-device-width: 678px) {
+  .container {
+      /* background-color: #ccc !important; */
+      height: 20rem !important;
+      display:grid !important;
+      grid-template-columns: repeat(3,1fr) !important;
+      grid-template-rows: auto !important;
+      grid-row-gap: 0px !important; 
+  }
+  .productDetails {
+  align-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  align-content: space-around !important;
+
+}
+
+
+
+  .quantity .quantityInput {
+      width: 80% !important;
+      margin-inline: auto !important;
+  }
+  .productImage {
+      grid-column: 2/3 !important;
+      grid-row: 1/1 !important;
+      background-color: yellow !important;
+      width: 100px;
+      height: 100px;
+  }
+  .content {
+      padding: 0.7rem !important;
+      grid-column: 1/4;
+      display:grid !important;
+      justify-items: center !important;
+      align-content:space-around !important;
+      grid-gap: 10px !important;
+      grid-template-columns: 50% 50% !important;
+      grid-template-rows: auto auto !important;
+
+  }
+  .remove,
+  .moveToFavorites {
+      font-size: 0.7rem !important;
+  }
+  .productDetails small {
+      font-size: 0.8rem !important;
+  }
+  .productDetails h6 {
+    font-size: 0.95rem !important
+  }
+  .mid {
+      height: 100% !important;
+      grid-row: 1/3 !important;
+      grid-column: 1/1 !important;
+      display: grid!important;
+      grid-template-columns: 100% !important;
+      align-content:stretch !important;
+  }
+  .quantity{
+      grid-column: 1/2 !important;
+      height: auto !important;
+  }
+  .price{
+      grid-column: 2/3 !important;
+  }
+  .subTotal{
+      grid-column: 3/4 !important;
+  }
+ 
+  .price,.subTotal{
+      height:auto !important;
+  }
+ 
+}
+@media screen and (min-device-width: 678px){
+  .price,
+.subTotal {
+  font-size: 2.3vw !important;
+}
+.remove i,
+.remove,
+.moveToFavorites i,
+.moveToFavorites {
+  font-size: 1.3vw !important;
+}
+
+
+.productDetails small {
+
+  font-size: 1.4vw !important;
+}
+.productDetails h6 {
+  font-size: 1.65vw !important;
+}
+  
+}
+
+.container {
+  margin-block: 10px;
+  margin-inline: 0;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  height: 169px;
+  width: 100%;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: 49% 15% 18% 18%;
+  align-items: center;
+  padding: 0;
+}
+.container div {
+  object-fit: object-fit;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.container .price,
+.container .quantity,
+.container .content {
+  border-right: 1px solid #ccc;
+}
+.price,
+.subTotal {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #000000;
+}
+.quantity .quantityInput {
+  width: 3rem;
+  text-align: center;
+  padding: 7px;
+}
+.productImage {
+    display: block;
+  object-fit: cover;
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  grid-column-gap: 35px;
+  border: none;
+}
+.remove,
+.moveToFavorites {
+  cursor: pointer;
+}
+
+.remove,
+.moveToFavorites {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 10px;
+  align-content: flex-end;
+  border: none;
+  margin-bottom: 20px;
+}
+.remove i,
+.remove,
+.moveToFavorites i,
+.moveToFavorites {
+  color: #ed165f;
+}
+.productDetails {
+  display: grid;
+  grid-template-columns: auto;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+.productDetails small {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height, or 112% */
+  letter-spacing: 0.2px;
+
+  color: #686868;
+}
+.productDetails h6 {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 18px;
+  /* identical to box height, or 90% */
+  letter-spacing: 0.2px;
+
+  color: #000000;
+}
+.mid {
+  display: grid;
+  grid-template-columns: auto;
+  align-content: flex-end;
+}

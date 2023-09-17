@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-family: 'Mulish', sans-serif;
+}
+
+.link:visited,
+.link:active {
+    color: black
+}
+
+.heade-style {
+    display: inline-block;
+
+}
+
+.input-style {
+    box-shadow: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: inherit;
+}
+
+.cart-item-count {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 18px;
+    /* identical to box height, or 75% */
+    letter-spacing: 0.2px;
+    color: #000000;
+}
+
+h6 {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height, or 112% */
+    letter-spacing: 0.2px;
+    color: #686868;
+}
+
+.price {
+    font-family: 'Roboto'
+}

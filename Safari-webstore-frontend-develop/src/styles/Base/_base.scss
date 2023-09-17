@@ -1,0 +1,57 @@
+@import "../Vendors/reset-css";
+@import url("http://fonts.cdnfonts.com/css/mulish");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Mulish sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+}
+
+.ui.checkbox input.hidden + label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  font-weight: 400;
+}
+
+.ui.checkbox input:checked ~ .box:after,
+.ui.checkbox input:checked ~ label:after {
+  opacity: 1;
+  color: #fff !important;
+  background: #ed165f;
+}
+
+.container {
+  width: 90% !important;
+}
+
+.account-dashboard {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #000000;
+  text-align: center;
+  padding-top: 34px;
+  padding-bottom: 48px;
+}

@@ -1,0 +1,18 @@
+
+.orders-wrapper {
+    margin: 3rem 3rem 0 0;
+    /* padding: 2rem 0 0 0;
+    width: 70vw; */
+}
+
+.title {
+    font-weight: 400;
+}
+
+.orders-list-wrapper {
+    margin: 2rem 2rem 0 0;
+    padding: 1.5rem 2rem;
+    border-radius: 6px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+}
+

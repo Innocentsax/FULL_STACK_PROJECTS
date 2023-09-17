@@ -1,0 +1,119 @@
+.shell-wrapper {
+    width: 960px;
+    height: auto;
+    padding: 2.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: inherit;
+
+
+    .shell-title {
+        font-weight: lighter;
+        font-size: 25px;
+    }
+
+    .self-shell {
+        width: 200px;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+.btn-address {
+    margin-top: 2.0rem;
+    width: 260px;
+    word-spacing: 0.5em;
+    padding: 1rem;
+    color: #fff;
+    background: #ED165F;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.pagination {
+    display: inline-block;
+    margin-top: 1rem;
+    :hover {
+        background-color: #ddd;
+        border-radius: 5px;
+    }
+    :first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    :last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    button {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+      }
+  }
+  .pagination button.active {
+    background-color: #ED165F;
+    color: white;
+  }
+    
+@media screen and (max-width: 1024px) {
+    .shell-wrapper {
+        width: 600px;
+        height: auto;
+        margin: 3rem;
+    }
+    .btn-address {
+        margin: 3rem;
+    }
+    
+    .pagination {
+        margin: 3rem;
+    }
+
+    .title {
+        margin: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .shell-wrapper {
+        width: 480px;
+        height: auto;
+        margin: 3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .shell-wrapper {
+        width: 300px;
+        height: auto;
+        padding: 2.5rem;
+        margin: 3rem;
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+
+        .shell-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .self-shell {
+            width: 200px;
+            align-self: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+}

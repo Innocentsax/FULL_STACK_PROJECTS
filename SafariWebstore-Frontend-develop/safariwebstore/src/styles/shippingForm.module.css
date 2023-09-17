@@ -1,0 +1,73 @@
+.container{
+   box-shadow:  0 1px 5px 0 rgba(0,0,0,0.1);
+   padding: 20px;
+   height: auto;
+}
+.form{
+    width: 100%;
+}
+.form{
+  display: grid;
+  grid-template-columns: 100% !important;
+  grid-row-gap: 20px;
+}
+.form .formGroup {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: baseline;
+
+}
+.form .formGroup label{
+    font-family: Mulish;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+color: #000000;
+}
+
+.form .labels{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+    align-items: baseline;
+    grid-column-gap: 10px;
+       
+  
+}
+.form .label input{
+    background-color: palevioletred;
+    color: palevioletred;
+}
+
+.form .labels h6 {
+    font-family: Mulish;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 18px;
+/* identical to box height, or 112% */
+color: #000000;
+
+}
+.form .formGroup textarea {
+    height: 100px;
+    resize: none;
+}
+select,input {
+    padding-block: 5px;
+}
+select,input,textarea{
+    outline: none;
+    box-shadow: none;
+    border-radius: 3px;
+    padding: 5px 15px;
+    border: 1px solid #000;
+}
+
+.formGroup .input {
+    width: 100%;
+
+}

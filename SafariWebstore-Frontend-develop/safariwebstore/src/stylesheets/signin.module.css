@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+.top{
+  margin-bottom: 0 !important;
+}
+.container {
+  width: 100%;
+  min-width: 350px;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+  align-content: space-around;
+  align-items: stretch;
+  grid-row-gap: 50px;
+}
+.form {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+.form .formGroup {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin-inline: 0;
+  margin-block: 7px;
+}
+.form .formGroup input {
+  border: 1px solid #000000;
+  margin-block: 10px;
+  outline: none;
+  padding-inline: 10px;
+  padding-block: 7px;
+  border-radius: 4px;
+  box-shadow: none;
+  background-color: white;
+}
+.form .formGroup:nth-last-of-type(2) {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.forgotPassword {
+  color: black;
+}
+.form .formGroup:last-of-type input {
+  background: #ed165f;
+  border-radius: 6px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  height: 47px;
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* UI/Background */
+  color: #ffffff;
+}
+.form .formGroup:nth-last-of-type(2) input {
+  margin-right: 10px;
+}
+.form .formGroup label {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+  color: #000000;
+}
+.bottom{
+  margin-top: 0 !important;
+}
+.bottom h5 {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 18px;
+  line-height: 18px;
+  /* identical to box height, or 90% */
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+.error {
+  width: 100% !important;
+  height: 20x;
+  padding: 15px 30px;
+  background-color: #ccc;
+  color: red;
+  border-radius: 5px;
+  text-align: center;
+}

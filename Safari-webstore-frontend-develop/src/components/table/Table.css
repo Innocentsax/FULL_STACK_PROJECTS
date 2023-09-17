@@ -1,0 +1,58 @@
+.tableDiv {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.tableDiv table {
+  border-spacing: 0;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tableDiv table tr :last-child td {
+  border-bottom: 0;
+}
+
+.tableDiv table .defaultColumnInput {
+  border: none;
+  font-size: small;
+  display: none;
+}
+
+.tableDiv table th {
+  margin: 0;
+  padding: 1.0rem;
+  border-bottom: 1px solid white;
+  background-color: #f2f2f2;
+  font-size: medium;
+}
+
+.tableDiv table th :last-child {
+  border-right: 0;
+}
+
+.tableDiv table td {
+  margin: 0;
+  padding: 1.0rem;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.tableDiv table td :last-child {
+  border-right: 0;
+}
+
+.tableDiv .pagination {
+  padding: 0.5rem;
+}
+
+.tableDiv .pagination button {
+  margin: 0.125rem;
+}
+
+.tableDiv .pagination span {
+  margin: 0.5rem;
+}
+
+.tableDiv .pagination select {
+  margin: 0.5rem;
+}
+/*# sourceMappingURL=Table.css.map */

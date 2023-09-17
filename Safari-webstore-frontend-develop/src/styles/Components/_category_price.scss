@@ -1,0 +1,56 @@
+.price-space {
+    margin-bottom: 30px;
+}
+
+.Category-Price {
+    margin-top: 48px;
+    display: flex;
+}
+
+.prizecheckbox {
+   height: 27px;
+   width: 27px;
+}
+
+.prizetext {
+    height: 34px;
+    width: 61px;
+    border: 1px solid gray;
+}
+
+.filter-between {
+        margin-left: -10px;
+             margin-top: 5px;
+}
+
+.Category-Price label {
+    margin-left: 16px;
+    margin-top: -16px;
+}
+
+.price-filter {
+    display:  flex;
+}
+
+.price-A {
+    display: flex;
+    justify-content: start;
+}
+
+.price-A label {
+    margin-right: 20px;
+}
+
+.pricz-B {
+    padding-right:20px;
+    display: flex;
+    justify-content: end;
+}
+.pricefilterapply {
+    background: #ED165F;
+    border-radius: 2px;
+    color: #fff;
+    padding: 8px 20px 8px 20px;
+    border: 0px;
+    font-size: 14px;
+}

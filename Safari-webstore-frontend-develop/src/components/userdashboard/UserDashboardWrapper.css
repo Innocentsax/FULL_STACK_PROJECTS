@@ -1,0 +1,10 @@
+.dashboard-wrapper {
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+}
+@media screen and (max-width:800px) {
+    .dashboard-wrapper{
+        flex-direction: column;
+    }
+}

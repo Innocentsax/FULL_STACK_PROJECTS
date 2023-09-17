@@ -1,0 +1,19 @@
+.alert{
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    background-color: transparent;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: normal;
+    transition: ease-in all 400ms;
+
+    &--success{
+        border: thin solid green;
+        color: green;
+    }
+    &--error{
+        border: thin solid $color-primary;
+        color: $color-primary;
+    }
+}

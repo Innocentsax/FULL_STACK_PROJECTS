@@ -1,0 +1,9 @@
+.container{
+    margin-top: 20px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
