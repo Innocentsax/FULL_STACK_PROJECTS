@@ -9,3 +9,6 @@
 
 ## Backend
 Java, SpringBoot, Thymleaf, DevTool, Spring MVC and Spring Web(For Backend) deploy with [Render](https://medium.com/@redhabayuanggara/deploying-spring-boot-applications-on-render-com-for-free-86fa039bd0ce)
+
+## Hosted Projected
+- [WakaCast](https://www.wakacast.com/)
