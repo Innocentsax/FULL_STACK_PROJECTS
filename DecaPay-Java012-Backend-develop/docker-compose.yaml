@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: .
+      target: development
+    container_name: backend
+    ports:
+      - "9082:9082"
+    environment:
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=decapay
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://dbserver:5432/decapay_db
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+    volumes:
+      - ./:/app
+    depends_on:
+      dbserver:
+        condition: service_healthy
+
+  dbserver:
+    image: postgres:latest
+    container_name: dbserver
+    ports:
+      - "5432:5432"
+    environment:
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=decapay
+      - POSTGRES_DB=decapay_db
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - dbserver:/var/lib/postgresql/data
+volumes:
+  dbserver:
+    driver:  local

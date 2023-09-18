@@ -1,0 +1,61 @@
+/*.backdrop{*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    z-index: 10;*/
+/*    background: rgba(0, 0, 0, 0.75);*/
+/*}*/
+/*.edit{*/
+/*    position: absolute;*/
+/*  top: 150px;*/
+/*  left: 32%;*/
+/*  height: 350px;*/
+/*  width: 550px;*/
+/*  z-index: 10;*/
+/*}*/
+/*.title{*/
+/*    text-align: center;*/
+/*    font-size: 25px;*/
+/*    font-weight: 400;*/
+/*    color: #21334f;*/
+/*}*/
+/*.btns{*/
+/*    background-color: #ffffff;*/
+/*    border: 2px solid #14A800;*/
+/*    color: #14A800;*/
+/*    width: 70px;*/
+/*    height: 30px;*/
+/*    padding: 4px, 16px, 4px, 16px;*/
+/*    font-size: 16px;*/
+/*    position: relative;*/
+/*    top: 50px;*/
+/*    margin-right: 20px;*/
+/*    !* left: 160px; *!*/
+/*}*/
+/*.btns:hover{*/
+/*    background-color: #b0eaa8;*/
+/*    border: none;*/
+/*    color: #ffffff;*/
+/*}*/
+/*.label{*/
+/*    font-size: 15px;*/
+/*    line-height: 30px;*/
+/*    color: #21334f;*/
+/*    margin-bottom: 20px;*/
+/*    position: relative;*/
+/*    !* left: 50px; *!*/
+/*    */
+/*}*/
+/*.amount{*/
+/*    width: 430px;*/
+/*     color: #21334f; */
+/*    height: 35px;*/
+/*    padding: 4px, 16px, 4px, 16px;*/
+/*    border: 1px solid #c5c5c5;*/
+/*    font-size: 16px;*/
+/*    line-height: auto;*/
+/*    position: relative;*/
+/*    !* left: 50px; *!*/
+/*}*/

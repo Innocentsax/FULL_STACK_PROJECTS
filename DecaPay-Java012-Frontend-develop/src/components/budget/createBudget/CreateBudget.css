@@ -1,0 +1,439 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.create-budget-decapay-8vu {
+  width: 100%;
+  height: 102.4rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.create-budget-decapay-8vu .frame-8812-s7o {
+  width: 50rem;
+  height: 49.2rem;
+  position: absolute;
+  left: 55.4rem;
+  top: 15.4rem;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8811-b3o {
+  margin: 0rem 19rem 3.2rem 0rem;
+  width: calc(100% - 19rem);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8811-b3o .frame-8780-iPK {
+  margin-right: 11.2rem;
+  box-sizing: border-box;
+  padding: 0.8rem;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.0399999991);
+  border-radius: 5rem;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8811-b3o .frame-8780-iPK .back-arrow-f3f {
+  margin-right: 0.8rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8811-b3o .frame-8780-iPK .back-zbj {
+  margin-top: 0.1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #21334f;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8811-b3o .create-budget-th7 {
+  margin-top: 0.1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #21334f;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ {
+  margin-bottom: 2.4rem;
+  width: 100%;
+  row-gap: 1.6rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-4-vNu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-4-vNu .title-gcy {
+  margin-bottom: 0.7rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #21334f;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-2-d2R, .frame-2-Bi9, .frame-2-LzM, .frame-3-WA5,.frame-3-d6H {
+ border-radius: 10px;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-4-vNu .frame-2-d2R {
+  box-sizing: border-box;
+  padding: 1.45rem 1.6rem 1.35rem 1.6rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #c4c4c4;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #d9d9d9;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-6-VqK {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-6-VqK .amount-ey7 {
+  margin-bottom: 0.7rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #21334f;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-6-VqK .frame-2-Bi9 {
+  box-sizing: border-box;
+  padding: 1.45rem 1.6rem 1.35rem 1.6rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #c4c4c4;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #d9d9d9;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-7-41F {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-7-41F .budget-period-Qqo {
+  margin-bottom: 0.7rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #21334f;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-7-41F .frame-2-LzM {
+  box-sizing: border-box;
+  padding: 1.45rem 1.6rem 1.35rem 1.6rem;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #d9d9d9;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-7-41F .frame-2-LzM .select-gYR {
+  margin-right: 40.4rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #c4c4c4;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-7-41F .frame-2-LzM .path-94-pPj {
+  margin-bottom: 0.1rem;
+  width: 1.6rem;
+  height: 0.9143rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-5-XZ3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-5-XZ3 .description-tuP {
+  margin-bottom: 0.7rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #21334f;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-6-yiZ .frame-5-XZ3 .frame-3-d6H {
+  box-sizing: border-box;
+  padding: 1.45rem 1.6rem 1.35rem 1.6rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #c4c4c4;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #d9d9d9;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8812-s7o .frame-8666-RS9 .frame-3-WA5 {
+  width: 100%;
+  height: 4.8rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #14a800;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8746-1Mj {
+  box-sizing: border-box;
+  padding: 2rem 9.5rem 2.1rem 6rem;
+  width: 144rem;
+  height: 9.4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: solid 0.1rem rgba(0, 0, 0, 0.1599999964);
+}
+.create-budget-decapay-8vu .frame-8746-1Mj .frame-15-ui1 {
+  margin-right: 97.9rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8746-1Mj .frame-15-ui1 .cardpayment-3pD {
+  margin-right: 0.8rem;
+  width: 5.3rem;
+  height: 5.3rem;
+  object-fit: contain;
+  vertical-align: top;
+  border-radius: 8rem;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8746-1Mj .frame-15-ui1 .decapay-Nbb {
+  margin-top: 0.1rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2125;
+  color: #21334f;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8746-1Mj .frame-8747-WC1 {
+  margin: 0.6rem 0rem 0.5rem 0rem;
+  height: calc(100% - 1.1rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8746-1Mj .frame-8747-WC1 .ellipse-8-Edo {
+  margin-right: 0.8rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: #d9d9d9;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 2.1rem;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8746-1Mj .frame-8747-WC1 .ugochukwu-Xso {
+  margin-top: 0.1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2125;
+  color: #21334f;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X {
+  box-sizing: border-box;
+  padding: 4.2rem 1.6rem 67.8rem 1.6rem;
+  width: 28.1rem;
+  height: 93rem;
+  position: absolute;
+  left: 0;
+  top: 9.4rem;
+  overflow: hidden;
+  row-gap: 3.2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.4rem 1.6rem rgba(0, 0, 0, 0.1599999964);
+  background-color: #ffffff;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8748-iBb {
+  box-sizing: border-box;
+  padding: 1.15rem 9.2rem 1.05rem 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #14a800;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8748-iBb .vector-S7b {
+  margin: 0rem 2.4rem 0.1rem 0rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8748-iBb .dashboard-xbj {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8749-Upy {
+  margin: 0rem 12.2rem 0rem 2.4rem;
+  box-sizing: border-box;
+  padding: 0.06rem 0rem 0.06rem 0.23rem;
+  width: calc(100% - 14.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8749-Upy .budget-BUV {
+  margin-right: 2.6346rem;
+  width: 1.9356rem;
+  height: 2.28rem;
+  position: relative;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8749-Upy .budget-vBB {
+  margin-top: 0.1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #21334f;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8750-FjF {
+  margin: 0rem 4.7rem 0rem 2.4rem;
+  box-sizing: border-box;
+  padding-left: 0.2517rem;
+  width: calc(100% - 7.1rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8750-FjF .check-box-zB3 {
+  margin-right: 2.6516rem;
+  width: 1.8967rem;
+  height: 2.4rem;
+  position: relative;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8750-FjF .budget-category-Xwf {
+  margin-top: 0.1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #21334f;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8751-GeM {
+  margin: 0rem 12.4rem 0rem 2.4rem;
+  box-sizing: border-box;
+  padding: 0.25rem 0rem 0.15rem 0.375rem;
+  width: calc(100% - 14.8rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8751-GeM .logout-NhP {
+  margin: 0rem 2.775rem 0.1rem 0rem;
+  width: 1.65rem;
+  height: 1.65rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-budget-decapay-8vu .frame-8745-E1X .frame-8751-GeM .logout-hzZ {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #21334f;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}

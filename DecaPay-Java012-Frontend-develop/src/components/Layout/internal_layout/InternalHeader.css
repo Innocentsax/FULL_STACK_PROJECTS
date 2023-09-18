@@ -1,0 +1,15 @@
+.large-button {
+    font-size: 2rem;
+    padding: 10px 20px;
+
+}
+
+.dropdown-item {
+    background-color: green;
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: lightgreen;
+    color: white;
+}
