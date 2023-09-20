@@ -1,0 +1,81 @@
+Index: ../pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n    <modelVersion>4.0.0</modelVersion>\n    <parent>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-parent</artifactId>\n        <version>3.1.1</version>\n        <relativePath/> <!-- lookup parent from repository -->\n    </parent>\n    <groupId>com.decagon</groupId>\n    <artifactId>easy-lend-BE-14</artifactId>\n    <version>0.0.1-SNAPSHOT</version>\n    <name>easy-lend-BE-14</name>\n    <description>easy-lend-BE-14</description>\n    <packaging>pom</packaging>\n<!--    modules-->\n    <modules>\n        <module>payload</module>\n        <module>app</module>\n        <module>loan_selection_agreement_service</module>\n        <module>loan_agreement_service</module>\n\n    </modules>\n\n    <properties>\n        <java.version>17</java.version>\n        <maven.compiler.source>17</maven.compiler.source>\n        <maven.compiler.target>17</maven.compiler.target>\n        <spring.boot.maven.plugin.version>3.1.1</spring.boot.maven.plugin.version>\n        <spring.boot.dependencies.version>3.1.1</spring.boot.dependencies.version>\n        <spring-boot.version>3.1.1</spring-boot.version>\n        <lombok.version>1.18.28</lombok.version>\n        <payload.version>${project.version}</payload.version>\n    </properties>\n\n    <dependencyManagement>\n        <dependencies>\n            <dependency>\n                <groupId>org.springframework.boot</groupId>\n                <artifactId>spring-boot-dependencies</artifactId>\n                <version>${spring.boot.dependencies.version}</version>\n                <scope>import</scope>\n                <type>pom </type>\n            </dependency>\n\n            <!-- INTERNAL DEPENDENCIES START -->\n            <dependency>\n                <groupId>com.decagon</groupId>\n                <artifactId>payload</artifactId>\n                <version>${payload.version}</version>\n            </dependency>\n            <!-- INTERNAL DEPENDENCIES END-->\n        </dependencies>\n    </dependencyManagement>\n\n    <dependencies>\n\n        <dependency>\n            <groupId>org.projectlombok</groupId>\n            <artifactId>lombok</artifactId>\n            <version>${lombok.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-starter-test</artifactId>\n            <scope>test</scope>\n            <exclusions>\n                <exclusion>\n                    <artifactId>snakeyaml</artifactId>\n                    <groupId>org.yaml</groupId>\n                </exclusion>\n            </exclusions>\n        </dependency>\n    </dependencies>\n\n    <build>\n        <plugins>\n            <plugin>\n                <groupId>org.springframework.boot</groupId>\n                <artifactId>spring-boot-maven-plugin</artifactId>\n                <version>${spring.boot.maven.plugin.version}</version>\n            </plugin>\n        </plugins>\n    </build>\n\n</project>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../pom.xml b/../pom.xml
+--- a/../pom.xml	
++++ b/../pom.xml	
+@@ -18,7 +18,6 @@
+     <modules>
+         <module>payload</module>
+         <module>app</module>
+-        <module>loan_selection_agreement_service</module>
+         <module>loan_agreement_service</module>
+ 
+     </modules>
+Index: src/main/java/com/decagon/loanAgreementSelection/models/LoanAgreement.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanAgreementSelection.models;\n\nimport jakarta.persistence.*;\nimport lombok.AllArgsConstructor;\nimport lombok.Data;\nimport lombok.NoArgsConstructor;\n\nimport java.math.BigDecimal;\nimport java.sql.Timestamp;\n\n@Entity\n@AllArgsConstructor\n@NoArgsConstructor\n@Data\n@Table(name = \"LoanAgreement\")\n    public class LoanAgreement {\n\n        @Id\n        @GeneratedValue(strategy = GenerationType.IDENTITY)\n        @Column(name = \"agreement_id\")\n        private Integer agreementId;\n\n        @Column(name = \"loan_id\")\n        private Integer loanId;\n\n        @Column(name = \"borrower_id\")\n        private Integer borrowerId;\n\n        @Column(name = \"lender_id\")\n        private Integer lenderId;\n\n        @Column(name = \"interest_rate\")\n        private BigDecimal interestRate;\n\n        @Column(name = \"repayment_schedule\")\n        private String repaymentSchedule;\n\n        @Column(name = \"conditions\")\n        private String conditions;\n\n        @Column(name = \"created_at\")\n        private Timestamp createdAt;\n\n        @Column(name = \"updated_at\")\n        private Timestamp updatedAt;\n\n\n\n}\n
+===================================================================
+diff --git a/src/main/java/com/decagon/loanAgreementSelection/models/LoanAgreement.java b/src/main/java/com/decagon/loanAgreementSelection/models/LoanAgreement.java
+--- a/src/main/java/com/decagon/loanAgreementSelection/models/LoanAgreement.java	
++++ b/src/main/java/com/decagon/loanAgreementSelection/models/LoanAgreement.java	
+@@ -18,16 +18,16 @@
+         @Id
+         @GeneratedValue(strategy = GenerationType.IDENTITY)
+         @Column(name = "agreement_id")
+-        private Integer agreementId;
++        private Long agreementId;
+ 
+         @Column(name = "loan_id")
+-        private Integer loanId;
++        private Long loanId;
+ 
+         @Column(name = "borrower_id")
+-        private Integer borrowerId;
++        private Long borrowerId;
+ 
+         @Column(name = "lender_id")
+-        private Integer lenderId;
++        private Long lenderId;
+ 
+         @Column(name = "interest_rate")
+         private BigDecimal interestRate;
+Index: src/main/java/com/decagon/loanAgreementSelection/controllers/BorrowerController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanAgreementSelection.controllers;\n\nimport com.decagon.loanAgreementSelection.services.BorrowerService;\nimport lombok.RequiredArgsConstructor;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.*;\n\n@RestController\n@RequiredArgsConstructor\n@RequestMapping(\"/api/v1/borrower\")\npublic class BorrowerController {\n    private final BorrowerService service;\n\n    @GetMapping(\"/select\")\n    public ResponseEntity<String> selectLoan(@RequestParam(\"loanId\") Integer loanId) {\n        // Your code to select the loan based on the loanId\n        service.selectLoan(loanId);\n        return ResponseEntity.ok(\"Loan selected successfully\");\n    }\n\n}\n
+===================================================================
+diff --git a/src/main/java/com/decagon/loanAgreementSelection/controllers/BorrowerController.java b/src/main/java/com/decagon/loanAgreementSelection/controllers/BorrowerController.java
+--- a/src/main/java/com/decagon/loanAgreementSelection/controllers/BorrowerController.java	
++++ b/src/main/java/com/decagon/loanAgreementSelection/controllers/BorrowerController.java	
+@@ -12,7 +12,7 @@
+     private final BorrowerService service;
+ 
+     @GetMapping("/select")
+-    public ResponseEntity<String> selectLoan(@RequestParam("loanId") Integer loanId) {
++    public ResponseEntity<String> selectLoan(@RequestParam("loanId") Long loanId) {
+         // Your code to select the loan based on the loanId
+         service.selectLoan(loanId);
+         return ResponseEntity.ok("Loan selected successfully");
+Index: src/main/java/com/decagon/loanAgreementSelection/services/BorrowerService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanAgreementSelection.services;\n\npublic interface BorrowerService {\n    void selectLoan(Integer loanId);\n}\n
+===================================================================
+diff --git a/src/main/java/com/decagon/loanAgreementSelection/services/BorrowerService.java b/src/main/java/com/decagon/loanAgreementSelection/services/BorrowerService.java
+--- a/src/main/java/com/decagon/loanAgreementSelection/services/BorrowerService.java	
++++ b/src/main/java/com/decagon/loanAgreementSelection/services/BorrowerService.java	
+@@ -1,5 +1,7 @@
+ package com.decagon.loanAgreementSelection.services;
+ 
++import com.decagon.loanAgreementSelection.dtos.response.LoanResponse;
++
+ public interface BorrowerService {
+-    void selectLoan(Integer loanId);
++    LoanResponse selectLoan(Long loanId);
+ }

@@ -1,0 +1,920 @@
+Index: src/main/java/com/decagon/loanagreementservice/services/serviceImpl/BorrowerServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanagreementservice.services.serviceImpl;\n\nimport com.decagon.loanagreementservice.dtos.request.LoanAgreementDto;\nimport com.decagon.loanagreementservice.models.LoanAgreement;\nimport com.decagon.loanagreementservice.models.LoanOffer;\nimport com.decagon.loanagreementservice.models.Status;\nimport com.decagon.loanagreementservice.repository.AgreementRepository;\nimport com.decagon.loanagreementservice.services.LoanOfferClient;\nimport com.decagon.loanagreementservice.services.BorrowerService;\nimport lombok.RequiredArgsConstructor;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.stereotype.Service;\n\nimport java.util.Objects;\nimport java.util.Random;\n\n@RequiredArgsConstructor\n@Service\npublic class BorrowerServiceImpl implements BorrowerService {\n    private final LoanOfferClient loanOfferClient;\n    private final AgreementRepository repository;\n    Random random = new Random();\n    long randomLong = random.nextLong(100);\n    @Override\n    public LoanAgreementDto selectLoanOffer(Long loanId) {\n            LoanOffer loanOffer = getLoanOffer(loanId);\n            if(Objects.isNull(loanOffer)){\n                throw new RuntimeException(\"loan offer \");\n            }\n            // todo Set the status of the loan offer to pending. NB the loan application entity is present in a different service\n            LoanAgreement loanAgreement = new LoanAgreement();\n            loanAgreement.setInterestRate(loanOffer.getInterestRate());\n            // todo get the id of the logged in user who in this case is a borrower and replace randomLong.\n            loanAgreement.setBorrowerId(randomLong);\n            loanAgreement.setLenderId(loanOffer.getLenderId());\n            loanAgreement.setStatus(Status.PENDING);\n            loanAgreement.setLoanId(loanOffer.getLoanId());\n            loanAgreement.setRepaymentSchedule(loanOffer.getRepaymentSchedule());\n            repository.save(loanAgreement);\n        //            BeanUtils.copyProperties(loanAgreement, loanAgreementDto);\n            return new LoanAgreementDto(loanAgreement);\n     }\n\n\n\n\n    private LoanOffer getLoanOffer(Long offerId) {\n        // todo Use ur FeignClient to call the loanOffer service\n        //fei\n        ResponseEntity<LoanOffer> response = loanOfferClient.getLoanOffer(offerId);\n        if (response.getStatusCode().is2xxSuccessful()) {\n            return response.getBody();\n        } else {\n            // Handle error case\n            throw new RuntimeException(\"Failed to retrieve loan offer.\");\n        }\n    }\n\n\n    }\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/BorrowerServiceImpl.java b/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/BorrowerServiceImpl.java
+--- a/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/BorrowerServiceImpl.java	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/BorrowerServiceImpl.java	(date 1690293770614)
+@@ -1,52 +1,70 @@
+ package com.decagon.loanagreementservice.services.serviceImpl;
+ 
+ import com.decagon.loanagreementservice.dtos.request.LoanAgreementDto;
++import com.decagon.loanagreementservice.exceptions.InvalidTokenException;
++import com.decagon.loanagreementservice.exceptions.OfferNotFoundException;
++import com.decagon.loanagreementservice.exceptions.UserNotAuthorizedException;
+ import com.decagon.loanagreementservice.models.LoanAgreement;
+ import com.decagon.loanagreementservice.models.LoanOffer;
+ import com.decagon.loanagreementservice.models.Status;
+ import com.decagon.loanagreementservice.repository.AgreementRepository;
++import com.decagon.loanagreementservice.security_config.JwtUtils;
+ import com.decagon.loanagreementservice.services.LoanOfferClient;
+ import com.decagon.loanagreementservice.services.BorrowerService;
++import jakarta.servlet.http.HttpServletRequest;
+ import lombok.RequiredArgsConstructor;
++import lombok.extern.slf4j.Slf4j;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.stereotype.Service;
+ 
+ import java.util.Objects;
+-import java.util.Random;
+ 
+ @RequiredArgsConstructor
+ @Service
+ public class BorrowerServiceImpl implements BorrowerService {
+     private final LoanOfferClient loanOfferClient;
+     private final AgreementRepository repository;
+-    Random random = new Random();
+-    long randomLong = random.nextLong(100);
++    private final JwtUtils jwtUtils;
++
++
++
+     @Override
+-    public LoanAgreementDto selectLoanOffer(Long loanId) {
++    public LoanAgreementDto selectLoanOffer(Long loanId, HttpServletRequest request) {
++
++        String auth = request.getHeader("Authorization");
++        String token = auth.substring(7);
++        if(jwtUtils.getUserTypeFromToken(token) != "BORROWER"){
++            throw  new UserNotAuthorizedException("permission denied");
++        }
++        String userId = jwtUtils.getUserIdFromToken(token);
++        System.out.println("user Id from controller " + userId +">>>>>>>>>>>>");
++        if (userId == null) {
++
++           throw new InvalidTokenException("UserId is null");
++        }
+             LoanOffer loanOffer = getLoanOffer(loanId);
+-            if(Objects.isNull(loanOffer)){
+-                throw new RuntimeException("loan offer ");
++            if (Objects.isNull(loanOffer)) {
++                throw new OfferNotFoundException("loan offer not found");
+             }
+             // todo Set the status of the loan offer to pending. NB the loan application entity is present in a different service
+             LoanAgreement loanAgreement = new LoanAgreement();
+             loanAgreement.setInterestRate(loanOffer.getInterestRate());
+             // todo get the id of the logged in user who in this case is a borrower and replace randomLong.
+-            loanAgreement.setBorrowerId(randomLong);
++            loanAgreement.setBorrowerId(userId);
+             loanAgreement.setLenderId(loanOffer.getLenderId());
+             loanAgreement.setStatus(Status.PENDING);
+             loanAgreement.setLoanId(loanOffer.getLoanId());
+             loanAgreement.setRepaymentSchedule(loanOffer.getRepaymentSchedule());
+             repository.save(loanAgreement);
+-        //            BeanUtils.copyProperties(loanAgreement, loanAgreementDto);
++            //            BeanUtils.copyProperties(loanAgreement, loanAgreementDto);
+             return new LoanAgreementDto(loanAgreement);
+-     }
++        }
+ 
+ 
+ 
+ 
+-    private LoanOffer getLoanOffer(Long offerId) {
++    public LoanOffer getLoanOffer(Long offerId) {
+         // todo Use ur FeignClient to call the loanOffer service
+-        //fei
+         ResponseEntity<LoanOffer> response = loanOfferClient.getLoanOffer(offerId);
+         if (response.getStatusCode().is2xxSuccessful()) {
+             return response.getBody();
+Index: src/main/java/com/decagon/loanagreementservice/models/LoanAgreement.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanagreementservice.models;\n\nimport jakarta.persistence.*;\nimport lombok.AllArgsConstructor;\nimport lombok.Data;\nimport lombok.NoArgsConstructor;\nimport org.hibernate.annotations.CreationTimestamp;\nimport org.hibernate.annotations.UpdateTimestamp;\n\nimport java.sql.Timestamp;\nimport java.time.LocalDateTime;\n\nimport static com.decagon.loanagreementservice.models.Status.NEW;\n\n@Entity\n@AllArgsConstructor\n@NoArgsConstructor\n@Data\n@Table(name = \"loan_Agreement\")\n    public class LoanAgreement {\n\n        @Id\n        @GeneratedValue(strategy = GenerationType.IDENTITY)\n        @Column(name = \"agreement_id\")\n        private Long agreementId;\n\n        @Column(name = \"loan_id\")\n        private Long loanId;\n        @Column(name = \"borrower_id\")\n        private Long borrowerId;\n\n        @Column(name = \"lender_id\")\n        private Long lenderId;\n\n        @Column(name = \"interest\")\n        private double interestRate;\n\n        @Column(name = \"repayment_schedule\")\n        private String repaymentSchedule;\n        @Enumerated(EnumType.STRING)\n        private Status status = NEW;\n\n        @Column(name = \"conditions\")\n        private String conditions;\n\n        @Column(name = \"created_at\")\n        @CreationTimestamp\n        private LocalDateTime createdAt;\n\n        @Column(name = \"updated_at\")\n        @UpdateTimestamp\n        private Timestamp updatedAt;\n\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/decagon/loanagreementservice/models/LoanAgreement.java b/src/main/java/com/decagon/loanagreementservice/models/LoanAgreement.java
+--- a/src/main/java/com/decagon/loanagreementservice/models/LoanAgreement.java	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/java/com/decagon/loanagreementservice/models/LoanAgreement.java	(date 1690115045531)
+@@ -9,6 +9,7 @@
+ 
+ import java.sql.Timestamp;
+ import java.time.LocalDateTime;
++import java.util.UUID;
+ 
+ import static com.decagon.loanagreementservice.models.Status.NEW;
+ 
+@@ -27,10 +28,10 @@
+         @Column(name = "loan_id")
+         private Long loanId;
+         @Column(name = "borrower_id")
+-        private Long borrowerId;
++        private String borrowerId;
+ 
+         @Column(name = "lender_id")
+-        private Long lenderId;
++        private String lenderId;
+ 
+         @Column(name = "interest")
+         private double interestRate;
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n# MySQL Database Configuration\nspring.datasource.url=jdbc:mysql://localhost:3307/Loan-selection-mysql\nspring.datasource.username=root\nspring.datasource.password=database\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\n\n\n\n# Hibernate Configuration\nspring.jpa.database-platform=org.hibernate.dialect.MySQL57Dialect\nspring.jpa.show-sql=true\nspring.jpa.generate-ddl=true\nspring.jpa.hibernate.ddl-auto=create\nloan-offer-api.name=Loan-offer\nloan-offer-api.base-url=https://8bc59347-66e0-4c0b-9b68-b487233ee42d.mock.pstmn.io\n\n\n## Flyway Configuration\n#spring.flyway.url=jdbc:mysql://localhost:3306/your_database_name\n#spring.flyway.user=your_username\n#spring.flyway.password=your_password\n#spring.flyway.locations=classpath:db/migration\n#\n## Logging Configuration\n#logging.level.org.springframework=INFO\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/resources/application.properties	(date 1690291301707)
+@@ -13,7 +13,11 @@
+ spring.jpa.generate-ddl=true
+ spring.jpa.hibernate.ddl-auto=create
+ loan-offer-api.name=Loan-offer
+-loan-offer-api.base-url=https://8bc59347-66e0-4c0b-9b68-b487233ee42d.mock.pstmn.io
++loan-offer-api.base-url=https://d0bff4e3-2a47-4ced-9964-2b16c82860cb.mock.pstmn.io/
++
++
++application.jwt.security.secretKey = 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
++application.jwt.security.expiration = 7200000
+ 
+ 
+ ## Flyway Configuration
+Index: src/main/java/com/decagon/loanagreementservice/services/LoanOfferClient.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanagreementservice.services;\n\nimport com.decagon.loanagreementservice.models.LoanOffer;\nimport org.springframework.cloud.openfeign.FeignClient;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.stereotype.Component;\nimport org.springframework.web.bind.annotation.GetMapping;\nimport org.springframework.web.bind.annotation.PathVariable;\n@Component\n@FeignClient(name = \"${loan-offer-api.name}\", url = \"${loan-offer-api.base-url}\")\npublic interface LoanOfferClient {\n    @GetMapping(\"/accept_offer/{offerId}\")\n    ResponseEntity<LoanOffer> getLoanOffer(@PathVariable(\"offerId\")Long offerId);\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/decagon/loanagreementservice/services/LoanOfferClient.java b/src/main/java/com/decagon/loanagreementservice/services/LoanOfferClient.java
+--- a/src/main/java/com/decagon/loanagreementservice/services/LoanOfferClient.java	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/java/com/decagon/loanagreementservice/services/LoanOfferClient.java	(date 1690291322463)
+@@ -1,6 +1,7 @@
+ package com.decagon.loanagreementservice.services;
+ 
+ import com.decagon.loanagreementservice.models.LoanOffer;
++import jakarta.servlet.http.HttpServletRequest;
+ import org.springframework.cloud.openfeign.FeignClient;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.stereotype.Component;
+@@ -9,6 +10,8 @@
+ @Component
+ @FeignClient(name = "${loan-offer-api.name}", url = "${loan-offer-api.base-url}")
+ public interface LoanOfferClient {
+-    @GetMapping("/accept_offer/{offerId}")
+-    ResponseEntity<LoanOffer> getLoanOffer(@PathVariable("offerId")Long offerId);
++
++    @GetMapping("/getloan/{offerId}")
++
++    ResponseEntity<LoanOffer> getLoanOffer(@PathVariable("offerId") Long loanId);
+ }
+Index: src/main/java/com/decagon/loanagreementservice/services/serviceImpl/LenderServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanagreementservice.services.serviceImpl;\n\nimport com.decagon.loanagreementservice.dtos.request.LoanAgreementDto;\nimport com.decagon.loanagreementservice.models.LoanAgreement;\nimport com.decagon.loanagreementservice.repository.AgreementRepository;\nimport com.decagon.loanagreementservice.services.LenderService;\nimport lombok.RequiredArgsConstructor;\nimport org.springframework.stereotype.Service;\n\n\n@Service\n@RequiredArgsConstructor\npublic class LenderServiceImpl implements LenderService {\n    private final AgreementRepository agreementRepository;\n\n    @Override\n    public LoanAgreementDto selectLoanRequest(Long loanId) {\n    // todo fetch the loan by the loanId and call the disbursement service\n        LoanAgreement loanAgreement = new LoanAgreement();\n    return new LoanAgreementDto(loanAgreement);\n    }\n\n\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/LenderServiceImpl.java b/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/LenderServiceImpl.java
+--- a/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/LenderServiceImpl.java	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/LenderServiceImpl.java	(date 1690293770643)
+@@ -1,26 +1,44 @@
+ package com.decagon.loanagreementservice.services.serviceImpl;
+ 
+ import com.decagon.loanagreementservice.dtos.request.LoanAgreementDto;
++import com.decagon.loanagreementservice.exceptions.AgreementNotFoundException;
++import com.decagon.loanagreementservice.exceptions.UserNotAuthorizedException;
+ import com.decagon.loanagreementservice.models.LoanAgreement;
++import com.decagon.loanagreementservice.models.Status;
+ import com.decagon.loanagreementservice.repository.AgreementRepository;
++import com.decagon.loanagreementservice.security_config.JwtUtils;
+ import com.decagon.loanagreementservice.services.LenderService;
++import jakarta.servlet.http.HttpServletRequest;
+ import lombok.RequiredArgsConstructor;
+ import org.springframework.stereotype.Service;
+ 
++import java.util.Objects;
++
+ 
+ @Service
+ @RequiredArgsConstructor
+ public class LenderServiceImpl implements LenderService {
+     private final AgreementRepository agreementRepository;
+ 
++    private final JwtUtils jwtUtils;
++
+     @Override
+-    public LoanAgreementDto selectLoanRequest(Long loanId) {
+-    // todo fetch the loan by the loanId and call the disbursement service
+-        LoanAgreement loanAgreement = new LoanAgreement();
++    public LoanAgreementDto selectLoanRequest(Long loanId, HttpServletRequest request) {
++        String auth = request.getHeader("Authorization");
++        String token = auth.substring(7);
++        if(jwtUtils.getUserTypeFromToken(token) != "LENDER"){
++            throw  new UserNotAuthorizedException("permission denied");
++        }
++    LoanAgreement loanAgreement = agreementRepository.findByLoanId(loanId).get();
++    if(Objects.isNull(loanAgreement)){
++        throw new AgreementNotFoundException("Loan Agreement not found");
++    }
++        loanAgreement.setStatus(Status.APPROVED);
++    // todo use feign client to call the disbursement service
++
+     return new LoanAgreementDto(loanAgreement);
+     }
+ 
+ 
+ 
+-
+ }
+Index: loan_agreement_service.iml
+===================================================================
+diff --git a/loan_agreement_service.iml b/loan_agreement_service.iml
+deleted file mode 100644
+--- a/loan_agreement_service.iml	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ /dev/null	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
+@@ -1,143 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+-  <component name="FacetManager">
+-    <facet type="web" name="Web">
+-      <configuration>
+-        <webroots />
+-      </configuration>
+-    </facet>
+-    <facet type="jpa" name="JPA">
+-      <configuration>
+-        <setting name="validation-enabled" value="true" />
+-        <setting name="provider-name" value="Hibernate" />
+-        <datasource-mapping>
+-          <factory-entry name="loan_agreement_service" />
+-        </datasource-mapping>
+-        <naming-strategy-map />
+-      </configuration>
+-    </facet>
+-    <facet type="Spring" name="Spring">
+-      <configuration />
+-    </facet>
+-  </component>
+-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
+-    <output url="file://$MODULE_DIR$/target/classes" />
+-    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+-    <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+-      <excludeFolder url="file://$MODULE_DIR$/target" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-context:6.0.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.4.8" level="project" />
+-    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.4.8" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.20.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.20.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:2.0.7" level="project" />
+-    <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:2.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-core:6.0.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-jcl:6.0.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.33" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.19" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:5.0.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:6.0.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.hibernate.orm:hibernate-core:6.2.5.Final" level="project" />
+-    <orderEntry type="library" name="Maven: jakarta.persistence:jakarta.persistence-api:3.1.0" level="project" />
+-    <orderEntry type="library" name="Maven: jakarta.transaction:jakarta.transaction-api:2.0.1" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jboss.logging:jboss-logging:3.5.1.Final" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.hibernate.common:hibernate-commons-annotations:6.0.6.Final" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: io.smallrye:jandex:3.0.5" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.fasterxml:classmate:1.5.1" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.jaxb:jaxb-runtime:4.0.3" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.jaxb:jaxb-core:4.0.3" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.angus:angus-activation:2.0.1" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.jaxb:txw2:4.0.3" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.istack:istack-commons-runtime:4.1.2" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: jakarta.inject:jakarta.inject-api:2.0.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.antlr:antlr4-runtime:4.10.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-jpa:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-orm:6.0.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-tx:6.0.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-beans:6.0.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:2.0.7" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-aspects:6.0.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-security:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-aop:6.0.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:6.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:6.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:6.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:6.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-expression:6.0.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.15.2" level="project" />
+-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.15.2" level="project" />
+-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.15.2" level="project" />
+-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.15.2" level="project" />
+-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.2" level="project" />
+-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.15.2" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:3.1.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:10.1.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.10" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-web:6.0.10" level="project" />
+-    <orderEntry type="library" name="Maven: io.micrometer:micrometer-observation:1.11.1" level="project" />
+-    <orderEntry type="library" name="Maven: io.micrometer:micrometer-commons:1.11.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:6.0.10" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-core:5.3.1" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: net.bytebuddy:byte-buddy:1.14.5" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: net.bytebuddy:byte-buddy-agent:1.14.5" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.objenesis:objenesis:3.3" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.mysql:mysql-connector-j:8.0.33" level="project" />
+-    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.28" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:3.1.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:3.1.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:3.1.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: com.jayway.jsonpath:json-path:2.8.0" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:4.0.0" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: jakarta.activation:jakarta.activation-api:2.1.2" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: net.minidev:json-smart:2.4.11" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: net.minidev:accessors-smart:2.4.11" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm:9.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.assertj:assertj-core:3.24.2" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest:2.2" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter:5.9.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.9.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.9.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.2" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-params:5.9.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.9.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.9.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-junit-jupiter:5.3.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.skyscreamer:jsonassert:1.5.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:6.0.10" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.9.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-testcontainers:3.1.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:testcontainers:1.18.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13.2" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:2.2" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.apache.commons:commons-compress:1.23.0" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.rnorth.duct-tape:duct-tape:1.0.8" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains:annotations:17.0.0" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: com.github.docker-java:docker-java-api:3.3.0" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: com.github.docker-java:docker-java-transport-zerodep:3.3.0" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: com.github.docker-java:docker-java-transport:3.3.0" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: net.java.dev.jna:jna:5.12.1" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:junit-jupiter:1.18.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:mysql:1.18.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:jdbc:1.18.3" level="project" />
+-    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:database-commons:1.18.3" level="project" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: target/maven-archiver/pom.properties
+===================================================================
+diff --git a/target/maven-archiver/pom.properties b/target/maven-archiver/pom.properties
+deleted file mode 100644
+--- a/target/maven-archiver/pom.properties	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ /dev/null	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
+@@ -1,3 +0,0 @@
+-artifactId=loan_agreement_service
+-groupId=com.easyLend
+-version=0.0.1-SNAPSHOT
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_15_07_2023__09_15__Changes_1.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_07_2023__09_15__Changes_1.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_07_2023__09_15__Changes_1.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_07_2023__09_15__Changes_1.xml	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ /dev/null	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_15_07_2023,_09_15_[Changes]1" date="1689408928171" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_07_2023,_09_15_[Changes]1/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 15/07/2023, 09:15 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_15_07_2023,_09_15_[Changes]1/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_07_2023,_09_15_[Changes]1/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_07_2023,_09_15_[Changes]1/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_07_2023,_09_15_[Changes]1/shelved.patch	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ /dev/null	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
+@@ -1,43 +0,0 @@
+-Index: ../untitled/src/main/java/com/decagon/Main.java
+-===================================================================
+-diff --git a/../untitled/src/main/java/com/decagon/Main.java b/../untitled/src/main/java/com/decagon/Main.java
+-deleted file mode 100644
+---- a/../untitled/src/main/java/com/decagon/Main.java	
+-+++ /dev/null	
+-@@ -1,7 +0,0 @@
+--package com.decagon;
+--
+--public class Main {
+--    public static void main(String[] args) {
+--        System.out.println("Hello world!");
+--    }
+--}
+-\ No newline at end of file
+-Index: ../untitled/pom.xml
+-===================================================================
+-diff --git a/../untitled/pom.xml b/../untitled/pom.xml
+-deleted file mode 100644
+---- a/../untitled/pom.xml	
+-+++ /dev/null	
+-@@ -1,20 +0,0 @@
+--<?xml version="1.0" encoding="UTF-8"?>
+--<project xmlns="http://maven.apache.org/POM/4.0.0"
+--         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+--         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+--    <modelVersion>4.0.0</modelVersion>
+--    <parent>
+--        <groupId>com.decagon</groupId>
+--        <artifactId>easy-lend-BE-14</artifactId>
+--        <version>0.0.1-SNAPSHOT</version>
+--    </parent>
+--
+--    <artifactId>untitled</artifactId>
+--
+--    <properties>
+--        <maven.compiler.source>17</maven.compiler.source>
+--        <maven.compiler.target>17</maven.compiler.target>
+--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+--    </properties>
+--
+--</project>
+-\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"07627e74-d02f-4731-a1a7-835a0cecd8db\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/../.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/compiler.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/loan_agreement_service.iml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/decagon/LoanAgreementService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/decagon/LoanAgreementSelectionApplication.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/controllers/BorrowerController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/controllers/BorrowerController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/controllers/LenderController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/controllers/LenderController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/models/LoanAgreement.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/models/LoanAgreement.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/repository/LoanAgreementRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/repository/AgreementRepository.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/services/AgreementService.java\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/services/BorrowerService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/services/BorrowerService.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/application.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/application.properties\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/application.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/application.properties\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/decagon/LoanAgreementService.class\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/controllers/BorrowerController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/controllers/BorrowerController.class\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/controllers/LenderController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/controllers/LenderController.class\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/models/LoanAgreement.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/models/LoanAgreement.class\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/repository/LoanAgreementRepository.class\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/services/AgreementService.class\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/services/BorrowerService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/services/BorrowerService.class\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Enum\" />\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"useMavenConfig\" value=\"true\" />\n      </MavenGeneralSettings>\n    </option>\n    <option name=\"importingSettings\">\n      <MavenImportingSettings>\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\n      </MavenImportingSettings>\n    </option>\n  </component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2SR5cZlt0HYRkMDvOnKl3AeY4PO\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,\n    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,\n    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,\n    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/decagon/IdeaProjects/easy-lend-14-updated/loan_agreement_service/pom.xml&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,\n    &quot;spring.configuration.checksum&quot;: &quot;cc7bf2e9854aa28b28cd0158732ed400&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  },\n  &quot;keyToStringList&quot;: {\n    &quot;DatabaseDriversLRU&quot;: [\n      &quot;mysql&quot;\n    ]\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CreateClassDialog.RecentsKey\">\n      <recent name=\"com.decagon.loanAgreementSelection.services\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"LoanAgreementSelectionApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"loan_agreement_service\" />\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.decagon.LoanAgreementSelectionApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.decagon.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Spring Boot.LoanAgreementSelectionApplication\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"07627e74-d02f-4731-a1a7-835a0cecd8db\" name=\"Changes\" comment=\"\" />\n      <created>1689096632910</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1689096632910</updated>\n      <workItem from=\"1689409723299\" duration=\"4516000\" />\n      <workItem from=\"1689459217294\" duration=\"33848000\" />\n      <workItem from=\"1689691869229\" duration=\"1677000\" />\n      <workItem from=\"1689694321921\" duration=\"7740000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TerminalProjectNonSharedOptionsProvider\">\n    <envs>\n      <env key=\"Path\" value=\"C:\\Program Files\\Java\\jdk-17\\bin;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\PuTTY\\;C:\\Users\\olorunlexe\\scoop\\apps\\maven\\current\\bin;C:\\Users\\olorunlexe\\scoop\\shims;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\olorunlexe\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\olorunlexe\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Azure Data Studio\\bin;C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.3.3\\bin\" />\n    </envs>\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/.idea/workspace.xml	(date 1690299842287)
+@@ -4,29 +4,43 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="07627e74-d02f-4731-a1a7-835a0cecd8db" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++    <list default="true" id="07627e74-d02f-4731-a1a7-835a0cecd8db" name="Changes" comment="Added borrower loan selection">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_07_2023,_09_15_[Changes]1/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_07_2023__09_15__Changes_1.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/loan_agreement_service.iml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/LoanAgreementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/LoanAgreementSelectionApplication.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/controllers/BorrowerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/controllers/BorrowerController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/controllers/LenderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/controllers/LenderController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/models/LoanAgreement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/models/LoanAgreement.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/repository/LoanAgreementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/repository/AgreementRepository.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/services/AgreementService.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/services/BorrowerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanAgreementSelection/services/BorrowerService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/controllers/BorrowerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/controllers/BorrowerController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/controllers/LenderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/controllers/LenderController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/dtos/request/LoanAgreementDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/dtos/request/LoanAgreementDto.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/models/LoanAgreement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/models/LoanAgreement.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/models/LoanOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/models/LoanOffer.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/models/LoanRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/models/LoanRequest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/services/BorrowerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/services/BorrowerService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/services/LenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/services/LenderService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/services/LoanOfferClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/services/LoanOfferClient.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/BorrowerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/BorrowerServiceImpl.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/LenderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/decagon/loanagreementservice/services/serviceImpl/LenderServiceImpl.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/LoanAgreementService.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/controllers/BorrowerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/controllers/BorrowerController.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/controllers/LenderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/controllers/LenderController.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/models/LoanAgreement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/models/LoanAgreement.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/repository/LoanAgreementRepository.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/services/AgreementService.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/services/BorrowerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/services/BorrowerService.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/LoanAgreementSelectionApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/decagon/LoanAgreementSelectionApplication.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/EasyLend14Application.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/controllers/BorrowerController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/controllers/LenderController.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/models/LoanAgreement.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/models/LoanOffer.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/models/LoanRequest.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/models/Status.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/repository/AgreementRepository.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/services/ApiClient.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/services/BorrowerService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/services/LenderService.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/services/serviceImpl/BorrowerServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/decagon/loanAgreementSelection/services/serviceImpl/LenderServiceImpl.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/loan_agreement_service-0.0.1-SNAPSHOT.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -36,7 +50,6 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="Enum" />
+         <option value="Interface" />
+         <option value="Class" />
+       </list>
+@@ -60,9 +73,6 @@
+       </MavenImportingSettings>
+     </option>
+   </component>
+-  <component name="ProblemsViewState">
+-    <option name="selectedTabId" value="CurrentFile" />
+-  </component>
+   <component name="ProjectId" id="2SR5cZlt0HYRkMDvOnKl3AeY4PO" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+@@ -76,26 +86,19 @@
+     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+     &quot;last_opened_file_path&quot;: &quot;/Users/decagon/IdeaProjects/easy-lend-14-updated/loan_agreement_service/pom.xml&quot;,
+     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+     &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+     &quot;spring.configuration.checksum&quot;: &quot;cc7bf2e9854aa28b28cd0158732ed400&quot;,
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+-  },
+-  &quot;keyToStringList&quot;: {
+-    &quot;DatabaseDriversLRU&quot;: [
+-      &quot;mysql&quot;
+-    ]
+   }
+ }</component>
+   <component name="RecentsManager">
+     <key name="CreateClassDialog.RecentsKey">
+-      <recent name="com.decagon.loanAgreementSelection.services" />
++      <recent name="com.decagon.loanagreementservice.exceptions" />
+     </key>
+   </component>
+   <component name="RunManager">
+@@ -126,10 +129,8 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1689096632910</updated>
+-      <workItem from="1689409723299" duration="4516000" />
+-      <workItem from="1689459217294" duration="33848000" />
+-      <workItem from="1689691869229" duration="1677000" />
+-      <workItem from="1689694321921" duration="7740000" />
++      <workItem from="1689850315750" duration="35437000" />
++      <workItem from="1690211234934" duration="20278000" />
+     </task>
+     <servers />
+   </component>
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n    <modelVersion>4.0.0</modelVersion>\n    <parent>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-parent</artifactId>\n        <version>3.1.1</version>\n        <relativePath/> <!-- lookup parent from repository -->\n    </parent>\n    <groupId>com.easyLend</groupId>\n    <artifactId>loan_agreement_service</artifactId>\n    <version>0.0.1-SNAPSHOT</version>\n    <name>loan_agreement_service</name>\n    <description>loan agreement service</description>\n    <dependencies>\n        <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter</artifactId>\n    </dependency>\n    <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-data-jpa</artifactId>\n    </dependency>\n<!--    <dependency>-->\n<!--        <groupId>org.springframework.boot</groupId>-->\n<!--        <artifactId>spring-boot-starter-security</artifactId>-->\n<!--    </dependency>-->\n        <dependency>\n            <groupId>org.springframework.cloud</groupId>\n            <artifactId>spring-cloud-starter-openfeign</artifactId>\n            <version>4.0.3</version>\n        </dependency>\n    <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-web</artifactId>\n    </dependency>\n    <!--        <dependency>-->\n    <!--            <groupId>org.flywaydb</groupId>-->\n    <!--            <artifactId>flyway-core</artifactId>-->\n    <!--        </dependency>-->\n    <!--        <dependency>-->\n    <!--            <groupId>org.flywaydb</groupId>-->\n    <!--            <artifactId>flyway-mysql</artifactId>-->\n    <!--        </dependency>-->\n\n    <dependency>\n        <groupId>org.mockito</groupId>\n        <artifactId>mockito-core</artifactId>\n        <scope>test</scope>\n    </dependency>\n\n    <dependency>\n        <groupId>com.mysql</groupId>\n        <artifactId>mysql-connector-j</artifactId>\n        <scope>runtime</scope>\n    </dependency>\n    <dependency>\n        <groupId>org.projectlombok</groupId>\n        <artifactId>lombok</artifactId>\n        <optional>true</optional>\n    </dependency>\n    <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-starter-test</artifactId>\n        <scope>test</scope>\n    </dependency>\n    <dependency>\n        <groupId>org.springframework.boot</groupId>\n        <artifactId>spring-boot-testcontainers</artifactId>\n        <scope>test</scope>\n    </dependency>\n\n    <dependency>\n        <groupId>org.testcontainers</groupId>\n        <artifactId>junit-jupiter</artifactId>\n        <scope>test</scope>\n    </dependency>\n    <dependency>\n        <groupId>org.testcontainers</groupId>\n        <artifactId>mysql</artifactId>\n        <scope>test</scope>\n    </dependency>\n    </dependencies>\n    <properties>\n        <maven.compiler.source>17</maven.compiler.source>\n        <maven.compiler.target>17</maven.compiler.target>\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\n    </properties>\n\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/pom.xml	(date 1690298070553)
+@@ -6,7 +6,7 @@
+     <parent>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-parent</artifactId>
+-        <version>3.1.1</version>
++        <version>3.0.6</version>
+         <relativePath/> <!-- lookup parent from repository -->
+     </parent>
+     <groupId>com.easyLend</groupId>
+@@ -23,10 +23,29 @@
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-data-jpa</artifactId>
+     </dependency>
+-<!--    <dependency>-->
+-<!--        <groupId>org.springframework.boot</groupId>-->
+-<!--        <artifactId>spring-boot-starter-security</artifactId>-->
+-<!--    </dependency>-->
++        <dependency>
++            <groupId>io.jsonwebtoken</groupId>
++            <artifactId>jjwt-api</artifactId>
++            <version>0.11.5</version>
++        </dependency>
++        <dependency>
++            <groupId>org.springdoc</groupId>
++            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
++            <version>2.1.0</version>
++        </dependency>
++        <dependency>
++            <groupId>io.jsonwebtoken</groupId>
++            <artifactId>jjwt-impl</artifactId>
++            <version>0.11.5</version>
++        </dependency>
++        <dependency>
++            <groupId>io.jsonwebtoken</groupId>
++            <artifactId>jjwt-jackson</artifactId>
++            <version>0.11.5</version>
++        </dependency>
++
++
++
+         <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-openfeign</artifactId>
+@@ -50,6 +69,11 @@
+         <artifactId>mockito-core</artifactId>
+         <scope>test</scope>
+     </dependency>
++        <dependency>
++            <groupId>org.springdoc</groupId>
++            <artifactId>springdoc-openapi-ui</artifactId>
++            <version>1.7.0</version>
++        </dependency>
+ 
+     <dependency>
+         <groupId>com.mysql</groupId>
+@@ -64,24 +88,13 @@
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-test</artifactId>
+-        <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-        <groupId>org.springframework.boot</groupId>
+-        <artifactId>spring-boot-testcontainers</artifactId>
+         <scope>test</scope>
+-    </dependency>
+-
+-    <dependency>
+-        <groupId>org.testcontainers</groupId>
+-        <artifactId>junit-jupiter</artifactId>
+-        <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-        <groupId>org.testcontainers</groupId>
+-        <artifactId>mysql</artifactId>
+-        <scope>test</scope>
+-    </dependency>
++   </dependency>
++        <dependency>
++            <groupId>org.hibernate.validator</groupId>
++            <artifactId>hibernate-validator</artifactId>
++            <version>8.0.1.Final</version>
++        </dependency>
+     </dependencies>
+     <properties>
+         <maven.compiler.source>17</maven.compiler.source>
+Index: src/main/java/com/decagon/loanagreementservice/models/LoanRequest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanagreementservice.models;\n\npublic class LoanRequest {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/decagon/loanagreementservice/models/LoanRequest.java b/src/main/java/com/decagon/loanagreementservice/models/LoanRequest.java
+--- a/src/main/java/com/decagon/loanagreementservice/models/LoanRequest.java	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/java/com/decagon/loanagreementservice/models/LoanRequest.java	(date 1690269773217)
+@@ -1,4 +1,21 @@
+ package com.decagon.loanagreementservice.models;
+ 
++import lombok.AllArgsConstructor;
++import lombok.Getter;
++import lombok.NoArgsConstructor;
++
++import java.time.LocalDateTime;
++import java.util.UUID;
++@Getter
++@AllArgsConstructor
++@NoArgsConstructor
+ public class LoanRequest {
++
++    private Long requestId;
++    private String BorrowerId;
++    private Long loanId;
++    private LocalDateTime createdAt;
++    private LocalDateTime updatedAt;
++    private double interestRate;
++    private String repaymentSchedule;
+ }
+Index: target/classes/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n# MySQL Database Configuration\nspring.datasource.url=jdbc:mysql://localhost:3307/Loan-selection-mysql\nspring.datasource.username=root\nspring.datasource.password=database\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\n\n\n\n# Hibernate Configuration\nspring.jpa.database-platform=org.hibernate.dialect.MySQL57Dialect\nspring.jpa.show-sql=true\nspring.jpa.generate-ddl=true\nspring.jpa.hibernate.ddl-auto=create\nloan-offer-api.name=Loan-offer\nloan-offer-api.base-url=https://8bc59347-66e0-4c0b-9b68-b487233ee42d.mock.pstmn.io\n\n\n## Flyway Configuration\n#spring.flyway.url=jdbc:mysql://localhost:3306/your_database_name\n#spring.flyway.user=your_username\n#spring.flyway.password=your_password\n#spring.flyway.locations=classpath:db/migration\n#\n## Logging Configuration\n#logging.level.org.springframework=INFO\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/target/classes/application.properties b/target/classes/application.properties
+--- a/target/classes/application.properties	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/target/classes/application.properties	(date 1690298653332)
+@@ -13,7 +13,11 @@
+ spring.jpa.generate-ddl=true
+ spring.jpa.hibernate.ddl-auto=create
+ loan-offer-api.name=Loan-offer
+-loan-offer-api.base-url=https://8bc59347-66e0-4c0b-9b68-b487233ee42d.mock.pstmn.io
++loan-offer-api.base-url=https://d0bff4e3-2a47-4ced-9964-2b16c82860cb.mock.pstmn.io/
++
++
++application.jwt.security.secretKey = 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
++application.jwt.security.expiration = 7200000
+ 
+ 
+ ## Flyway Configuration
+Index: src/main/java/com/decagon/loanagreementservice/models/LoanOffer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanagreementservice.models;\n\nimport lombok.AllArgsConstructor;\nimport lombok.Getter;\nimport lombok.NoArgsConstructor;\n\nimport java.time.LocalDateTime;\n@Getter\n@AllArgsConstructor\n@NoArgsConstructor\npublic class LoanOffer {\n    private Long offerId;\n    private Long lenderId;\n    private Long loanId;\n    private LocalDateTime createdAt;\n    private LocalDateTime updatedAt;\n    private double interestRate;\n    private String repaymentSchedule;\n\n    // Constructors, getters, and setters\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/decagon/loanagreementservice/models/LoanOffer.java b/src/main/java/com/decagon/loanagreementservice/models/LoanOffer.java
+--- a/src/main/java/com/decagon/loanagreementservice/models/LoanOffer.java	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/java/com/decagon/loanagreementservice/models/LoanOffer.java	(date 1690269773199)
+@@ -5,12 +5,14 @@
+ import lombok.NoArgsConstructor;
+ 
+ import java.time.LocalDateTime;
++import java.util.UUID;
++
+ @Getter
+ @AllArgsConstructor
+ @NoArgsConstructor
+ public class LoanOffer {
+     private Long offerId;
+-    private Long lenderId;
++    private String lenderId;
+     private Long loanId;
+     private LocalDateTime createdAt;
+     private LocalDateTime updatedAt;
+Index: src/main/java/com/decagon/loanagreementservice/services/BorrowerService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanagreementservice.services;\n\nimport com.decagon.loanagreementservice.dtos.request.LoanAgreementDto;\n\npublic interface BorrowerService {\n    LoanAgreementDto selectLoanOffer(Long loanId);\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/decagon/loanagreementservice/services/BorrowerService.java b/src/main/java/com/decagon/loanagreementservice/services/BorrowerService.java
+--- a/src/main/java/com/decagon/loanagreementservice/services/BorrowerService.java	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/java/com/decagon/loanagreementservice/services/BorrowerService.java	(date 1690289124392)
+@@ -1,7 +1,10 @@
+ package com.decagon.loanagreementservice.services;
+ 
+ import com.decagon.loanagreementservice.dtos.request.LoanAgreementDto;
++import com.decagon.loanagreementservice.models.LoanOffer;
++import jakarta.servlet.http.HttpServletRequest;
+ 
+ public interface BorrowerService {
+-    LoanAgreementDto selectLoanOffer(Long loanId);
++    LoanAgreementDto selectLoanOffer(Long loanId, HttpServletRequest request);
++    LoanOffer getLoanOffer(Long offerId);
+ }
+Index: src/main/java/com/decagon/loanagreementservice/services/LenderService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanagreementservice.services;\n\nimport com.decagon.loanagreementservice.dtos.request.LoanAgreementDto;\n\npublic interface LenderService {\n    LoanAgreementDto selectLoanRequest(Long loanId);\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/decagon/loanagreementservice/services/LenderService.java b/src/main/java/com/decagon/loanagreementservice/services/LenderService.java
+--- a/src/main/java/com/decagon/loanagreementservice/services/LenderService.java	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/java/com/decagon/loanagreementservice/services/LenderService.java	(date 1690293770713)
+@@ -1,7 +1,9 @@
+ package com.decagon.loanagreementservice.services;
+ 
+ import com.decagon.loanagreementservice.dtos.request.LoanAgreementDto;
++import jakarta.servlet.http.HttpServletRequest;
+ 
+ public interface LenderService {
+-    LoanAgreementDto selectLoanRequest(Long loanId);
++
++    LoanAgreementDto selectLoanRequest(Long loanId, HttpServletRequest request);
+ }
+Index: src/main/java/com/decagon/loanagreementservice/dtos/request/LoanAgreementDto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanagreementservice.dtos.request;\n\nimport com.decagon.loanagreementservice.models.LoanAgreement;\nimport com.decagon.loanagreementservice.models.Status;\nimport jakarta.persistence.*;\nimport lombok.AllArgsConstructor;\nimport lombok.Getter;\nimport lombok.NoArgsConstructor;\n\nimport static com.decagon.loanagreementservice.models.Status.NEW;\n\n@Getter\n@AllArgsConstructor\n@NoArgsConstructor\npublic class LoanAgreementDto {\n\n    private Long agreementId;\n\n\n    private Long loanId;\n    @Column(name = \"borrower_id\")\n    private Long borrowerId;\n\n    @Column(name = \"lender_id\")\n    private Long lenderId;\n\n    @Column(name = \"interest\")\n    private double interestRate;\n\n    @Column(name = \"repayment_schedule\")\n    private String repaymentSchedule;\n    @Enumerated(EnumType.STRING)\n    private Status status = NEW;\n\n    @Column(name = \"conditions\")\n    private String conditions;\n    public LoanAgreementDto(LoanAgreement loanAgreement) {\n        this.loanId = loanAgreement.getLoanId();\n        this.borrowerId = loanAgreement.getBorrowerId();\n        this.lenderId = loanAgreement.getLenderId();\n        this.interestRate = loanAgreement.getInterestRate();\n        this.repaymentSchedule = loanAgreement.getRepaymentSchedule();\n        this.status = loanAgreement.getStatus();\n        this.conditions = conditions;\n    }\n}\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/decagon/loanagreementservice/dtos/request/LoanAgreementDto.java b/src/main/java/com/decagon/loanagreementservice/dtos/request/LoanAgreementDto.java
+--- a/src/main/java/com/decagon/loanagreementservice/dtos/request/LoanAgreementDto.java	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/java/com/decagon/loanagreementservice/dtos/request/LoanAgreementDto.java	(date 1690299657715)
+@@ -18,21 +18,21 @@
+ 
+ 
+     private Long loanId;
+-    @Column(name = "borrower_id")
+-    private Long borrowerId;
++
++    private String borrowerId;
+ 
+-    @Column(name = "lender_id")
+-    private Long lenderId;
+ 
+-    @Column(name = "interest")
++    private String lenderId;
++
++
+     private double interestRate;
+ 
+-    @Column(name = "repayment_schedule")
++
+     private String repaymentSchedule;
+     @Enumerated(EnumType.STRING)
+     private Status status = NEW;
+ 
+-    @Column(name = "conditions")
++
+     private String conditions;
+     public LoanAgreementDto(LoanAgreement loanAgreement) {
+         this.loanId = loanAgreement.getLoanId();
+Index: src/main/java/com/decagon/loanagreementservice/controllers/BorrowerController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanagreementservice.controllers;\n\nimport com.decagon.loanagreementservice.services.BorrowerService;\nimport lombok.RequiredArgsConstructor;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.*;\n\n@RestController\n@RequiredArgsConstructor\n@RequestMapping(\"/api/v1/borrower\")\npublic class BorrowerController {\n    private final BorrowerService service;\n\n    @GetMapping(\"/accept_offer/{offerId}\")\n    public ResponseEntity<String> selectLoanOffer(@PathVariable(\"offerId\") Long loanId) {\n        // code to select the loan based on the loanId\n        service.selectLoanOffer(loanId);\n        return ResponseEntity.ok(\"Loan selected successfully\");\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/decagon/loanagreementservice/controllers/BorrowerController.java b/src/main/java/com/decagon/loanagreementservice/controllers/BorrowerController.java
+--- a/src/main/java/com/decagon/loanagreementservice/controllers/BorrowerController.java	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/java/com/decagon/loanagreementservice/controllers/BorrowerController.java	(date 1690293770684)
+@@ -1,8 +1,14 @@
+ package com.decagon.loanagreementservice.controllers;
+ 
++
++import com.decagon.loanagreementservice.models.LoanOffer;
++import com.decagon.loanagreementservice.security_config.JwtUtils;
+ import com.decagon.loanagreementservice.services.BorrowerService;
++import jakarta.servlet.http.HttpServletRequest;
+ import lombok.RequiredArgsConstructor;
++import org.springframework.http.HttpStatus;
+ import org.springframework.http.ResponseEntity;
++
+ import org.springframework.web.bind.annotation.*;
+ 
+ @RestController
+@@ -12,10 +18,12 @@
+     private final BorrowerService service;
+ 
+     @GetMapping("/accept_offer/{offerId}")
+-    public ResponseEntity<String> selectLoanOffer(@PathVariable("offerId") Long loanId) {
++    public ResponseEntity<String> selectLoanOffer(@PathVariable("offerId") Long loanId, HttpServletRequest request) {
+         // code to select the loan based on the loanId
+-        service.selectLoanOffer(loanId);
++
++        service.selectLoanOffer(loanId, request);
+         return ResponseEntity.ok("Loan selected successfully");
+     }
+ 
++
+ }
+Index: src/main/java/com/decagon/loanagreementservice/controllers/LenderController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.decagon.loanagreementservice.controllers;\n\nimport com.decagon.loanagreementservice.services.LenderService;\nimport lombok.RequiredArgsConstructor;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.*;\n\n@RestController\n@RequiredArgsConstructor\n@RequestMapping(\"api/v1/lender\")\npublic class LenderController {\n    private final LenderService lenderService;\n\n    @GetMapping(\"/accept_request/{loanId}\")\n    public ResponseEntity<String> selectLoanRequest(@PathVariable(\"loanId\") Long loanId) {\n        // code to select the loan based on the loanId\n        lenderService.selectLoanRequest(loanId);\n        return ResponseEntity.ok(\"Loan selected successfully\");\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/decagon/loanagreementservice/controllers/LenderController.java b/src/main/java/com/decagon/loanagreementservice/controllers/LenderController.java
+--- a/src/main/java/com/decagon/loanagreementservice/controllers/LenderController.java	(revision 9b161962ae9c0f84d8b8b09058a1f127856d75ac)
++++ b/src/main/java/com/decagon/loanagreementservice/controllers/LenderController.java	(date 1690293770696)
+@@ -1,6 +1,7 @@
+ package com.decagon.loanagreementservice.controllers;
+ 
+ import com.decagon.loanagreementservice.services.LenderService;
++import jakarta.servlet.http.HttpServletRequest;
+ import lombok.RequiredArgsConstructor;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.web.bind.annotation.*;
+@@ -11,10 +12,11 @@
+ public class LenderController {
+     private final LenderService lenderService;
+ 
+-    @GetMapping("/accept_request/{loanId}")
+-    public ResponseEntity<String> selectLoanRequest(@PathVariable("loanId") Long loanId) {
++    @GetMapping("/accept_request/{requestId}")
++
++    public ResponseEntity<String> selectLoanRequest(@PathVariable("requestId") Long loanId, HttpServletRequest request) {
+         // code to select the loan based on the loanId
+-        lenderService.selectLoanRequest(loanId);
++        lenderService.selectLoanRequest(loanId, request);
+         return ResponseEntity.ok("Loan selected successfully");
+     }
+ }

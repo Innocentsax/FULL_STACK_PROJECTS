@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="07627e74-d02f-4731-a1a7-835a0cecd8db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__com_google_code_gson_gson_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../borrower-service/src/main/java/com/decagon/borrowerservice/dto/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../borrower-service/src/main/java/com/decagon/borrowerservice/exception/EasyLendExceptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/controller/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/dto/request/BankData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/exception/BankNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/repository/BankRespository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/service/serviceImplementation/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/utils/HeadersUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/dataSources/a6f7d4f6-1319-40be-9348-a4712909fbd5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dataSources/a6f7d4f6-1319-40be-9348-a4712909fbd5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../borrower-service/src/main/java/com/decagon/borrowerservice/controller/LoanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../borrower-service/src/main/java/com/decagon/borrowerservice/controller/LoanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../borrower-service/src/main/java/com/decagon/borrowerservice/dto/LoanRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../borrower-service/src/main/java/com/decagon/borrowerservice/dto/LoanRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../borrower-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../borrower-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_07_2023,_11_50_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_07_2023,_22_06_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/config/CloudinaryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/config/CloudinaryConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/controller/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/domain/entity/Banks.java" beforeDir="false" afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/domain/entity/Banks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/eventListener/UserCreationEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/eventListener/UserCreationEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/exception/handler/ExceptionsHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/exception/handler/ExceptionsHandlers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/repository/ProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/repository/ProfileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/service/ProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/service/ProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/service/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/service/UploadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/service/serviceImplementation/ProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../profile-management-service/src/main/java/com/decagon/service/serviceImplementation/ProfileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../profile-management-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../profile-management-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-registration-service/src/main/java/com/easyLend/userservice/UserRegApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-registration-service/src/main/java/com/easyLend/userservice/UserRegApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-registration-service/src/main/java/com/easyLend/userservice/services/serviceImpl/AppUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-registration-service/src/main/java/com/easyLend/userservice/services/serviceImpl/AppUserServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2SR5cZlt0HYRkMDvOnKl3AeY4PO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/decagon/IdeaProjects/easy-lend-14-updated/loan_agreement_service/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;cc7bf2e9854aa28b28cd0158732ed400&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.decagon.loanAgreementSelection.services" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LoanAgreementSelectionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="loan_agreement_service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.decagon.LoanAgreementSelectionApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.decagon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.LoanAgreementSelectionApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07627e74-d02f-4731-a1a7-835a0cecd8db" name="Changes" comment="" />
+      <created>1689096632910</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689096632910</updated>
+      <workItem from="1689409723299" duration="4516000" />
+      <workItem from="1689459217294" duration="33848000" />
+      <workItem from="1689691869229" duration="1677000" />
+      <workItem from="1689694321921" duration="7740000" />
+      <workItem from="1690895222052" duration="91000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <envs>
+      <env key="Path" value="C:\Program Files\Java\jdk-17\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Users\olorunlexe\scoop\apps\maven\current\bin;C:\Users\olorunlexe\scoop\shims;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\olorunlexe\AppData\Local\Microsoft\WindowsApps;C:\Users\olorunlexe\AppData\Local\GitHubDesktop\bin;C:\Program Files\Azure Data Studio\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.3\bin" />
+    </envs>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

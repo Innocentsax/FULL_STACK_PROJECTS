@@ -1,0 +1,17 @@
+# MySQL connection
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/lender_service?useSSL=false
+    username: root
+    password: KhAlifA41#
+  jpa:
+    spring:
+      jpa:
+        database-platform=org:
+          hibernate:
+            dialect:
+              MySQL8Dialect:
+
+    hibernate:
+      ddl-auto: update
+    show-sql: true

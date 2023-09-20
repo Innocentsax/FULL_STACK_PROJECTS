@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.decagon.ProjectManagementServiceApplicationTests" time="14.705" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/decagon/Desktop/Edirin/Profile Management Service/target/test-classes:/Users/decagon/Desktop/Edirin/Profile Management Service/target/classes:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.1.1/spring-boot-starter-data-jpa-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.1.1/spring-boot-starter-aop-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/spring-aop/6.0.10/spring-aop-6.0.10.jar:/Users/decagon/.m2/repository/org/aspectj/aspectjweaver/1.9.19/aspectjweaver-1.9.19.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.1.1/spring-boot-starter-jdbc-3.1.1.jar:/Users/decagon/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/decagon/.m2/repository/org/springframework/spring-jdbc/6.0.10/spring-jdbc-6.0.10.jar:/Users/decagon/.m2/repository/org/hibernate/orm/hibernate-core/6.2.5.Final/hibernate-core-6.2.5.Final.jar:/Users/decagon/.m2/repository/org/springframework/data/spring-data-jpa/3.1.1/spring-data-jpa-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/data/spring-data-commons/3.1.1/spring-data-commons-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/spring-orm/6.0.10/spring-orm-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-context/6.0.10/spring-context-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-tx/6.0.10/spring-tx-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-beans/6.0.10/spring-beans-6.0.10.jar:/Users/decagon/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/decagon/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/Users/decagon/.m2/repository/org/springframework/spring-aspects/6.0.10/spring-aspects-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.1.1/spring-boot-starter-web-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.1/spring-boot-starter-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot/3.1.1/spring-boot-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.1/spring-boot-autoconfigure-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.1/spring-boot-starter-logging-3.1.1.jar:/Users/decagon/.m2/repository/ch/qos/logback/logback-classic/1.4.8/logback-classic-1.4.8.jar:/Users/decagon/.m2/repository/ch/qos/logback/logback-core/1.4.8/logback-core-1.4.8.jar:/Users/decagon/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/Users/decagon/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/decagon/.m2/repository/org/slf4j/jul-to-slf4j/2.0.7/jul-to-slf4j-2.0.7.jar:/Users/decagon/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.1.1/spring-boot-starter-json-3.1.1.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.2/jackson-datatype-jdk8-2.15.2.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.2/jackson-module-parameter-names-2.15.2.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.1.1/spring-boot-starter-tomcat-3.1.1.jar:/Users/decagon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.10/tomcat-embed-core-10.1.10.jar:/Users/decagon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.10/tomcat-embed-el-10.1.10.jar:/Users/decagon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.10/tomcat-embed-websocket-10.1.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-web/6.0.10/spring-web-6.0.10.jar:/Users/decagon/.m2/repository/io/micrometer/micrometer-observation/1.11.1/micrometer-observation-1.11.1.jar:/Users/decagon/.m2/repository/io/micrometer/micrometer-commons/1.11.1/micrometer-commons-1.11.1.jar:/Users/decagon/.m2/repository/org/springframework/spring-webmvc/6.0.10/spring-webmvc-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-expression/6.0.10/spring-expression-6.0.10.jar:/Users/decagon/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/decagon/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/decagon/.m2/repository/org/jboss/logging/jboss-logging/3.5.1.Final/jboss-logging-3.5.1.Final.jar:/Users/decagon/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/decagon/.m2/repository/io/smallrye/jandex/3.0.5/jandex-3.0.5.jar:/Users/decagon/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/decagon/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/Users/decagon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0.jar:/Users/decagon/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/decagon/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.3/jaxb-runtime-4.0.3.jar:/Users/decagon/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.3/jaxb-core-4.0.3.jar:/Users/decagon/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/decagon/.m2/repository/org/glassfish/jaxb/txw2/4.0.3/txw2-4.0.3.jar:/Users/decagon/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/decagon/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/decagon/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/decagon/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar:/Users/decagon/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.1/spring-boot-starter-test-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-test/3.1.1/spring-boot-test-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.1/spring-boot-test-autoconfigure-3.1.1.jar:/Users/decagon/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/decagon/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/decagon/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/decagon/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/decagon/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/decagon/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/decagon/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/Users/decagon/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/decagon/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/decagon/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/decagon/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/decagon/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/Users/decagon/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/decagon/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/decagon/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/Users/decagon/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.5/byte-buddy-agent-1.14.5.jar:/Users/decagon/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/decagon/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/Users/decagon/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/decagon/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/decagon/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-jcl/6.0.10/spring-jcl-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-test/6.0.10/spring-test-6.0.10.jar:/Users/decagon/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/decagon/.m2/repository/com/cloudinary/cloudinary-core/1.33.0/cloudinary-core-1.33.0.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-webflux/3.1.1/spring-boot-starter-webflux-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-reactor-netty/3.1.1/spring-boot-starter-reactor-netty-3.1.1.jar:/Users/decagon/.m2/repository/io/projectreactor/netty/reactor-netty-http/1.1.8/reactor-netty-http-1.1.8.jar:/Users/decagon/.m2/repository/io/netty/netty-codec-http/4.1.94.Final/netty-codec-http-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-common/4.1.94.Final/netty-common-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-buffer/4.1.94.Final/netty-buffer-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-transport/4.1.94.Final/netty-transport-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-codec/4.1.94.Final/netty-codec-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-handler/4.1.94.Final/netty-handler-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-codec-http2/4.1.94.Final/netty-codec-http2-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-resolver-dns/4.1.94.Final/netty-resolver-dns-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-resolver/4.1.94.Final/netty-resolver-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-codec-dns/4.1.94.Final/netty-codec-dns-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.94.Final/netty-resolver-dns-native-macos-4.1.94.Final-osx-x86_64.jar:/Users/decagon/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.94.Final/netty-resolver-dns-classes-macos-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-transport-native-epoll/4.1.94.Final/netty-transport-native-epoll-4.1.94.Final-linux-x86_64.jar:/Users/decagon/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.94.Final/netty-transport-native-unix-common-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.94.Final/netty-transport-classes-epoll-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/projectreactor/netty/reactor-netty-core/1.1.8/reactor-netty-core-1.1.8.jar:/Users/decagon/.m2/repository/io/netty/netty-handler-proxy/4.1.94.Final/netty-handler-proxy-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-codec-socks/4.1.94.Final/netty-codec-socks-4.1.94.Final.jar:/Users/decagon/.m2/repository/org/springframework/spring-webflux/6.0.10/spring-webflux-6.0.10.jar:/Users/decagon/.m2/repository/io/projectreactor/reactor-core/3.5.7/reactor-core-3.5.7.jar:/Users/decagon/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Africa/Lagos"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.0.5.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/decagon/Desktop/Edirin/Profile Management Service/target/surefire/surefirebooter-20230711005507309_3.jar /Users/decagon/Desktop/Edirin/Profile Management Service/target/surefire 2023-07-11T00-55-07_032-jvmRun1 surefire-20230711005507309_1tmp surefire_0-20230711005507309_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/decagon/Desktop/Edirin/Profile Management Service/target/test-classes:/Users/decagon/Desktop/Edirin/Profile Management Service/target/classes:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.1.1/spring-boot-starter-data-jpa-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.1.1/spring-boot-starter-aop-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/spring-aop/6.0.10/spring-aop-6.0.10.jar:/Users/decagon/.m2/repository/org/aspectj/aspectjweaver/1.9.19/aspectjweaver-1.9.19.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.1.1/spring-boot-starter-jdbc-3.1.1.jar:/Users/decagon/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/decagon/.m2/repository/org/springframework/spring-jdbc/6.0.10/spring-jdbc-6.0.10.jar:/Users/decagon/.m2/repository/org/hibernate/orm/hibernate-core/6.2.5.Final/hibernate-core-6.2.5.Final.jar:/Users/decagon/.m2/repository/org/springframework/data/spring-data-jpa/3.1.1/spring-data-jpa-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/data/spring-data-commons/3.1.1/spring-data-commons-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/spring-orm/6.0.10/spring-orm-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-context/6.0.10/spring-context-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-tx/6.0.10/spring-tx-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-beans/6.0.10/spring-beans-6.0.10.jar:/Users/decagon/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/decagon/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/Users/decagon/.m2/repository/org/springframework/spring-aspects/6.0.10/spring-aspects-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.1.1/spring-boot-starter-web-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.1/spring-boot-starter-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot/3.1.1/spring-boot-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.1/spring-boot-autoconfigure-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.1/spring-boot-starter-logging-3.1.1.jar:/Users/decagon/.m2/repository/ch/qos/logback/logback-classic/1.4.8/logback-classic-1.4.8.jar:/Users/decagon/.m2/repository/ch/qos/logback/logback-core/1.4.8/logback-core-1.4.8.jar:/Users/decagon/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/Users/decagon/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/decagon/.m2/repository/org/slf4j/jul-to-slf4j/2.0.7/jul-to-slf4j-2.0.7.jar:/Users/decagon/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.1.1/spring-boot-starter-json-3.1.1.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.2/jackson-datatype-jdk8-2.15.2.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.2/jackson-datatype-jsr310-2.15.2.jar:/Users/decagon/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.2/jackson-module-parameter-names-2.15.2.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.1.1/spring-boot-starter-tomcat-3.1.1.jar:/Users/decagon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.10/tomcat-embed-core-10.1.10.jar:/Users/decagon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.10/tomcat-embed-el-10.1.10.jar:/Users/decagon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.10/tomcat-embed-websocket-10.1.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-web/6.0.10/spring-web-6.0.10.jar:/Users/decagon/.m2/repository/io/micrometer/micrometer-observation/1.11.1/micrometer-observation-1.11.1.jar:/Users/decagon/.m2/repository/io/micrometer/micrometer-commons/1.11.1/micrometer-commons-1.11.1.jar:/Users/decagon/.m2/repository/org/springframework/spring-webmvc/6.0.10/spring-webmvc-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-expression/6.0.10/spring-expression-6.0.10.jar:/Users/decagon/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/decagon/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/decagon/.m2/repository/org/jboss/logging/jboss-logging/3.5.1.Final/jboss-logging-3.5.1.Final.jar:/Users/decagon/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/decagon/.m2/repository/io/smallrye/jandex/3.0.5/jandex-3.0.5.jar:/Users/decagon/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/decagon/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/Users/decagon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0.jar:/Users/decagon/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/decagon/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.3/jaxb-runtime-4.0.3.jar:/Users/decagon/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.3/jaxb-core-4.0.3.jar:/Users/decagon/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/decagon/.m2/repository/org/glassfish/jaxb/txw2/4.0.3/txw2-4.0.3.jar:/Users/decagon/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/decagon/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/decagon/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/decagon/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar:/Users/decagon/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.1/spring-boot-starter-test-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-test/3.1.1/spring-boot-test-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.1/spring-boot-test-autoconfigure-3.1.1.jar:/Users/decagon/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/decagon/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/decagon/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/decagon/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/decagon/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/decagon/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/decagon/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/Users/decagon/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/decagon/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/decagon/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/decagon/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/decagon/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/Users/decagon/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/decagon/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/decagon/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/Users/decagon/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.5/byte-buddy-agent-1.14.5.jar:/Users/decagon/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/decagon/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/Users/decagon/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/decagon/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/decagon/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-jcl/6.0.10/spring-jcl-6.0.10.jar:/Users/decagon/.m2/repository/org/springframework/spring-test/6.0.10/spring-test-6.0.10.jar:/Users/decagon/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/decagon/.m2/repository/com/cloudinary/cloudinary-core/1.33.0/cloudinary-core-1.33.0.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-webflux/3.1.1/spring-boot-starter-webflux-3.1.1.jar:/Users/decagon/.m2/repository/org/springframework/boot/spring-boot-starter-reactor-netty/3.1.1/spring-boot-starter-reactor-netty-3.1.1.jar:/Users/decagon/.m2/repository/io/projectreactor/netty/reactor-netty-http/1.1.8/reactor-netty-http-1.1.8.jar:/Users/decagon/.m2/repository/io/netty/netty-codec-http/4.1.94.Final/netty-codec-http-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-common/4.1.94.Final/netty-common-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-buffer/4.1.94.Final/netty-buffer-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-transport/4.1.94.Final/netty-transport-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-codec/4.1.94.Final/netty-codec-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-handler/4.1.94.Final/netty-handler-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-codec-http2/4.1.94.Final/netty-codec-http2-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-resolver-dns/4.1.94.Final/netty-resolver-dns-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-resolver/4.1.94.Final/netty-resolver-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-codec-dns/4.1.94.Final/netty-codec-dns-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.94.Final/netty-resolver-dns-native-macos-4.1.94.Final-osx-x86_64.jar:/Users/decagon/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.94.Final/netty-resolver-dns-classes-macos-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-transport-native-epoll/4.1.94.Final/netty-transport-native-epoll-4.1.94.Final-linux-x86_64.jar:/Users/decagon/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.94.Final/netty-transport-native-unix-common-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.94.Final/netty-transport-classes-epoll-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/projectreactor/netty/reactor-netty-core/1.1.8/reactor-netty-core-1.1.8.jar:/Users/decagon/.m2/repository/io/netty/netty-handler-proxy/4.1.94.Final/netty-handler-proxy-4.1.94.Final.jar:/Users/decagon/.m2/repository/io/netty/netty-codec-socks/4.1.94.Final/netty-codec-socks-4.1.94.Final.jar:/Users/decagon/.m2/repository/org/springframework/spring-webflux/6.0.10/spring-webflux-6.0.10.jar:/Users/decagon/.m2/repository/io/projectreactor/reactor-core/3.5.7/reactor-core-3.5.7.jar:/Users/decagon/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/decagon"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-10-18"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-17.0.5.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/decagon/Desktop/Edirin/Profile Management Service"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/Users/decagon/Desktop/Edirin/Profile Management Service/target/surefire/surefirebooter-20230711005507309_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.5+9-LTS-191"/>
+    <property name="user.name" value="decagon"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="12.6.5"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/decagon/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/29/pyrl5nzd2f53mqphzxy1y30m0000gn/T/"/>
+    <property name="idea.version" value="2022.3.3"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="17.0.5"/>
+    <property name="user.dir" value="/Users/decagon/Desktop/Edirin/Profile Management Service"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="21593"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/decagon/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.5+9-LTS-191"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="contextLoads" classname="com.decagon.ProjectManagementServiceApplicationTests" time="0.012">
+    <error message="Failed to load ApplicationContext for [WebMergedContextConfiguration@22617270 testClass = com.decagon.ProjectManagementServiceApplicationTests, locations = [], classes = [com.decagon.ProjectManagementServiceApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7ef82753, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@58cbafc2, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4c60d6e9, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@d737b89, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7e057f43, org.springframework.boot.test.context.SpringBootTestAnnotation@992bef3a], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@22617270 testClass = com.decagon.ProjectManagementServiceApplicationTests, locations = [], classes = [com.decagon.ProjectManagementServiceApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7ef82753, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@58cbafc2, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4c60d6e9, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@d737b89, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7e057f43, org.springframework.boot.test.context.SpringBootTestAnnotation@992bef3a], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:143)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'nigerianBankServiceImpl' defined in file [/Users/decagon/Desktop/Edirin/Profile Management Service/target/classes/com/decagon/service/serviceImplementation/NigerianBankServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.reactive.function.client.WebClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1406)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:187)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:119)
+	... 73 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.reactive.function.client.WebClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1824)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1383)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 97 more
+]]></error>
+    <system-out><![CDATA[00:55:10.025 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.decagon.ProjectManagementServiceApplicationTests]: ProjectManagementServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:55:10.421 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.decagon.ProjectManagementServiceApplication for test class com.decagon.ProjectManagementServiceApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.1)
+
+2023-07-11T00:55:11.965+01:00  INFO 21593 --- [           main] ProjectManagementServiceApplicationTests : Starting ProjectManagementServiceApplicationTests using Java 17.0.5 with PID 21593 (started by decagon in /Users/decagon/Desktop/Edirin/Profile Management Service)
+2023-07-11T00:55:11.968+01:00  INFO 21593 --- [           main] ProjectManagementServiceApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2023-07-11T00:55:13.969+01:00  INFO 21593 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11T00:55:14.040+01:00  INFO 21593 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JPA repository interfaces.
+2023-07-11T00:55:15.966+01:00  INFO 21593 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11T00:55:16.380+01:00  INFO 21593 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11T00:55:16.392+01:00  INFO 21593 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-11T00:55:17.210+01:00  INFO 21593 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T00:55:17.914+01:00  INFO 21593 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11T00:55:18.044+01:00  INFO 21593 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-11T00:55:19.159+01:00  INFO 21593 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ab5924c
+2023-07-11T00:55:19.161+01:00  INFO 21593 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-11T00:55:20.428+01:00  INFO 21593 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-11T00:55:23.078+01:00  INFO 21593 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: alter table employment_status modify column income  float(53) not null
+Hibernate: alter table government_issued_ids modify column document_type  enum ('DRIVER_LICENSE','NIN','PASSPORT')
+Hibernate: alter table profile modify column user_type  enum ('BORROWER','LENDER')
+2023-07-11T00:55:23.623+01:00  INFO 21593 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T00:55:23.657+01:00  WARN 21593 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'nigerianBankServiceImpl' defined in file [/Users/decagon/Desktop/Edirin/Profile Management Service/target/classes/com/decagon/service/serviceImplementation/NigerianBankServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.reactive.function.client.WebClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-07-11T00:55:23.658+01:00  INFO 21593 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11T00:55:23.671+01:00  INFO 21593 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-11T00:55:23.686+01:00  INFO 21593 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-11T00:55:23.702+01:00  INFO 21593 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-11T00:55:23.786+01:00 ERROR 21593 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.decagon.service.serviceImplementation.NigerianBankServiceImpl required a bean of type 'org.springframework.web.reactive.function.client.WebClient' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.reactive.function.client.WebClient' in your configuration.
+
+2023-07-11T00:55:23.812+01:00 ERROR 21593 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.decagon.ProjectManagementServiceApplicationTests@630febd7]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@22617270 testClass = com.decagon.ProjectManagementServiceApplicationTests, locations = [], classes = [com.decagon.ProjectManagementServiceApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7ef82753, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@58cbafc2, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4c60d6e9, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@d737b89, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7e057f43, org.springframework.boot.test.context.SpringBootTestAnnotation@992bef3a], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:143) ~[spring-test-6.0.10.jar:6.0.10]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127) ~[spring-test-6.0.10.jar:6.0.10]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.0.10.jar:6.0.10]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.0.10.jar:6.0.10]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241) ~[spring-test-6.0.10.jar:6.0.10]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-6.0.10.jar:6.0.10]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.9.3.jar:1.9.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50) ~[surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.0.0.jar:3.0.0]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'nigerianBankServiceImpl' defined in file [/Users/decagon/Desktop/Edirin/Profile Management Service/target/classes/com/decagon/service/serviceImplementation/NigerianBankServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.reactive.function.client.WebClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.1.1.jar:3.1.1]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.0.10.jar:6.0.10]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.0.10.jar:6.0.10]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1406) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545) ~[spring-boot-test-3.1.1.jar:3.1.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.1.1.jar:3.1.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.1.1.jar:3.1.1]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:187) ~[spring-test-6.0.10.jar:6.0.10]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:119) ~[spring-test-6.0.10.jar:6.0.10]
+	... 73 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.reactive.function.client.WebClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1824) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1383) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.10.jar:6.0.10]
+	... 97 common frames omitted
+
+]]></system-out>
+    <system-err><![CDATA[
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+]]></system-err>
+  </testcase>
+</testsuite>

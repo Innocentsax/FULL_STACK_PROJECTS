@@ -1,0 +1,24 @@
+# MySQL connection
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/profile_mgt?allowPublicKeyRetrieval=true
+    username: root
+    password: Bongo@501
+  jpa:
+    spring:
+      jpa:
+        database-platform=org:
+          hibernate:
+            dialect:
+              MySQL8Dialect:
+
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+#Cloudinary
+cloudinary:
+  cloud_name: dqqlpmdpm
+  api_key: 967725158739296
+  api_secret: WzXnPmgukKQXG6BxkQuPxMhuxYU
