@@ -1,0 +1,25 @@
+.name{
+    margin-left: 45%;
+    margin-top: 10%;
+    height: auto;
+    
+}
+
+.copyright{
+    margin-left: 46%;
+    margin-top: 28px;
+    height: auto;
+}
+
+.reserved{
+    margin-left: 46%;
+    margin-top: -7px;
+}
+
+.about{
+    margin-top: 28px;
+}
+.email{
+    margin-top: 28px;
+    color: white;
+}

@@ -1,0 +1,92 @@
+*{
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+.h1{
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 76px;
+    color: #FFFFFF;   
+}
+.back{
+    position: absolute;
+    width: 525px;
+    height: 32px;
+    left: 112px;
+    top: 146px;
+    
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.details{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF;
+    
+}
+.datex{
+    height: 33px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #252D42;
+}
+.time{
+    height: 22px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #252D42; 
+}
+.calender{
+    height: 22px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FF5722;
+}
+.eventdate{
+    margin-top: 50px;
+    width: 567px;
+    height: 44px;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+    color: #252D42;
+}
+.startDate{
+    width: 98px;
+}
+.endDate{
+    width: 89px;
+}
+.startTime{
+    width: 89px;
+}
+.contactInfo{
+    width: 729px;
+    height: 22px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #252D42;
+}
+.contactInfo a{
+    color:#FF5722;
+}
+.otherEvent{
+    width: 100%;
+    height: 55px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    color: #252D42;
+    margin-top: 80px;
+}

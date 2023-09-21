@@ -1,0 +1,152 @@
+.close {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.radio-section {
+    position: fixed;
+    top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 598px;
+     border: 2px solid #FF5722;
+    background-color: #fff;
+    margin: 100px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    height: 80vh;
+}
+
+.radio-item [type="radio"] {
+    display: none;
+}
+
+.radio-item + .radio-item {
+    margin-top: 5px;
+
+}
+
+.radio-item label {
+    display: block;
+    /* padding: 20px 60px; */
+    padding-left: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #fff;
+    /* border: 2px solid rgba(255, 0, 0, 0.1); */
+    /* border-radius: 8px; */
+    cursor: pointer;
+    /* font-size: 18px; */
+    /* font-weight: bold; */
+    width: 581px;
+    /* height: 70px; */
+    /* white-space: nowrap; */
+    position: relative;
+    transition: .4s ease-in-out 0s;
+}
+
+.radio-item label:after,
+.radio-item label:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.radio-item label:after {
+    height: 20px;
+    width: 20px;
+    border: 1px solid #D8D8D8;
+    left: 20px;
+    top: calc(50% - 10PX);
+}
+
+.radio-item label:before {
+    background-color: #FF5722;
+    /* border: 1px solid #FF5722; */
+    height: 10px;
+    width: 10px;
+    left: 25px;
+    top: calc(50% - 5PX);
+    transform: scale(5);
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s ease-in-out 0s;
+}
+
+
+
+.radio-item [type="radio"]:checked ~ label {
+    background: rgba(37, 45, 65, 0.03);
+    /* border-color: #FF5722; */
+}
+
+.radio-item [type="radio"]:checked ~ label:before{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.radio-item label:hover {
+    background: rgba(37, 45, 65, 0.01);
+    transition: all 0.25s ease;
+}
+
+.ticket-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-left: 0.5rem; */
+    width: auto;
+    /* border: 2px solid #83fbb3; */
+}
+
+.ticketcon {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    /* border: 2px solid #83fbb3; */
+}
+
+.ticket {
+    font-size: 16px;
+    color: #252D42;
+}
+
+.available {
+    font-size: 14px;
+    color: rgba(37, 45, 65, 0.29);
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #252D42;
+    border: 1px solid #98A2B3;
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin-right: 0.7rem;
+}

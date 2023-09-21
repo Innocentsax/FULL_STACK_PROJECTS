@@ -1,0 +1,1 @@
+package com.decagon.eventhubbe.dto.response;import lombok.Data;@Datapublic class BanksRepo{    private boolean status;    private String message;    private BankDataResponse data;}

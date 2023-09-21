@@ -1,0 +1,43 @@
+spring:
+  servlet:
+    multipart:
+      enabled: true
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:admin@eventhub.x3bwxlb.mongodb.net/eventhub?retryWrites=true&w=majority
+      auto-index-creation: true
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 10000
+  application:
+    name: event-hub
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: eventhubjava@gmail.com
+    password: jtluggqffqginukh
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  cache:
+    type: redis
+    cache-names:
+      - events
+    redis:
+      cache-null-values: false
+      time-to-live: 86400000
+jwt:
+  expiration:
+    access-token: 86400000
+    refresh-token: 259200000
+v1: 1
+server:
+  port: 8999
+cloud-api-name: dknryxg72
+cloud-api-secret: boQo3txlmXUV2VpjvmJr1dc_FKc
+cloud-api-key: 828638228684336
+

@@ -1,0 +1,27 @@
+
+.eventCreated{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 45px;
+    letter-spacing: 0.25px;
+    color: #252D42;
+}
+.total{
+    margin-top: -25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.15px;
+    color: #667085;
+}
+.filter{
+    font-size: 25px;
+}
+.filterText{
+    color: #101828;
+    font-size: 18px;
+}
+.editEvent{
+    font-size: 16px;
+    color: #667085;
+}

@@ -1,0 +1,1 @@
+package com.decagon.eventhubbe.dto.response;public class RecieveNameResponse{    private String accountName;}
