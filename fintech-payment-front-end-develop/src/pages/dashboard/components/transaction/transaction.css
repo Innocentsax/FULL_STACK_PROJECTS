@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@200;400;600&display=swap');
+.transaction-container{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+    width:60vw;
+    margin:3rem auto;
+}
+.search-i{
+    background-color: #fff;
+    border: none;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.search{
+    margin-left:0;
+    border: none;
+}
+.search-transaction{
+    display: flex;
+    background-color: #0000000A;
+}
+.t-history{
+    color: #012A4A;
+    background-color: #0000000A;
+    padding: 15px 0px 9px 15px;
+}
+.first-element{
+    display: flex;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #012A4A;
+}
+.owner-name{
+    color: #012A4A;
+}
+.money{
+    padding-left: 60%;
+    color:#34A853;
+}
+.history-name{
+    margin: 0px 20px 0px 20px;
+}
+.bank{
+    color: #979797;
+    font-size: small;
+    margin-top: 5px;
+}
+
+
+

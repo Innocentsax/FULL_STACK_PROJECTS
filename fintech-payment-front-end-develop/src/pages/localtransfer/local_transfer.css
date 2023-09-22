@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.goBack {
+    color: #012A4A;
+}
+
+.transferContainer {
+    display: flex;
+    justify-content: space-around;
+}
+.first-link a{
+    color: #012A4A;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.second-link a {
+    font-size: 18px;
+    font-weight: 600;
+}
+.newHr {
+    size: 8px;
+    width: 350px;
+    border: 1px solid #4252E1;
+    margin-left: 3rem;
+    margin-top: -50px;
+}
+.formContainer {
+    width: 853px;
+    height: 802px;
+    background: #FFFFFF;
+    margin: auto;
+}
+.formWrapper {
+    width: 100%;
+    /* z-index: 4900; */
+}
+ form label {
+    font-weight: 500;
+    font-size: 16px;
+    color: #012A4A;
+    margin-left: 3rem;
+    margin-top: 30px;
+}
+input, select{
+    width: 797px;
+    height: 48px;
+    margin-left: 2rem;
+    padding: 8px 16px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+}
+textarea {
+    width: 797px;
+    height: 134px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    background: #FFFFFF;
+    font-size: 16px;
+    resize: none;
+    margin-left: 2rem;
+}
+.btnContainer {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.transferBtn {
+    width: 797px;
+    height: 48px;
+    background: linear-gradient(105.38deg, #4361EE 19.05%, #3A0CA3 82.03%, #3A0CA3 82.03%);
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+}
+.arrow {
+    position: relative;
+    right: 35px;
+    cursor: pointer;
+}
+.inputBtn  {
+    cursor: pointer;
+}

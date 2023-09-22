@@ -1,0 +1,69 @@
+ * {
+    box-sizing: border-box;
+    margin: 0;
+}  
+
+ body {
+    background: #E5E5E5; 
+} 
+
+
+.topbar {
+    width: 100%;
+    height: 96px;
+    background-color:#F5F5F5;
+    padding-top: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 999; 
+    margin-bottom: 30px;
+    
+}
+
+.topbarWrapper {
+    display: flex;
+    height: 100%;
+    padding: 0px  125px;  
+    align-items: center;
+    justify-content: space-between; 
+   
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 32px;
+    color: #012A4A;
+}
+
+.topbarIconContainer {
+    position: relative;
+    cursor: pointer;
+    margin-right: 30px;
+   
+}
+
+.topIconBadge{
+    position: absolute;
+    top: -5px;
+    right:-2px;
+    background-color: red;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+   
+  }
+
+.topRight {
+    display: flex;
+    align-items: center;
+}
+
+.topSetting {
+    width: 20px;
+    height: 20px; 
+      
+}

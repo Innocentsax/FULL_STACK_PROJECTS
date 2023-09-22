@@ -1,0 +1,142 @@
+
+   * {
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+    margin: 0;
+  }  
+
+
+  
+  .header-name {
+    text-align: left;
+    font-size: x-large;
+    font-weight: bolder;
+  }
+  
+  .header-text {
+    margin-bottom: 2rem;
+    
+  }
+  
+  .header-tag {
+    margin-bottom: 4rem;
+    color: #012A4A;
+  }
+
+  .col-left {
+    background-color: #E5E5E5;
+  } 
+  
+  .left-side {
+    margin-top: 3rem;
+  }
+  
+  .right-side-img {
+    width: 100%;
+  }
+  
+
+  .right-side-img {
+    object-fit:cover; 
+    background-image: url("../assets/img/signup-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+
+  
+  .container-fluid {
+    padding: 0;
+    background: #FFFFFF;
+  }
+  
+  .forms-items, label {
+    text-align: left;
+    font-weight: 500;
+    margin-left: 1rem;
+    position: relative;
+    right: 18px;
+    
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid   rgb(80, 79, 79) ;
+    border-radius: 8px;
+    height: 3rem;
+    width: 396px;
+    margin-left: -.2rem;
+    margin-bottom: -28px;
+    
+  }
+
+  
+
+  .form-control:focus {
+    box-shadow: none;
+  }
+
+
+
+  .input-container span {
+    margin-left: 1rem;
+    color: rgb(170, 169, 169);
+  }
+
+  
+  .forms-items input {
+    border: none;
+    font-family: FontAwesome;
+    outline: none;
+    margin-left: 1rem;
+    padding-left: 0;
+    font-family: sans-serif;
+    background: #FFFFFF;
+   
+  }
+
+  
+
+  .form-control:focus {
+    outline: none !important
+  } 
+
+  
+  
+  
+  .form-container {
+    padding-left: 30%;
+    width: 95%;
+  }
+  
+  
+  .signup-button {
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .new-btn{
+    background-image: linear-gradient(to right, #4361ee, #3A0CA3, #3A0CA3);
+    width: 100%;
+    color: white;
+    padding: .8rem;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  .login-span {
+    font-weight: bold;
+  }
+  
+  .login{
+    margin-bottom: 7rem;
+  }
+  
+  .left {
+    margin-right: 2rem;
+    text-align: left;
+  }
+
+  

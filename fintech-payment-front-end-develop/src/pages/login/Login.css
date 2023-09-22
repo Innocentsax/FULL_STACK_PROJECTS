@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+.header-container {
+    text-align: left;
+    font-size: x-large; 
+    font-weight: bolder;
+}
+
+.login-message {
+    margin-bottom: 2rem;
+    color: #012A4A;
+    font-size: 24px;
+}
+
+.header-title {
+    margin-bottom: 4rem;
+    color: #012A4A;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+ div, name {
+    color: #012A4A;
+    font-size: 16px;
+} 
+
+.left-side {
+    margin-top: 3rem;
+}
+
+.login-background {
+    height: 110vh; 
+    
+}
+
+.right-side-image {
+    object-fit: cover; 
+    background-image: url("./login-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+    width: 850px;
+    
+}
+
+.form-item, label {
+    /* text-align: left; */
+    font-weight: 500;
+    position: relative;
+    right: 18px;
+    margin-bottom: -18px;
+   
+}
+
+
+.form-item input {
+    border: 1px solid #012A4A;
+    border-radius: 6px;
+    height: 3rem;
+    font-family: FontAwesome;
+    background: #FFFFFF;
+    margin-left: 1rem;
+    
+}
+
+.form-container {
+    padding-left: 30%;
+    width: 95%;
+   
+   
+}
+
+
+
+.btn {
+    background-image: linear-gradient(105.38deg, #4361EE 19.05%, #3A0CA3 82.03%, #3A0CA3 82.03%);
+    width: 100%;
+    color: white;
+    padding: .8rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 3rem;
+    position: relative;
+    top: 20px;
+
+}
+
+.login-button {
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #FFFFFF;
+}
+
+.create-account {
+    font-weight: bold;
+    color: #4359E7;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.login {
+    color: #012A4A;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.forget-pw {
+    color: #89B3F8;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    top: 35px;
+
+}
+
+a:hover {
+    text-decoration:none;
+}
+
+
+
+.login{
+    margin-bottom: 7rem;
+}
+
+.left {
+    margin-right: 2rem;
+    text-align: left;
+}
+
+
