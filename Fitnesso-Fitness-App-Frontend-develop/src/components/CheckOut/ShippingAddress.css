@@ -1,0 +1,68 @@
+:root {
+    --customColor: #081458;
+  }
+.ShippingAddress-container{
+    border-radius: 10px;
+    background-color: white;
+    /* border: #081158 solid 1px; */
+    margin: 1.4rem 1.4rem 1rem 3rem;
+    height: auto;
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+    height: 24rem;
+    overflow: auto;
+
+}
+.ShippingAddress-row{
+    display: flex;
+}
+.ShippingAddress-split{
+    justify-content: space-between;
+    border-bottom: #F5F5F5 solid 1px;
+}
+.ShippingAddress-design{
+    color: var(--customColor);
+    font-family: 'Sato', Courier, monospace;
+}
+.ShippingAddress-heading {
+    font-size: 25px;
+    font-weight: bold;
+}
+.ShippingAddress-title-content{
+    height: 56px;
+    padding: 15px;
+}
+
+.ShippingAddress-info-input{
+    display: block;
+    height: 50px;
+}
+.ShippingAddress-info-input label{
+    color: var(--customColor);
+    font-weight: bold;
+    font-family: 'Sato', Courier, monospace;
+}
+.ShippingAddress-info-input input[type="text"]{
+    border-radius: 6px;
+    height: 34px;
+    padding: 0 10px;
+    margin-top: 10px;
+    font-size:15px;
+    border: none;
+    background-color: #E8EAF4;
+}
+.ShippingAddress-big-input{
+    width: 97%;
+}
+
+.ShippingAddress-small-input{
+    width: 96%;
+}
+.ShippingAddress-all-small{
+    width: 98%;
+    align-items: flex-start;
+}
+
+.ShippingAddress-input-container{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+  app:
+    container_name: fitness-app-container
+    image: fitness-app-image
+    build: ./
+    ports:
+      - "8084:9067"
+    depends_on:
+      - postgresqldb
+  postgresqldb:
+    container_name: fitnes-server
+    image: postgres
+    ports:
+      - "5443:5432"
+    environment:
+      - POSTGRES_PASSWORD=12345678
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=fitnes
+#      - API_KEY=150ae8e483e258a594d62cc0c29fe45b
+#      - API_SECRET=be5bacbadb39cb316745e76d270320d9
+      - API_KEY_PAYMENT=sk_test_a3b3f34f4aae505f1b8a2b41c4ecb033a59e2781

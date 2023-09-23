@@ -1,0 +1,123 @@
+.slider{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    opacity: 0;
+    transform:translateX(-50%);
+    transition: all 0.8s ease-in-out;
+}
+
+@media screen and (min-width:125px) {
+    .slide img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.slide img{
+    height: 130%;
+}
+.content {
+    position: absolute;
+    top:23rem;
+    left:5rem;
+    opacity: 0;
+    width: 50%;
+    padding: 3rem;
+    background: rgba(0, 0, 0,0.3);
+    animation: slide-up 1s ease 0.5s;
+    animation-fill-mode: forwards;
+    border-radius: 10px;
+}
+
+@keyframes slide-up {
+    0% {
+        visibility: visible;
+        top :23rem
+    }
+
+    100% {
+        visibility: visible;
+        top :17rem
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slide img{
+        width: 80%;
+        height: 100%;
+    }
+}
+
+.content > * {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.8rem;
+    color : white
+}
+
+.current {
+    opacity: 1;
+    transform:translateX(0);
+}
+
+.current .content {
+    opacity: 1;
+}
+
+.arrow {
+    border: 2px solid white;
+    background: transparent;
+    color: #fff;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 999;
+    border-radius: 50%;
+    top: 35%;
+}
+
+.arrow:hover {
+    background: #fff;
+    color: #777;
+}
+
+.next {
+    right: 1.5rem;
+}
+
+.prev {
+    left: 1.5rem;
+}
+
+hr {
+    height: 2px;
+    background: white;
+    width: 100%;
+}
+
+.btn{
+    color: green;
+    background: none;
+    outline: none;
+    border: 1px solid white;
+    font-size: 25px;
+    padding: 10px 50px;
+    border-radius:10px;
+    
+}
+
+button:active{
+    border: 1px solid green;
+    color: red;
+    cursor: pointer;
+}

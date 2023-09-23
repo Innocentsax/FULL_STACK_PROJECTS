@@ -1,0 +1,52 @@
+:root {
+    --customColor: #081458;
+  }
+.EmailCheck-container{
+    border-radius: 10px;
+    background-color: white;
+    border: #081158 solid 1px;
+    height: auto;
+    padding-bottom: 20px;
+    height: fit-content;
+    width: 320px;
+    overflow: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.EmailCheck-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+.EmailCheck-split{
+    justify-content: space-between;
+    border-bottom: #F5F5F5 solid 1px;
+}
+.EmailCheck-design{
+    color: var(--customColor);
+    font-family: 'Sato', Courier, monospace;
+}
+.EmailCheck-heading {
+    font-size: 25px;
+    font-weight: bold;
+}
+.EmailCheck-title-content{
+    height: 30px;
+    padding: 15px;
+}
+
+/* .EmailCheck-svg-styling-success{
+    color: #58f058;
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+} */
+
+/* .EmailCheck-svg-styling-cancel{
+    color: #ff0000;
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+} */
+

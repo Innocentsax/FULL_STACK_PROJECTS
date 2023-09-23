@@ -1,0 +1,83 @@
+:root {
+    --customColor: #081458;
+  }
+.DiscountCoupon-container{
+    border-radius: 10px;
+    background-color: white;
+    /* border: #081158 solid 1px; */
+    margin: 1.4rem 1.4rem 1rem 3rem;
+    height: auto;
+    /* padding-top: 20px; */
+    padding-bottom: 2px;
+    overflow: auto;
+    height: 110px;
+
+}
+.DiscountCoupon-row{
+    display: flex;
+    align-items: flex-end;
+}
+.DiscountCoupon-split{
+    justify-content: space-between;
+    border-bottom: #F5F5F5 solid 1px;
+}
+.DiscountCoupon-design{
+    color: var(--customColor);
+    font-family: 'Sato', Courier, monospace;
+}
+.DiscountCoupon-heading {
+    font-size: 25px;
+    font-weight: bold;
+}
+.DiscountCoupon-title-content{
+    height: 56px;
+    padding: 15px;
+}
+
+.DiscountCoupon-info-input{
+    display: block;
+    height: 50px;
+}
+.DiscountCoupon-info-input label{
+    color: var(--customColor);
+    font-weight: bold;
+    font-family: 'Sato', Courier, monospace;
+}
+.DiscountCoupon-info-input input[type="text"]{
+    border-radius: 6px;
+    width: 97%;
+    padding: 0 10px;
+    font-size: 15px;
+    height: 34px;
+    margin-top: 10px;
+    border: none;
+    background-color: #E8EAF4;
+}
+
+.DiscountCoupon-info-input button{
+    color: white;
+    font-weight: 300;
+    height: 36px;
+    border: none;
+    font-size: 20px;
+    background-color: #8EA5A0;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: 2px dashed #8EA5A0;
+    cursor: pointer;
+    width: 40%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    display:block;
+    text-decoration: none;
+    font-family: 'Sato', Courier, monospace;
+}
+
+.DiscountCoupon-info-input button:hover  {
+     transform: scale(1.05); 
+     background: none;
+    color: #8EA5A0;
+    }
+    .DiscountCoupon-input-container{
+        margin-bottom: 20px;
+    }

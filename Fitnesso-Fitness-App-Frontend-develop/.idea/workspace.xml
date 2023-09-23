@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b63874b1-04e6-4e87-b285-6eec17bbc3d7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/10.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/11.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/12.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/13.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/14.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/15.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/2.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/3.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/4.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/5.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/6.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/7.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/8.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/9.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/browser.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/browser.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/hash.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/hash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/hash.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/hash.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/history.development.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/history.development.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/history.development.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/history.development.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/history.production.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/history.production.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/umd/history.development.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/umd/history.development.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/umd/history.development.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/umd/history.development.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/history/umd/history.production.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/history/umd/history.production.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/BlogArticle/BlogArticle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/BlogArticle/BlogArticle.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="25cC9YiE0MJFCNW3QBLkze3tvte" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b63874b1-04e6-4e87-b285-6eec17bbc3d7" name="Changes" comment="" />
+      <created>1645816838596</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645816838596</updated>
+      <workItem from="1645816887671" duration="1984000" />
+      <workItem from="1645820903366" duration="745000" />
+      <workItem from="1645828554553" duration="346000" />
+      <workItem from="1645833923399" duration="2503000" />
+      <workItem from="1645881119652" duration="1141000" />
+      <workItem from="1645882737295" duration="301000" />
+      <workItem from="1645883897073" duration="557000" />
+      <workItem from="1645884597470" duration="3351000" />
+      <workItem from="1646001321260" duration="46000" />
+      <workItem from="1646002309272" duration="5174000" />
+      <workItem from="1646130471277" duration="68000" />
+      <workItem from="1646130621372" duration="463000" />
+      <workItem from="1646134452819" duration="9507000" />
+      <workItem from="1646236825307" duration="169000" />
+      <workItem from="1646237057383" duration="15000" />
+      <workItem from="1646237095739" duration="12904000" />
+      <workItem from="1646354647352" duration="2686000" />
+      <workItem from="1646417111996" duration="10028000" />
+      <workItem from="1646513381181" duration="380000" />
+      <workItem from="1646521605311" duration="3950000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

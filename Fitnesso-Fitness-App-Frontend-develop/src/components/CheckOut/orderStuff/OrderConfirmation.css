@@ -1,0 +1,65 @@
+:root {
+    --customColor: #081458;
+  }
+.OrderConfirmation-container{
+    border-radius: 10px;
+    background-color: white;
+    /* border: #081158 solid 1px; */
+    margin: 3rem 1.4rem 1rem 3rem;
+    height: auto;
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+    height: fit-content;
+    overflow: auto;
+
+}
+
+.OrderConfirmation-container-below{
+    border-radius: 10px;
+    background-color: white;
+    /* border: #081158 solid 1px; */
+    margin: 1.4rem 1.4rem 1rem 3rem;
+    height: auto;
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+    height: fit-content;
+    overflow: auto;
+
+}
+
+.OrderConfirmation-row{
+    display: flex;
+}
+.OrderConfirmation-split{
+    justify-content: space-between;
+    border-bottom: #F5F5F5 solid 1px;
+}
+.OrderConfirmation-design{
+    color: var(--customColor);
+    font-family: 'Sato', Courier, monospace;
+}
+.OrderConfirmation-heading {
+    font-size: 25px;
+    font-weight: bold;
+}
+.OrderConfirmation-title-content{
+    height: 56px;
+    padding: 15px;
+}
+.OrderConfirmation-body{
+    margin: 22px 15px 20px 20px;
+}
+
+.OrderConfirmation-header-title{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.OrderConfirmation-infos-list{
+    width: 50%;
+}
+
+.OrderConfirmation-item-list{
+    margin-bottom: 5px;
+}

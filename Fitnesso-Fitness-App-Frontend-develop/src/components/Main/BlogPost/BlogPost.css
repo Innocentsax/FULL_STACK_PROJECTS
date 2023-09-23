@@ -1,0 +1,71 @@
+/*.posts {*/
+/*    padding: 0 10rem;*/
+/*    margin-top: 10rem;*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr;*/
+/*    gap: 20px;*/
+/*}*/
+
+/*.paginationBttns{*/
+/*    width: 80%;*/
+/*    height: 40px;*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.paginationBttns a {*/
+/*    padding: 10px;*/
+/*    margin: 8px;*/
+/*    border-radius: 5px;*/
+/*    border: 1px solid #2b2eff;*/
+/*    color: #2b2eff;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.paginationBttns a:hover {*/
+/*    color: white;*/
+/*    background-color: #2b2eff;*/
+/*}*/
+
+/*.paginationActive a {*/
+/*    color: white;*/
+/*    background-color: #2b2eff;*/
+/*}*/
+
+.title{
+    text-decoration: black;
+    justify-content: center;
+}
+
+.content{
+
+}
+
+.authorname{
+
+}
+
+
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+    margin: auto;
+
+
+}
+.blog-card{
+    width:29%;
+    margin:1% 2% ;
+}
+.pagination-button{
+    display: flex;
+    justify-content: center;
+
+}
+.pagination-button button{
+  padding: 10px 15px;
+    margin: 5px;
+
+}

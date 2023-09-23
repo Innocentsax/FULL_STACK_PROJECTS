@@ -1,0 +1,79 @@
+.footer_section{
+    background-color: #081458;
+    padding-bottom: 300px;
+    
+}
+.footer_section_top{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer_section_top1{
+    flex: 0.4;
+    margin-left: 20px;
+    margin-top: 60px;
+}
+.footer_social{
+    display: flex;
+    margin-top: 200px;
+
+}
+.footer_section_top2{
+    margin-top: 80px;
+    flex: 0.3;
+}
+.footer_contact{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 2;
+}
+.footer_mail{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 3;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.footer_section_top3{
+    margin-top: 80px;
+    flex: 0.3;
+}
+.footer_explore{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 2;
+}
+.footer_link{
+    color: white;
+    font-size: 1.25rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    line-height: 2;
+}
+.footer_link:hover{
+    font-weight: 600;
+}
+.footer_section_bottom{
+    margin-top: 80px;
+    background-color: #081458;
+    display: flex;
+    float: left;
+    margin-left: 20px;
+    
+}
+.img-tag{
+    
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+
+    
+}
+.img-tag1{
+    height: 50px;
+    width: 50px; 
+    margin-right: 15px;
+}
+.img-tag1:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}

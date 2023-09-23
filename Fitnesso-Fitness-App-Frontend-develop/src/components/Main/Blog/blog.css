@@ -1,0 +1,80 @@
+
+.blog_section{
+    margin: auto ;
+    width: 95%;
+    margin-top:100px ;
+    margin-bottom: 50px;
+
+}
+.blog_header{
+    color: #203492;
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+.blog_container{
+    display: flex;
+    justify-content: space-around;
+}
+.blogs{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 55vh;
+    width: 31%;
+    margin-top: 60px;
+}
+.photo, .photo1, .photo2{
+    width: 95%;
+    height: 30vh;
+    background-size: cover;
+}
+
+.photo{
+    background-image: url('https://1zywyj2snl841a00uzb2czsr-wpengine.netdna-ssl.com/wp-content/uploads/2020/07/Milly-Forge-Online-Personal-Training.jpg');
+
+}
+.photo1{
+    background-image: url('https://toughmudder.com/wp-content/uploads/2021/08/Molly-Galbraith-Podcast_1000x583.jpg');
+
+}
+.photo2{
+    background-image: url('https://1zywyj2snl841a00uzb2czsr-wpengine.netdna-ssl.com/wp-content/uploads/2020/07/michael-crop-1.jpg');
+
+}
+.blogs .description p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #203492;
+    font-size: 15px;
+    line-height: 25px;
+}
+.blogs .title{
+    text-transform: capitalize;
+    color: #203492;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.space{
+    height: 50px;
+}
+
+
+@media screen and (max-width:767px){
+    .blog_container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+    }
+    .blogs{
+    
+        width: 100%;
+       
+    }
+
+    
+}
+
+

@@ -1,0 +1,135 @@
+@import url("https://fonts.users__dashboard__googleapis.users__dashboard__com/css2?family=Lato:wght@300;400;700&display=swap");
+.faves-container {
+  padding: 25px;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  max-width: 800px;
+  max-height: fit-content;
+}
+
+.faves-details img {
+  max-width: 104px;
+  max-height: 104px;
+}
+
+.fave-details {
+  display: grid;
+  grid-template-columns: 25% 1fr 15%;
+  margin: 20px;
+  border: 1px solid #ededed;
+  padding: 8px 8px;
+  border-radius: 40px;
+}
+
+.faves-container {
+  border: black thin;
+}
+
+.fave-container img {
+  width: 104px;
+  height: 104px;
+  padding: 10px 10px;
+}
+
+.fave-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fave-info > h5 {
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  overflow: hidden;
+}
+
+.fave-to-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fave-btn {
+  margin-top: 10px;
+  padding: 10px;
+  color: #2d3891;
+}
+
+.fave-btn > a {
+  text-decoration: none;
+  color: #99a3ee;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.btn-rmv-fave {
+  margin-top: 20px;
+  padding: 10px;
+  color: #ff8946;
+}
+.btn-rmv-fave > a {
+  text-decoration: none;
+  color: #ff8946;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.fave-btn:hover a {
+  color: #081158;
+  transition: all 1s ease;
+}
+.btn-rmv-fave:hover a {
+  color: #081158;
+  transition: all 1s ease;
+}
+.btn-rmv-fave > i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.fa-thin fa-trash-can {
+  color: black;
+}
+.pagination {
+  margin: 45px;
+  display: flex;
+  justify-content:first baseline;
+  list-style: none;
+  outline: none;
+  text-transform: capitalize;
+}
+.pagination > .active > a {
+background-color: #081158;
+border-color: #081158;
+color: #fff;
+border-radius: 30px;
+}
+.pagination > li > a {
+border: 1px solid #081158;
+padding: 5px 10px;
+outline: none;
+cursor: pointer;
+border-radius: 30px;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+background-color: #081158;
+border-color: #081158;
+outline: none;
+}
+.pagination > li > a,
+.pagination > li > span {
+color: #081158;
+border-radius: 30px;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+border-radius: 20px;
+}
+

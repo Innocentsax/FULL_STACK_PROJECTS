@@ -1,0 +1,36 @@
+:root {
+    --customColor: #081458;
+  }
+.ItemsOrder-container{
+    border-radius: 10px;
+    background-color: white;
+    /* border: #081158 solid 1px; */
+    margin: 3rem 3rem 1rem 0rem;
+    height: auto;
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+    height: fit-content;
+    width: 320px;
+    overflow: auto;
+
+}
+.ItemsOrder-row{
+    display: flex;
+}
+.ItemsOrder-split{
+    justify-content: space-between;
+    border-bottom: #F5F5F5 solid 1px;
+}
+.ItemsOrder-design{
+    color: var(--customColor);
+    font-family: 'Sato', Courier, monospace;
+}
+.ItemsOrder-heading {
+    font-size: 25px;
+    font-weight: bold;
+}
+.ItemsOrder-title-content{
+    height: 56px;
+    padding: 15px;
+}
+

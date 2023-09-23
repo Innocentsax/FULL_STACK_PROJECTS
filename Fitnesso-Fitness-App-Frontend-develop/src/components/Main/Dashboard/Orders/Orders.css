@@ -1,0 +1,27 @@
+.order-container {
+    padding: 25px;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+    max-width: 800px;
+    max-height: fit-content;
+}
+
+.order-details img {
+    max-width: 104px;
+    max-height: 104px;
+}
+
+.order-details {
+    display: grid;
+    grid-template-columns: 25% 1fr 15%;
+}
+
+.data-container{
+    border: black thin;
+}
+
+.data-container img {
+    max-width: 104px;
+    max-height: 104px;
+}

@@ -1,0 +1,12 @@
+.single-blog-display{
+    width:70%;
+    margin:auto;
+    background:blue;
+    margin-top: 50px;
+}
+.single-blog-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

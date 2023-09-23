@@ -1,0 +1,15 @@
+.main-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.dash-article {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

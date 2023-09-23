@@ -1,0 +1,87 @@
+.trainers {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.trainers_section {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.trainer_img {
+    height: 250px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.trainers_text {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.trainers_text > span {
+    height: 80px;
+    width: 500px;
+    font-size: xxx-large;
+    padding-left: 40px;
+}
+
+.trainers_details {
+    margin: 20px;
+    border: thin black;
+    width: 25%;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 8px;
+    border-radius: 20px;
+}
+
+@media (max-width:800px){
+    .trainers_section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trainers_details {
+        width: 70%;
+    }
+
+    .trainer_img {
+        height: 150px;
+    }
+}
+
+@media (max-width:440px){
+    .hp_product_card_wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .trainers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trainers_text > span{
+        padding-left: 95px;
+        font-size: xx-large;
+        margin-top: 50px;
+    }
+    .trainers_section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trainers_details {
+        width: 100%;
+        
+    }
+
+    .trainer_img {
+        height: 150px;
+    }
+}

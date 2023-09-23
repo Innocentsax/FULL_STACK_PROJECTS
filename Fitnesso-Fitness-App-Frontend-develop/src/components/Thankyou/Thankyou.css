@@ -1,0 +1,31 @@
+.thanks {
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.thank-btn {
+    color: white;
+    background-color: #203492 ;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    margin-left: 40%;
+}
+.thank-btn a{
+    color: white !important;
+}
+
+.thank-btn:hover {
+    cursor: pointer;
+    background-color: #3952c2 ;
+}
+
+.thanks-heading {
+    margin-bottom: 1.5rem;
+}

@@ -1,0 +1,22 @@
+
+.cat-nav-links{
+    /* display: grid;
+    grid-template-columns: 5, auto;
+    list-style: none;
+    text-align: center;
+    width: auto;
+    margin-right: 32px;
+    font-weight: 100px;
+    font-size: 18px; */
+    padding: 20px 12px 20px 12px;
+    border-radius: 5px;
+
+}
+
+.cat-right{
+    display: flex;
+    justify-content: flex-end;
+
+    
+}
+

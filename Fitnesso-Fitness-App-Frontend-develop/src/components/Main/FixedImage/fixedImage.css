@@ -1,0 +1,17 @@
+.fixedImage{
+    height: 70vh;
+    background-image: url("https://images.unsplash.com/photo-1536922246289-88c42f957773?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODV8fHdvcmtvdXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+    margin-top: -50px;
+    display: flex;
+
+}
+.fixedImage_header{
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    /* text-align: center; */
+    padding-top: 3%;
+    font-size: 3rem;
+    margin: auto;
+  
+}

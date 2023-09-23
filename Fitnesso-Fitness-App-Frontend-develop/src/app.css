@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text_small {
+  font-size: 0.8rem;
+  padding-bottom: 0.6em;
+}
+
+.favorite-button {
+  color: #081158;
+  background-color: #fff;
+  margin: 0px;
+  cursor: pointer;
+  border-radius: 6px;
+  height: 70px;
+  width: 40px;
+  border: white;
+}
+
+.favorite-button:hover {
+  font-size: 1.5rem;
+  padding: 0.216rem 0.5rem;
+}
+
+body{
+  background-color: #F5F5F5;
+}

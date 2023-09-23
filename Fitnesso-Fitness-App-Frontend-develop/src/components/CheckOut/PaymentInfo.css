@@ -1,0 +1,78 @@
+:root {
+    --customColor: #081458;
+  }
+.PaymentInfo-container{
+    border-radius: 10px;
+    background-color: white;
+    /* border: #081158 solid 1px; */
+    margin: 1.4rem 1.4rem 1rem 3rem;
+    height: fit-content;
+    /* width: fit-content; */
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+    overflow: auto;
+
+}
+.PaymentInfo-row{
+    display: flex;
+}
+.PaymentInfo-split{
+    justify-content: space-between;
+    border-bottom: #F5F5F5 solid 1px;
+}
+.PaymentInfo-design{
+    color: var(--customColor);
+    font-family: 'Sato', Courier, monospace;
+}
+.PaymentInfo-heading {
+    font-size: 25px;
+    font-weight: bold;
+}
+.PaymentInfo-title-content{
+    height: 56px;
+    padding: 15px;
+}
+
+.PaymentInfo-info-input{
+    display: block;
+    height: 50px;
+}
+.PaymentInfo-info-input label{
+    color: var(--customColor);
+    font-weight: bold;
+    font-family: 'Sato', Courier, monospace;
+}
+.PaymentInfo-info-input input[type="text"], 
+.PaymentInfo-info-input input[type="password"],
+.PaymentInfo-info-input input[type="tel"]{
+    border-radius: 6px;
+    height: 34px;
+    padding: 0 10px;
+    margin-top: 10px;
+    font-size:15px;
+    border: none;
+    background-color: #E8EAF4;
+}
+.PaymentInfo-big-input{
+    width: 97%;
+}
+
+.PaymentInfo-small-input{
+    width: 60%;
+}
+
+.PaymentInfo-divider{
+    width: 50%
+}
+
+.PaymentInfo-clean{
+    align-items: center;
+    padding: 15px;
+}
+.PaymentInfo-card-adjust{
+    margin-top: 30px;
+}
+
+.PaymentInfo-input-container{
+    margin-bottom: 20px;
+}

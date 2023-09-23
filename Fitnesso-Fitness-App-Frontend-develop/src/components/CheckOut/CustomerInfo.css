@@ -1,0 +1,58 @@
+:root {
+    --customColor: #081458;
+  }
+.CustomerInfo-container{
+    border-radius: 10px;
+    background-color: white;
+    /* border: #081158 solid 1px; */
+    margin: 3rem 1.4rem 1rem 3rem;
+    height: auto;
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+    height: 175px;
+    overflow: auto;
+
+}
+.CustomerInfo-row{
+    display: flex;
+}
+.CustomerInfo-split{
+    justify-content: space-between;
+    border-bottom: #F5F5F5 solid 1px;
+}
+.CustomerInfo-design{
+    color: var(--customColor);
+    font-family: 'Sato', Courier, monospace;
+}
+.CustomerInfo-heading {
+    font-size: 25px;
+    font-weight: bold;
+}
+.CustomerInfo-title-content{
+    height: 56px;
+    padding: 15px;
+}
+
+.CustomerInfo-info-input{
+    display: block;
+    height: 50px;
+}
+.CustomerInfo-info-input label{
+    color: var(--customColor);
+    font-weight: bold;
+    font-family: 'Sato', Courier, monospace;
+}
+.CustomerInfo-info-input input[type="text"]{
+    border-radius: 6px;
+    width: 97%;
+    padding: 0 10px;
+    font-size:15px;
+    height: 34px;
+    margin-top: 10px;
+    border: none;
+    background-color: #E8EAF4;
+}
+
+.CustomerInfo-input-container{
+    margin-bottom: 20px;
+}

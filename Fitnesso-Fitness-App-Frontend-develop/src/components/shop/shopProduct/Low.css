@@ -1,0 +1,577 @@
+.bg3 {
+  background-image: url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50%;
+  margin: 70px;
+  position: relative;
+}
+.bg4 {
+  background-image: url("http://res.cloudinary.com/fitnesso/image/upload/v1646489529/wnauwzyc0p3uzdp9gsmi.png");
+  height: 100vh;
+  width: 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin: 0 auto 10px;
+  position: relative;
+}
+.icn,
+.icn1,
+.icn2,
+.icn3 {
+  font-size: 60px;
+}
+.pinky {
+  display: flex;
+  justify-content: center;
+  background-color: #081158;
+  position: absolute;
+  padding: 2%;
+  top: -120px;
+  left: -75px;
+  margin-top: 500px;
+  width: 1450px;
+  z-index: 1;
+  transform: rotate(1.5deg);
+}
+
+.icon {
+  display: flex;
+}
+
+.productSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  margin-left: 67px;
+}
+
+.writeUp {
+  text-align: center;
+}
+
+.parentForm {
+  background-color: #b1d0f1;
+  border-radius: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80vw;
+  padding: 50px;
+  position: absolute;
+  right: 15px;
+  left: 20px;
+  top: 300px;
+}
+.title2 {
+  font-size: 64px;
+}
+.paragraph {
+  font-size: 20px;
+  width: 762px;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+.form {
+  display: flex;
+  padding: 20px;
+  padding-top: 40px;
+  width: 90%;
+  justify-content: center;
+  margin-left: 50px;
+  gap: 1rem;
+}
+.form > input {
+  padding: 20px;
+  width: 15rem;
+  border-radius: 10px;
+}
+.button {
+  padding: 20px;
+  width: 15rem;
+  background-color: #081158;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.productContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1.5%;
+  
+}
+.Products {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+  margin-top: 60px;
+  background-color: white;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+  rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+  rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.product_titleContainer {
+  padding: 10px;
+  margin-left: -6px;
+}
+.product_titleWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-size: 20px;
+}
+.colour-time {
+  color: #203492;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+}
+.colour-free {
+  font-weight: bold;
+  color: #ec8675;
+  font-family: 'Permanent Marker', cursive;
+}
+.productName {
+  font-size: 1.3rem;
+}
+.nameProduct {
+  color: #203492;
+  font-family: "Ubuntu", sans-serif;
+}
+.productTrain {
+  padding-bottom: 10px;
+  color: #081158;
+}
+.productTrain:hover{
+  padding-left: 5px;
+  transition: all 0.5s  ease-in;
+}
+.iconContainer {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: -20%;
+}
+
+.imgWrapper {
+  height: 400px;
+  object-fit: cover;
+  overflow-y: hidden;
+}
+.imgWrapper:hover {
+  padding-top: 10px;
+  padding-right: 5px;
+}
+.img{
+  justify-content: center;
+}
+
+@media screen and (max-width: 1189px) {
+  .parentForm {
+    top: 220px;
+    position: absolute;
+    overflow-y: hidden;
+    height: 45vh;
+  }
+  .bg4 {
+    overflow-y: hidden;
+    position: relative;
+  }
+  .form {
+    display: flex;
+    padding: 10px;
+    padding-top: 40px;
+    width: 90%;
+  }
+  .iconContainer {
+    margin-left: -260px;
+  }
+  .paragraph {
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1171px) {
+  .parentForm {
+    width: 78vw;
+    height: 40vh;
+    padding: 50px;
+    right: 15px;
+    left: 20px;
+    top: 250px;
+  }
+
+  .writeUp {
+    text-align: center;
+    width: auto;
+  }
+  .title2 {
+    font-size: 45px;
+  }
+
+  .paragraph {
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .parentForm {
+    width: 78vw;
+    height: 40vh;
+    padding: 50px;
+    right: 15px;
+    left: 20px;
+    top: 200px;
+    overflow-y: hidden;
+  }
+  .writeUp {
+    text-align: center;
+    width: auto;
+  }
+  .title2 {
+    font-size: 40px;
+  }
+  .paragraph {
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: center;
+  }
+  .form {
+    display: flex;
+    padding: 10px;
+    padding-top: 40px;
+    width: 90%;
+  }
+
+  .form > input {
+    padding: 15px;
+    width: 10rem;
+    border-radius: 10px;
+  }
+  .button {
+    padding: 15px;
+    width: 12rem;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .pinky {
+    padding: 2%;
+    top: -200px;
+    left: -75px;
+    margin-top: 500px;
+    width: 1450px;
+    z-index: 1000;
+    transform: rotate(1.5deg);
+  }
+  .bg4 {
+    width: 88%;
+    padding: 20px;
+    margin: 0 auto 10px;
+    position: relative;
+  }
+  .iconContainer {
+    width: 50%;
+    margin-left: -350px;
+  }
+}
+@media screen and (max-width: 1078px) {
+  .parentForm {
+    top: 200px;
+  }
+  .paragraph{
+      font-size: 15px;
+      line-height: 1.5;
+      text-align: center;
+      width: 650px;
+  }
+}
+.iconContainer {
+  align-items: center;
+  margin-left: -340px;
+}
+@media screen and (max-width: 960px) {
+  .parentForm {
+    top: 175px;
+    height: 37vh;
+  }
+  .iconContainer {
+    align-items: center;
+    margin-left: -440px;
+  }
+  .bg4 {
+    width: 85%;
+    height: 70vh;
+    padding: 20px;
+  }
+  .pinky {
+    top: -265px;
+  }
+  .paragraph{
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+}
+@media screen and (max-width: 983px) {
+  .parentForm {
+    top: 160px;
+  }
+  .icn,
+  .icn1,
+  .icn2,
+  .icn3 {
+    font-size: 58px;
+  }
+  .paragraph{
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+}
+@media screen and (max-width: 852px) {
+  .parentForm {
+    top: 143px;
+    height: 35vh;
+  }
+  .icn,
+  .icn1,
+  .icn2,
+  .icn3 {
+    font-size: 55px;
+  }
+  .paragraph{
+    font-size: 15px;
+    line-height: 1.5;
+    width: 540px;
+}
+}
+
+@media screen and (max-width: 848px) {
+  .parentForm {
+    height: 30vh;
+    top: 135px;
+  }
+  .iconContainer {
+    align-items: center;
+    margin-left: -640px;
+    font-size: 15px;
+  }
+  .icn,
+  .icn1,
+  .icn2,
+  .icn3 {
+    font-size: 40px;
+  }
+  .paragraph {
+    font-size: 15px;
+    line-height: 1.5;
+    width: 500px;
+  }
+}
+@media screen and (max-width: 731px){
+  .paragraph{
+    width: 400px;
+  }
+  .parentForm{
+    height: 28vh;
+    top: 120px;
+    margin-left: -11px
+  }
+  .form {
+    display: flex;
+    padding: 9px;
+    padding-top: 11px;
+    width: 90%;
+  }
+  .form > input {
+    padding: 7px;
+    width: 9rem;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 678px) {
+  .parentForm {
+    top: 100px;
+    height: 28vh;
+    width: 90%;
+    overflow-y: hidden;
+  }
+  .title2 {
+    font-size: 20px;
+  }
+  .paragraph {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .form{
+    margin-left: 17px;
+
+  }
+  .form > input {
+    padding: 5px;
+    width: 8rem;
+    height: 30px;
+  }
+  .button {
+    padding: 10px;
+    width: 8rem;
+    font-size: 13px;
+    height: 30px;
+    justify-content: center;
+  }
+  .bg4 {
+    width: 80%;
+    height: 60vh;
+    padding: 20px;
+  }
+  .pinky {
+    top: -280px;
+  }
+  .paragraph {
+    font-size: 15px;
+    line-height: 1.5;
+    width: 385px;
+  }
+}
+@media screen and (max-width: 628px) {
+  .parentForm {
+    top: 80px;
+    height: 25vh;
+    margin-right: 30px;
+  }
+  .form {
+    padding-top: 14px;
+
+  }
+  .form > input {
+    padding: 2px;
+    width: 7rem;
+    height: 30px;
+  }
+  .button {
+    padding: 5px;
+    width: 5rem;
+    font-size: 13px;
+  }
+  .bg4 {
+    width: 75%;
+    height: 50vh;
+    padding: 20px;
+  }
+  .pinky {
+    top: -315px;
+    height: 70px;
+  }
+  .iconContainer {
+    margin-left: -700px;
+    font-size: 15px;
+    justify-content: space-evenly;
+  }
+  .icn,
+  .icn1,
+  .icn2,
+  .icn3 {
+    font-size: 30px;
+  }
+  .paragraph {
+    font-size: 15px;
+    line-height: 1.5;
+    width: 340px;
+  }
+}
+@media screen and (max-width: 588px) {
+  .parentForm {
+    top: 75px;
+    height: 20vh;
+  }
+  .title2 {
+    font-size: 16px;
+    text-align: center;
+    width: auto;
+  }
+  .paragraph {
+    font-size: 9px;
+    line-height: 1.4;
+    width: 300px;
+  }
+  .form {
+    padding-top: 10px;
+    width: 108%;
+    padding: 0px;
+    margin-left: -6px;
+  }
+  .button {
+    padding: 4px;
+    font-size: 12px;
+  }
+  .bg4 {
+    width: 71%;
+    height: 39vh;
+  }
+  .pinky {
+    top: -356px;
+    height: 70px;
+  }
+  .iconContainer {
+    margin-left: -761px;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .parentForm {
+    top: 73px;
+    height: 19vh;
+  }
+  .title2 {
+    font-size: 14px;
+  }
+  .paragraph {
+    font-size: 6px;
+    line-height: 1.2;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .parentForm {
+    top: 63px;
+  }
+  .form{
+    width: 134%;
+  }
+  title2 {
+    font-size: 10px;
+  }
+  .form > input {
+    padding: -7px;
+    width: 9rem;
+    height: 31px;
+  }
+  .button {
+    padding: 9px;
+    font-size: 6px;
+}
+  .paragraph {
+    font-size: 5px;
+    line-height: 1.2;
+    width: 50px;
+  }
+  .title2 {
+    font-size: 10px;
+  }
+  .iconContainer {
+    margin-left: -1046px;
+    font-size: 5px;
+}
+}

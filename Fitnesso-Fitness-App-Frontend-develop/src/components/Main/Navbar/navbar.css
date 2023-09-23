@@ -1,0 +1,88 @@
+.navbar{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+  
+    position: fixed;
+    top: 0;
+    z-index: 1000000;
+    transition: all 1s ease;
+
+}
+.wrapper{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+a{
+    position: relative;
+}
+img{
+    width: 100px;
+    height: 60px;
+
+}
+
+.right{
+    display: grid;
+    grid-template-columns: 5, auto;
+    list-style: none;
+    text-align: center;
+    width: auto;
+    margin-right: 32px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 10px;
+    justify-content: right;
+    height: 30px;
+    padding: 5px 10px ;
+    
+}
+ul {
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+    
+}
+a{
+    text-decoration: none;
+    color: #203492;
+    font-family: 'Ubuntu', sans-serif;
+}
+.login1{
+    min-width: 70px;
+    padding: 10px 15px;
+    margin-top: -5px;
+}
+
+
+ul li:hover{
+    color: #203492;
+    border-radius: 4px;
+    font-weight: 400;
+    transition: all 0.2s ease-out;
+}
+
+@media screen and (max-width: 767px){
+    a{
+        text-decoration: none;
+    
+    }
+    
+    
+}
+

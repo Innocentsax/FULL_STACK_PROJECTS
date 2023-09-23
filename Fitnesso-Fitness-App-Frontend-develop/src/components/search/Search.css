@@ -1,0 +1,103 @@
+.form-control{
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+  rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+  rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  border-radius: 10px;
+}
+.form-control:hover{
+    background-color:rgb(200, 218, 218);
+}
+
+.search{
+  top: 80px;
+  z-index: 3000;
+  width:95%;
+  padding: auto;
+  /* margin:70px 0px 0 70px; */
+}
+
+.search_products_wrapper{
+  border-radius: 5px;
+  margin: 5px;
+  width: 186px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+  rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+  rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  height: 250px;
+  overflow: hidden;
+}
+.search__box{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, max(40px, 1fr));
+  background-color: white;
+
+}
+.search__name, .search__description, .search__price{
+  font-size: 14px;
+  margin: 5px;
+}
+
+.search__box:hover{
+  box-shadow: rgba(117, 117, 126, 0.2) 0px 7px 29px 0px;
+  transition:all 0.5s ease-in-out;
+  transform:scale(0.9);
+}
+.search__input{
+  border: 1px solid lightgrey;
+  outline-width: 0;
+  padding:10px 10px;
+  border-radius:10px;
+  font-size: 18px;
+  font-weight: 100;
+  min-width:30%;
+    /* background: #50BABA; */
+}
+.search__row{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: linear-gradient(rgb(248, 245, 245),rgba(0,0,0,0.8));
+  position: absolute;
+}
+
+.search__image{
+  width: 100%;
+}
+.search__image img{
+  width:100%;
+  height:150px;
+  /* margin:auto; */
+  /* max-width: 200px; */
+}
+
+.search__price{
+  /* background:blue; */
+  color: #50BABA;
+}
+.search__container{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color:grey;
+  font-weight: 100;
+  font-family: Verdana;
+  align-items: center;
+}
+@media screen and (max-width:960px){
+  .search__box{
+  width:25%;
+}
+.search__input{
+  width:50%;
+}
+}
+@media screen and (max-width:676px){
+  .search__box{
+  width:50%;
+}
+.search__input{
+  width:90%;
+}
+}
+

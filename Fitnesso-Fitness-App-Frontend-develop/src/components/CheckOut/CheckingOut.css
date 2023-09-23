@@ -1,0 +1,110 @@
+:root {
+    --customColor: #081458;
+  }
+.CheckingOut-row{
+    display: flex;
+    justify-content: center;
+    margin: 70px 30px 10px 30px;
+}
+
+.CheckingOut-left-container{
+    width: 50%;
+}
+.CheckingOut-place-order{
+    width: 320px;
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+    height: 55px;
+    background-color: var(--customColor);
+    font-family: 'Sato', Courier, monospace;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display:block;
+    text-decoration: none;
+}
+
+/* .CheckingOut-place-order:hover{
+    transform: scale(1.05);
+    transform: translateX(6px);
+} */
+
+.CheckingOut-place-second-slide {
+    width: 320px;
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+    height: 55px;
+    background-color: var(--customColor);
+    font-family: 'Sato', Courier, monospace;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display:block;
+    text-decoration: none;
+
+    position: relative;
+  }
+  
+  .CheckingOut-place-second-slide svg {
+    opacity: 0;
+    font-size: 20px;
+    transition: 0.2s;
+    position: absolute;
+    right: 10px;
+    top: 21px;
+    transition: transform 1;
+  }
+  
+  .CheckingOut-place-second-slide div {
+    transition: transform 0.8s;
+  }
+  
+  .CheckingOut-place-second-slide:hover div {
+    transform: translateX(-6px);
+  }
+  
+  .CheckingOut-place-second-slide::after {
+    content: "";
+    width: 100%; 
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+  }
+  
+  .CheckingOut-place-second-slide:hover svg {
+    opacity: 1;
+    transform: translateX(-6px);
+  }
+
+/* .CheckingOut-right-container{
+    position:  fixed;
+} */
+/* .CheckingOut-right-order{
+    position: fixed;
+} */
+
+.CheckingOut-place-pay-now button{
+    width: 320px;
+    color: white;
+    font-weight: 300;
+    height: 55px;
+    border: none;
+    font-size: 25px;
+    background-color: #0c640c;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display:block;
+    text-decoration: none;
+    font-family: 'Sato', Courier, monospace;
+  }
+
+  .CheckingOut-place-pay-now button:hover  {
+    transform: scale(1.05); 
+    /* background: none;
+   color: #0c640c; */
+   }
