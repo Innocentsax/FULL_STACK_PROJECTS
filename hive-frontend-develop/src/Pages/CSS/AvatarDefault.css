@@ -1,0 +1,7 @@
+.avatar-default-avatar-default {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  background: url(https://picsum.photos/1024/1024) center / cover;
+  border-radius: 200px;
+}

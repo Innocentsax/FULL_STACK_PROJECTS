@@ -1,0 +1,46 @@
+
+  .dashboard-button {
+    background-color:#1570EF !important;
+    outline: none !important;
+    border: none !important;
+    border-radius: 0.4rem !important;
+    font-size: 1.1rem !important;
+    cursor: pointer !important;
+    font-weight: 600;
+    color: white !important;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*width: 80%;80*/
+    height: 50px;
+    width: 320px;
+    /*margin: 0 auto;*/
+    padding: 0;
+    margin-left: -11px;
+  }
+  .button-default-button-default{
+    width: 25% !important;
+    height: 50px !important;
+  }
+
+  .dashboard-button-popup {
+    background-color:#1570EF !important;
+    outline: none !important;
+    border: none !important;
+    border-radius: 0.4rem !important;
+    font-size: 1.1rem !important;
+    cursor: pointer !important;
+    font-weight: 600;
+    color: white !important;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*width: 80%;80*/
+    height: 50px;
+    width: 500px;
+    /*margin: 0 auto;*/
+    padding: 0;
+    margin-left: -11px;
+  }

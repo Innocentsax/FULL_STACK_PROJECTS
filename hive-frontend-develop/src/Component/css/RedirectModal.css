@@ -1,0 +1,62 @@
+.redirect-modal-redirect-modal {
+    box-sizing: border-box;
+    background-color: white;
+    gap: 40px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 536px;
+    height: 285px;
+    border-radius: 24px;
+    padding: 48px;
+    font-family: Inter;
+    color: rgba(33, 51, 79, 1);
+    text-align: center;
+    font-weight: 700;
+}
+
+.redirect-modal-frame-8405x {
+    box-sizing: border-box;
+    padding-top: 22px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 440px;
+    height: 189px;
+}
+
+.redirect-modal-image-5x {
+    width: 136px;
+    height: 23px;
+    background: url(https://uortjlczjmucmpaqqhqm.supabase.co/storage/v1/object/public/firejet-converted-images/images/49228d08ba489d12c5c4cf9734fc200b35a614f9.webp)
+    center / cover;
+}
+
+.redirect-modal-frame-8404x {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 440px;
+    height: 112px;
+}
+
+.redirect-modal-you-will-be-redirect {
+    font-size: 24px;
+    line-height: 1.4;
+    width: 440px;
+    height: 68px;
+}
+
+.redirect-modal-frame-8345x {
+    gap: 32px;
+    width: 345px;
+    height: 20px;
+}
+
+.redirect-modal-frame-8344x {
+    width: 345px;
+    height: 20px;
+}

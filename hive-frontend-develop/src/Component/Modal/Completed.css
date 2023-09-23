@@ -1,0 +1,64 @@
+.task-completed-task-completed {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(242, 244, 247, 0.7);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .task-completed-main-accept {
+    box-sizing: border-box;
+    background-color: white;
+    gap: 40px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    padding: 48px;
+    font-family: Inter;
+  }
+  
+  .task-completed-task-accept {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .task-completed-task-accepted {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: left;
+    color: rgba(33, 51, 79, 1);
+    margin: 0px;
+    align-self: center;
+  }
+  
+  .task-completed-task-last {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(16, 24, 40, 1);
+    text-align: center;
+    font-weight: 400;
+  }
+  
+  .task-completed-task-page {
+    gap: 24px;
+  }
+  
+  .task-completed-you-have-accepted-th {
+    width: 345px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0px;
+  }
+  

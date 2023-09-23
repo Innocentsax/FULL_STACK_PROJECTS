@@ -1,0 +1,53 @@
+.success-pop-modal-success-pop-modal {
+    box-sizing: border-box;
+    background-color: white;
+    gap: 40px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 551px;
+    height: 404px;
+    border-radius: 24px;
+    padding: 48px;
+    font-family: Inter;
+    color: rgba(33, 51, 79, 1);
+    text-align: center;
+    font-weight: 700;
+}
+
+.success-pop-modal-frame-8405x {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 455px;
+    height: 308px;
+}
+
+.success-pop-modal-frame-8404x {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 455px;
+    height: 180px;
+}
+
+.success-pop-modal-task-createdtask-cre {
+    font-size: 24px;
+    line-height: 1.4;
+    width: 455px;
+    height: 136px;
+}
+
+.success-pop-modal-frame-8345x {
+    gap: 32px;
+    width: 345px;
+    height: 20px;
+}
+
+.success-pop-modal-frame-8344x {
+    width: 345px;
+    height: 20px;
+}

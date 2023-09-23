@@ -1,0 +1,178 @@
+.center-modal {    width: 632px;
+    /*height: 445px;*/
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*height: 100vh; !* set height to viewport height for full-screen centering *!*/
+}
+.payment-modal-payment-modal {
+    box-sizing: border-box;
+    background-color: white;
+    gap: 32px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 478px;
+    height: 350px;
+    padding: 40px;
+    border-radius: 12px;
+    font-family: Inter;
+    color: rgba(16, 24, 40, 1);
+    text-align: left;
+}
+
+.payment-modal-frame-9015x {
+    width: 245px;
+    box-sizing: border-box;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+.payment-modal-text {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: rgba(16, 24, 40, 1);
+    height: 34px;
+    width: 173px;
+}
+
+.payment-modal-text-1 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(152, 162, 179, 1);
+    height: 20px;
+    width: 400px;
+}
+
+.payment-modal-frame-8912x {
+    width: 398px;
+    box-sizing: border-box;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-top: -1.5rem;
+}
+
+.payment-modal-frame-9016x {
+    width: 398px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+.payment-modal-frame-8911x {
+    height: 72px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-modal-frame-8858x {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 398px;
+    height: 72px;
+}
+
+.payment-modal-text-3 {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(16, 24, 40, 1);
+    height: 20px;
+    width: 91px;
+}
+
+.payment-modal-button-default-1 {
+    width: 398px;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 324px;
+    background-color: white;
+    box-shadow: 0px 0px 0px 1px rgba(208, 213, 221, 1) inset;
+    box-shadow-width: 1px;
+    overflow: clip;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    color: rgba(152, 162, 179, 1);
+}
+
+.payment-modal-text-4 {
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    width: 58px;
+}
+
+.payment-modal-button-default {
+    width: 398px;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: rgba(21, 112, 239, 1);
+    overflow: clip;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+}
+.payment-modal-button-default2 {
+    width: 398px;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: white;
+    overflow: clip;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border-color: rgba(21, 112, 239, 1);
+    border-width: 15px;
+    color: rgba(21, 112, 239, 1);
+    font-weight: 600;
+}
+.payment-modal-text-2 {
+    font-size: 16px;
+    line-height: 1.4;
+    height: 22px;
+    width: 29px;
+}
+
+.payment-modal-input-1{
+    width: 100%;
+    height: 44px;
+    border-radius: 5px;
+    color: rgba(16, 24, 40, 1);
+    padding: 12px 44px 12px 44px;
+    border-width: 1px;
+    margin: 0 auto;
+    background: url('/src/Assets/Naira.png') no-repeat scroll 13px 10px;
+}
+

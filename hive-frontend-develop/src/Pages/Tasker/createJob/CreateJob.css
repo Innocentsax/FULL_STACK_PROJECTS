@@ -1,0 +1,469 @@
+.create-job-container {
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem 6rem; /* width: 1140px; height: 1466px; */
+    background-color: w #F2F4F7;
+    position: relative;
+}
+
+.task-creation-template { /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 60px;
+    position: absolute;
+    width: 1239px;
+    height: 1243px;
+    left: 100px;
+    top: 133px;
+}
+
+.create-job-container span {
+    color: grey;
+}
+
+.welocome-text-logo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    width: 321.96px;
+    height: 45px; /* background-color: red; */
+    align-items: center;
+}
+
+.welocome-text-logo h5 {
+    position: absolute;
+    width: 319px;
+    height: 45px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #101828;
+    padding-top: 0.3rem;
+}
+
+.welocome-text-logo img {
+    position: absolute;
+    /*left: 80.55%;*/
+    right: 0.72%;
+    top: 13.4%;
+    bottom: 10.61%;
+}
+
+.form-image-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    width: 100%;
+    height: 80%;
+}
+
+.form-image-container .task-form {
+    width: 680px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+}
+
+.task-form .form-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 680px;
+    height: 112px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background-color: #eff8ff;
+}
+
+.form-header > h6 {
+    width: 301px;
+    height: 34px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: #1570ef;
+}
+
+.form-header > p {
+    width: 290px;
+    height: 22px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.15px;
+    color: #012a4a;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem; /* background-color: blue; */
+}
+
+form label {
+    padding-bottom: 10px;
+}
+
+form .service-type {
+    width: 169px;
+    height: 22px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.15px;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.service-type select {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 80px;
+    width: 383px;
+    height: 44px;
+    background: #ffffff;
+    border: 1px solid #98a2b3;
+    border-radius: 6px;
+}
+
+form .service-request-type {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-request-type .check-text {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.15;
+    width: 150px;
+    height: 22px;
+    color: grey;
+    display: flex;
+    align-items: center;
+}
+
+.check-text span {
+    margin-left: 10px;
+}
+
+form .service-address {
+    margin-top: 3.0rem;
+}
+
+.service-address .input-get-address, .delivery-address .input-get-address {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.delivery-address {
+    margin-top: 1.5rem;
+}
+
+.input-get-address input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 8px;
+    width: 383px;
+    height: 44px;
+    background: #ffffff;
+    border: 1px solid #98a2b3;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.service-address button, .delivery-address button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 8px;
+    width: 225px;
+    height: 46px;
+    background: #1570ef;
+    border-radius: 6px;
+    color: white;
+    font-weight: 1000;
+}
+
+.service-rate {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.service-rate .rate-inputs {
+    display: flex;
+    flex-direction: row;
+    width: 59%;
+    justify-content: space-between; /* background-color: red; */
+}
+
+.rate-inputs input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 8px;
+    width: 140px;
+    height: 46px;
+}
+
+.rate-inputs select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 4px;
+    gap: 4px;
+}
+
+.task-validity-period, .task-duration, .task-description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.task-validity-period input, .task-duration input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 8px;
+    width: 383px;
+    height: 46px;
+    background: #ffffff;
+    border: 1px solid #98a2b3;
+    border-radius: 6px;
+}
+
+.task-validity-period span, .task-duration span {
+    color: grey;
+}
+
+.task-description textarea {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 16px;
+    gap: 8px;
+    width: 383px;
+    height: 78px;
+    background: #ffffff;
+    border: 1px solid #98a2b3;
+    border-radius: 6px;
+}
+
+#create-task-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 8px;
+    width: 616px;
+    height: 46px;
+    background: #1570ef;
+    border-radius: 6px;
+    margin-top: 1.5rem;
+    color: white;
+    font-size: 1em;
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+/* ################# RIGHT COLUMN ##########################*/
+.form-image-container .display-image-section {
+    width: 660px;
+    height: 100%;
+    order: 2; /* background-color: red; */
+}
+
+.display-image-section .image-container {
+    float: right;
+}
+
+/* ################# MEDIA QUERY ##########################*/
+@media screen and (max-width: 768px) {
+    .create-job-container {
+        height: 1466px;
+        width: 100vw;
+        padding: 0 6rem;
+    }
+
+    .task-creation-template {
+        width: 100%;
+        height: 1243px;
+        left: 100px;
+        top: 133px;
+        padding-bottom: 2rem;
+    }
+
+    .form-image-container {
+        flex-direction: column;
+    }
+
+    .form-image-container .task-form {
+        width: 50%;
+        margin: 0 auto;
+        order: 2;
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+
+    .task-form .form-header {
+        width: 383px;
+    }
+
+    .form-image-container .display-image-section {
+        height: 100%;
+        width: 100%;
+        order: 1;
+    }
+
+    .display-image-section .image-container {
+        float: none;
+    }
+
+    .display-image-section .image-container img {
+        width: fit-content;
+    }
+
+    .service-address .input-get-address, .delivery-address .input-get-address {
+        width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .service-address button, .delivery-address button {
+        width: 100%;
+        width: 383px;
+    }
+
+    .input-get-address input {
+        margin-bottom: 1.5rem;
+    }
+
+    #create-task-button {
+        width: 383px;
+        margin-bottom: 5rem;
+    }
+
+    .task-validity-period, .task-duration, .task-description {
+        width: 100%;
+        display: flex;
+    }
+
+    form label {
+        width: 100%;
+    }
+
+    .service-rate {
+        width: 383px;
+    }
+
+    .service-rate .rate-inputs {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/*new styling*//*.modal-overlay{*//* position: absolute;*//* top: 30%;*//* left:30%;*//* background-color: white;*//* border-radius: 10px;*//* padding: 2rem;*//* z-index: 40000;*//*}*//*.modal-overlay .modal-container{*//* display: flex;*//* flex-direction: column;*//* justify-content: space-between;*//* justify-items: center;*//* align-items: center;*//* text-align: center;*//*}*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px; /*z-index: 4000;*/
+}
+
+.modal-overlay button {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.modal-overlay button:hover {
+    color: #007bff;
+    background-color: white;
+    border: 2px solid #007bff;
+}
+
+.modal-container .modal-link {
+    text-align: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.5);
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+

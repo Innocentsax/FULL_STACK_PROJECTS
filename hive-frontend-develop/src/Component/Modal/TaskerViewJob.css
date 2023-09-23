@@ -1,0 +1,312 @@
+/* .view-job-view-job {
+    width: 623px;
+    height: 590px;
+    position: relative;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.16));
+    overflow: clip;
+    font-family: Inter;
+    text-align: left;
+  }
+  
+  .view-job-rectangle-312x {
+    width: 623px;
+    height: 590px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background-color: white;
+  }
+  
+  .view-job-frame-16483x {
+    position: absolute;
+    left: 32px;
+    top: 24px;
+    gap: 390px;
+    display: inline-flex;
+    align-items: center;
+    color: rgba(16, 24, 40, 1);
+    font-weight: 700;
+  }
+  
+  .view-job-task-details {
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16520x {
+    position: absolute;
+    left: 32px;
+    top: 74px;
+    gap: 32px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .view-job-frame-16487x {
+    width: 553px;
+    box-sizing: border-box;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: rgba(254, 253, 240, 1);
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    color: rgba(147, 47, 25, 1);
+  }
+  
+  .view-job-frame-16486x {
+    width: 328px;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .view-job-important {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0px;
+  }
+  
+  .view-job-this-job-has-been-ac {
+    line-height: 1;
+    position: relative;
+  }
+  
+  .view-job-this-job-has-been-ac-text-0x {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    display: inline;
+    margin: 0px;
+  }
+  
+  .view-job-chigozie-emenike-text-1x {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    display: inline;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16519x {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 400;
+  }
+  
+  .view-job-frame-16518x {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .view-job-frame-16517x {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgba(16, 24, 40, 1);
+  }
+  
+  .view-job-frame-16488x {
+    gap: 227px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-request-date {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-feb-620230750x {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16489x {
+    gap: 361px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-budget-rate {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-n8000x {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16490x {
+    gap: 373px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-job-type {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-cleaning {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16491x {
+    gap: 414px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-posted {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-client {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16492x {
+    gap: 339px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-location {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-festac-lagos {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16516x {
+    gap: 175px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-task-description {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-lorem-ipsum-dolor-si {
+    width: 210px;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16493x {
+    gap: 370px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-task-duration {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-hrs {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16498x {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .view-job-frame-16485x {
+    width: 111px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    color: rgba(152, 162, 179, 1);
+  }
+  
+  .view-job-otherinfo {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16497x {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgba(16, 24, 40, 1);
+  }
+  
+  .view-job-frame-16496x {
+    gap: 253px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-start-date {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-feb-820231030x {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16495x {
+    gap: 251px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-providers-name {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-chigozie-emenike {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+   */

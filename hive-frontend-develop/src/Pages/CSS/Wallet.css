@@ -1,0 +1,326 @@
+.wallet-wallet {
+    width: 1440px;
+    height: 1024px;
+    box-sizing: border-box;
+    padding-bottom: 261px;
+    background-color: rgba(242, 244, 247, 1);
+    overflow: clip;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+    text-align: left;
+  }
+  
+  .wallet-frame-16452x {
+    width: 1440px;
+    box-sizing: border-box;
+    overflow: clip;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wallet-rectangle-153x {
+    height: 94px;
+    box-sizing: border-box;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: white;
+    gap: 967px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .wallet-frame-16451x {
+    height: 24px;
+    box-sizing: border-box;
+    gap: 2px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-family: Nunito;
+    color: rgba(16, 24, 40, 1);
+    font-weight: 700;
+  }
+  
+  .wallet-hive {
+    font-size: 40px;
+    line-height: 24px;
+    height: 24px;
+    width: 84px;
+  }
+  
+  .wallet-ellipse-1x {
+    width: 8px;
+    height: 8px;
+    box-sizing: border-box;
+    background-color: rgba(16, 24, 40, 1);
+    border-radius: 9999px;
+  }
+  
+  .wallet-frame-16503x {
+    height: 32px;
+    box-sizing: border-box;
+    gap: 32px;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    font-family: Inter;
+    color: rgba(1, 42, 74, 1);
+    font-weight: 600;
+  }
+  
+  .wallet-frame-16502x {
+    height: 25px;
+    box-sizing: border-box;
+    padding-top: 1px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wallet-ellipse-2x {
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    left: 11px;
+    top: 50%;
+    position: absolute;
+    background-color: rgba(240, 68, 56, 1);
+    border-radius: 9999px;
+    right: 3px;
+    transform: translateY(calc(-50% - 7.5px));
+  }
+  
+  .wallet-frame-16453x {
+    height: 32px;
+    box-sizing: border-box;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+  }
+  
+  .wallet-avatar-default-1 {
+    height: 32px;
+    width: 32px;
+  }
+  
+  .wallet-hi-omotayo {
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    width: 83px;
+  }
+  
+  .wallet-frame-16522x {
+    width: 1240px;
+    box-sizing: border-box;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 54px;
+    background-color: white;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    font-family: Inter;
+  }
+  
+  .wallet-my-wallet {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: rgba(1, 42, 74, 1);
+    height: 45px;
+    width: 157px;
+  }
+  
+  .wallet-frame-16504x {
+    width: 1162px;
+    box-sizing: border-box;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 871px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgba(152, 162, 179, 1);
+    font-weight: 400;
+  }
+  
+  .wallet-all-payments-receive {
+    font-size: 16px;
+    line-height: 1.4;
+    height: 22px;
+    width: 291px;
+  }
+  
+  .wallet-frame-16529x {
+    width: 1240px;
+    box-sizing: border-box;
+    gap: 43px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+    font-family: Inter;
+  }
+  
+  .wallet-frame-16528x {
+    width: 1240px;
+    box-sizing: border-box;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    padding-left: 24px;
+    padding-right: 42px;
+    background-color: rgba(234, 236, 240, 1);
+    display: flex;
+    align-items: center;
+    color: rgba(16, 24, 40, 1);
+  }
+  
+  .wallet-frame-16527x {
+    height: 75px;
+    box-sizing: border-box;
+    gap: 820px;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+  }
+  
+  .wallet-frame-16526x {
+    height: 75px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wallet-frame-16524x {
+    height: 75px;
+    box-sizing: border-box;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+  
+  .wallet-text-5 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    height: 22px;
+    width: 161px;
+  }
+  
+  .wallet-ngn-35800x {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4;
+    height: 45px;
+    width: 196px;
+  }
+  
+  .wallet-frame-16361x {
+    height: 42px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 11px;
+    padding-right: 11px;
+    background-color: rgba(255, 250, 235, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    font-weight: 400;
+  }
+  
+  .wallet-text-2 {
+    font-size: 16px;
+    line-height: 1.4;
+    height: 22px;
+    width: 136px;
+  }
+  
+  .wallet-frame-16457x {
+    width: 1137px;
+    box-sizing: border-box;
+    gap: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+    font-weight: 400;
+  }
+  
+  .wallet-frame-16456x {
+    width: 1137px;
+    box-sizing: border-box;
+    gap: 1016px;
+    display: flex;
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+  
+  .wallet-text {
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgba(16, 24, 40, 1);
+    height: 22px;
+    width: 58px;
+  }
+  
+  .wallet-text-1 {
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgba(152, 162, 179, 1);
+    height: 22px;
+    width: 63px;
+  }
+  
+  .wallet-frame-16426x {
+    width: 304px;
+    box-sizing: border-box;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+  }
+  
+  .wallet-frame-16425x {
+    width: 304px;
+    box-sizing: border-box;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+  }
+  
+  .wallet-text-3 {
+    font-size: 24px;
+    line-height: 1.4;
+    color: rgba(16, 24, 40, 1);
+    height: 34px;
+    width: 167px;
+  }
+  
+  .wallet-text-4 {
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgba(152, 162, 179, 1);
+    height: 22px;
+    width: 304px;
+  }
+  

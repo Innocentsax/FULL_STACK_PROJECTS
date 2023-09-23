@@ -1,0 +1,140 @@
+.about-container {
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  margin: 0px;
+}
+
+.about-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  margin-top: 40px;
+  text-shadow: 1px 1px 2px;
+}
+.about-title h1 {
+  font-size: 38px;
+  color: slateblue;
+  
+}
+
+.section-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  /* background-color: rgb(233, 232, 243); */
+}
+
+.set {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  /* border-bottom: 1px solid; */
+  
+  
+}
+
+.about-text1 {
+  flex-basis: 60%;
+  margin-right: 30px;
+  padding: 10px;
+  text-align: justify;
+  /* background-color: rgb(190, 190, 190); */
+  margin-left: 200px;
+}
+.about-text1 h2 {
+  font-size: 44px;
+  text-shadow: 1px 1px 2px;
+}
+.about-text1 p {
+  font-size: 27px;
+}
+
+.img1-container {
+  flex-basis: 40%;
+  padding: 10px;
+  margin-right: 170px;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  box-shadow: 3px 2px;
+  /* background-color: red; */
+}
+.img2 {
+  height: 400px;
+  width: 400px;
+}
+.about-text2 {
+  padding: 10px;
+  text-align: justify;
+  /* background-color: green; */
+  width: 350px;
+  border-radius: 9px;
+  border-style: groove;
+  margin-left: 50px;
+  box-shadow: 1px 1px;
+  background-color: rgb(237, 236, 244);
+}
+.about-text2 h2 {
+  text-align: center;
+  text-shadow: 1px 1px 3px;
+  color: rgb(68, 68, 174);
+  margin-bottom: 18px;
+}
+.set2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.about-text3 {
+  padding: 10px;
+  text-align: justify;
+  /* background-color: blue; */
+  width: 430px;
+  border-radius: 9px;
+  border-style: groove;
+  box-shadow: 1px 1px;
+  background-color: rgb(237, 236, 244);
+}
+.about-text3 h2 {
+  text-align: center;
+  text-shadow: 1px 1px 3px;
+  color: rgb(68, 68, 174);
+  margin-bottom: 18px;
+}
+.set3 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.about-text4 {
+  padding: 10px;
+  text-align: justify;
+  /* background-color: red; */
+  width: 350px;
+  border-radius: 9px;
+  border-style: groove;
+  margin-right: 50px;
+  box-shadow: 1px 1px;
+  background-color: rgb(237, 236, 244);
+}
+.about-text4 h2 {
+  text-align: center;
+  text-shadow: 1px 1px 3px;
+  color: rgb(68, 68, 174);
+  box-shadow: 1px 1px;
+  margin-bottom: 18px;
+}
+.set4 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+

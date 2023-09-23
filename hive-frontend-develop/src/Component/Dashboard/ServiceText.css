@@ -1,0 +1,148 @@
+.service-text-service-text {
+    box-sizing: border-box;
+    /* background-color: white; */
+    /* gap: 32px; */
+    /* display: inline-flex; */
+    /* flex-direction: column;
+    justify-content: space-around; */
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-top:10px;
+    /*padding: 24px;*/
+    font-family: Inter;
+    color: rgba(16, 24, 40, 1);
+    text-align: left;
+    /* width: 25%; */
+  }
+  
+  .service-text-card-text-work {
+    gap: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .service-text-home-cleaning-servic {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-home-text {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 400;
+    padding-bottom: 8px;
+  }
+  
+  .service-text-frame-16472x {
+    gap: 62px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .service-text-request-date {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-feb-620200750x {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-frame-16473x {
+    gap: 76px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .service-text-budget-rate {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-n8000x {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-frame-16474x {
+    gap: 108px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .service-text-job-type {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-cleaning {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-frame-16475x {
+    gap: 119px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .service-text-posted {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-client {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-frame-16476x {
+    gap: 104px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .service-text-location {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-festac-lagos {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-frame-16477x {
+    gap: 72px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .service-text-task-duration {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .service-text-hrs {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }

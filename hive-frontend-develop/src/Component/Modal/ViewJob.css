@@ -1,0 +1,266 @@
+.view-job-view-job {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(242, 244, 247, 0.7);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .view-job-all-view-job {
+    width: 600px;
+    height: 550px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    /*padding: 25px;*/
+    padding-left: 40px;
+    padding-top: 39px;
+    padding-right: 40px;
+  }
+  
+  .view-job-task-details {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: rgba(16, 24, 40, 1);
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  
+  .view-job-task-details-1 {
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-main-view-job {
+    /* position: absolute; */
+    /* left: 32px; */
+    /* top: 90px; */
+    gap: 24px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 400;
+  }
+  
+  .view-job-text-body {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .view-job-frame-16515x {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgba(16, 24, 40, 1);
+  }
+  
+  .view-job-frame-16514x {
+    gap: 269px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-request-date {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-feb-620230750x {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16513x {
+    gap: 279px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-budget-rate {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-n8000x {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16512x {
+    gap: 306px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-job-type {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-cleaning {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16511x {
+    gap: 315px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-posted {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-client {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16510x {
+    gap: 301px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-location {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-festac-lagos {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16509x {
+    gap: 269px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-task-duration {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-hrs {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16515x-1 {
+    gap: 267px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-task-description {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-resume-ontime {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16516x {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .view-job-frame-16485x {
+    width: 111px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    color: rgba(152, 162, 179, 1);
+  }
+  
+  .view-job-otherinfo {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16508x {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgba(16, 24, 40, 1);
+  }
+  
+  .view-job-frame-16506x {
+    gap: 295px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-start-date {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-feb-820231030x {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-frame-16507x {
+    gap: 245px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .view-job-clients-name {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-yusuf-taiwo {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  
+  .view-job-button-body {
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }

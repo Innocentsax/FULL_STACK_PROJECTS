@@ -1,0 +1,167 @@
+.profileModal {
+    position: absolute;
+    width: 293px;
+    height: 182px;
+    background-color: white;
+    top: 10%;
+    right: 7%;
+    z-index: 200;
+
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.08));
+}
+
+.profileModal .profileModal-container {
+    position: absolute;
+    width: 293px;
+    height: 182px;
+    left: 0px;
+    top: 0px;
+}
+
+.profileModal-container .email-username-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+
+    position: absolute;
+    width: 163px;
+    height: 40px;
+    left: 16px;
+    top: 16px;
+}
+
+.email-username-container .email-username {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 163px;
+    height: 40px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.email-username-container .username {
+    width: 95px;
+    height: 20px;
+
+    /* Button Semi Bold - 14 */
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* Main Text */
+
+    color: #101828;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.email-username-container .email {
+    width: 163px;
+    height: 20px;
+
+    /* Button Normal - 14 */
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* Grey 400 */
+
+    color: #98a2b3;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.profileModal-container hr {
+    position: absolute;
+    width: 293px;
+    height: 0px;
+    left: 0px;
+    top: 72px;
+
+    /* Grey 300 */
+
+    border: 1px solid #d0d5dd;
+}
+
+.profileModal .account-logout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 99px;
+    height: 64px;
+    left: 16px;
+    top: 88px;
+}
+
+.account-logout-container .account {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 99px;
+    height: 20px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.account p {
+    width: 55px;
+    height: 20px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.account-logout-container .logout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 91px;
+    height: 20px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}

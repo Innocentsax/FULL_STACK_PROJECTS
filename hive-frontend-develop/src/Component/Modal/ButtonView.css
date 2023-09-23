@@ -1,0 +1,69 @@
+.modal-button {
+    width: 555px;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    overflow: clip;
+    gap: 8px;
+    /* display: inline-flex; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-family: Inter;
+    text-align: left;
+    transition-property: all;
+  }
+  
+  .button-completed {
+    background-color: rgba(21, 112, 239, 1);
+    color: white;
+    font-weight: 600;
+  }
+  
+  .button-decline {
+    background-color: #fff;
+    color: rgba(16, 24, 40, 1);
+    font-weight: 400;
+  }
+  .dashboard-primary-button{
+    background-color:#fefefe;
+    outline: none;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .button-default-button-close {
+    width: 383px;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: rgba(242, 244, 247, 1);
+    overflow: clip;
+    gap: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-family: Inter;
+    color: rgba(16, 24, 40, 1);
+    text-align: left;
+    font-weight: 400;
+  }
+  .success-success {
+    width: 65px;
+    height: 64px;
+  }

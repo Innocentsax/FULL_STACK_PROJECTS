@@ -1,0 +1,13 @@
+FROM eclipse-temurin:19.0.2_7-jdk-alpine as builder
+WORKDIR extracted
+ADD target/hive.jar hive.jar
+RUN java -Djarmode=layertools -jar hive.jar extract
+
+FROM eclipse-temurin:19.0.2_7-jdk-alpine
+WORKDIR application
+COPY --from=builder extracted/dependencies/ ./
+COPY --from=builder extracted/spring-boot-loader/ ./
+COPY --from=builder extracted/snapshot-dependencies/ ./
+COPY --from=builder extracted/application/ ./
+EXPOSE 5001
+ENTRYPOINT ["java","-jar","hive.jar"]

@@ -1,0 +1,130 @@
+.task-confirmation-task-confirmation {
+    width: 590px;
+    height: 200px;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    gap: 0px;
+    display: flex;
+    padding: 0px;
+    font-family: Inter;
+}
+
+.task-confirmation-rectangle-4x {
+    width: 590px;
+    height: 200px;
+    box-sizing: border-box;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 96px;
+    padding-right: 95px;
+    position: relative;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 3px;
+}
+
+.task-confirmation-are-you-sure-you-wan {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(33, 51, 79, 1);
+    width: 399px;
+    height: 40px;
+}
+
+.task-confirmation-containing_box_3x {
+    width: 142px;
+    height: 142px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 215px;
+    right: 39.49%;
+    top: 35px;
+    bottom: 11.5%;
+    gap: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    text-align: left;
+}
+
+.task-confirmation-task-confirmation-1 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: rgba(16, 24, 40, 1);
+    width: 142px;
+    height: 22px;
+}
+
+.task-confirmation-containing_box_1x {
+    width: 126px;
+    height: 30px;
+    box-sizing: border-box;
+    gap: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    font-weight: 400;
+}
+
+.task-confirmation-frame-8904x {
+    width: 60px;
+    gap: 24px;
+    height: 30px;
+    color: white;
+}
+
+.task-confirmation-frame-7632x {
+    width: 60px;
+    height: 30px;
+    box-sizing: border-box;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgba(21, 112, 239, 1);
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.task-confirmation-yes {
+    font-size: 14px;
+    line-height: 20px;
+    width: 24px;
+    height: 20px;
+}
+
+.task-confirmation-frame-7633x {
+    width: 60px;
+    height: 30px;
+    box-sizing: border-box;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 17px;
+    padding-right: 17px;
+    background-color: rgba(252, 252, 252, 1);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(1, 42, 74, 1);
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: rgba(33, 51, 79, 1);
+}
+
+.task-confirmation-no {
+    font-size: 14px;
+    line-height: 20px;
+    width: 19px;
+    height: 20px;
+}

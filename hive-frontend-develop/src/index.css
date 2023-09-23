@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400');
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.site-title {
+  font-size: 60px !important;
+  font-weight: 900 !important;
+  font-family: 'Nunito', sans-serif !important;
+  color: black;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-family: 'Nunito', sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: auto;
+  font-size: 25px !important;
+}
+
+.vl {
+  border-left: 2px solid gray;
+  height: 70px;
+  margin: 0 20px;
+}
+
+
+.btn {
+  padding: 10px 20px;
+  margin: 0 20px;
+  font-size: 25px !important;
+  font-family: 'Nunito', sans-serif !important;
+  height: 70px;
+  width: 200px;
+  color: #350ceb;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #c4f3f8;
+} 
+
+nav {
+  background: white;
+  padding: 1.5rem 2rem;
+}
+.nav-center {
+  max-width: 96%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+}
+nav svg {
+  width: 40px;
+}
+.notification-alert {
+  position: absolute;
+  top: -0.35rem;
+  right: 8px;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for mobile 
+ @media screen and (max-width: 768px) {
+  .site-title {
+    font-size: 25px; 
+  } 
+  ul {
+    flex-direction: column; 
+  } 
+  li {
+    margin: 10px 0; 
+  }
+  .vl {
+    display: none; 
+  } 
+  .btn {
+    padding: 8px 16px; font-size: 12px; 
+  } 
+  nav {
+    padding: 1rem; 
+  } 
+  nav svg {
+    width: 30px; 
+  } 
+} */
+
+/* Styles for web */
+ @media screen and (min-width: 768px) {
+  .site-title { 
+    font-size: 35px; 
+  } 
+  ul { 
+    flex-direction: row; 
+  }
+  .btn {
+    padding: 10px 20px; font-size: 14px; 
+  } 
+}
