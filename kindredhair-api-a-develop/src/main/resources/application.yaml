@@ -1,0 +1,15 @@
+server:
+  port: ${PORT:9000}
+  servlet:
+    context-path: /api/v1
+
+spring:
+  profiles:
+    active: test
+
+sendinblue:
+  api_key: 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
+
+mailgun:
+  api_key: 082fc1dc964ed5b6b659ff146e535576-0d2e38f7-441cca43
+  domain_name: sandboxbd9317ce6e654081889fe7ff11dbbb70.mailgun.org

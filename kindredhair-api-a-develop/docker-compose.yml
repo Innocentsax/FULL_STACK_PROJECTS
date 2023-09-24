@@ -1,0 +1,47 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+
+version: "3.7"
+
+# Define services
+services:
+  # Database Service (PostgresSQL)
+  db:
+    image: postgres
+    ports:
+      - 5432
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_DATABASE}
+    volumes:
+      - kndrd-a-data:/var/lib/postgresql/data
+    networks:
+      - kndrd-a
+  # App backend service
+  server:
+    # Configuration for building the docker image for the backend service
+    build:
+      context: . # Use an image built from the specified dockerfile in the app directory.
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Forward the exposed port 8080 on the container to port 8080 on the host machine
+    # restart: always
+    volumes:
+      - .:/app
+    depends_on:
+      - db # This service depends on mysql. Start that first.
+    environment: # Pass environment variables to the service
+      DB_HOST: db
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASS}
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+    networks: # Networks to join (Services on the same network can communicate with each other using their name)
+      - kndrd-a
+
+# Volumes
+volumes:
+  kndrd-a-data:
+# Networks to be created to facilitate communication between containers
+networks:
+  kndrd-a:

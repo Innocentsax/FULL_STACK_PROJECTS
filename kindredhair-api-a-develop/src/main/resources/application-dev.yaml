@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kindredhair
+    username: postgres
+    password: postgres
+    initialization-mode: always
+    driverClassName: org.postgresql.Driver
+    continue-on-error: false
+jwt:
+  secret: secret
