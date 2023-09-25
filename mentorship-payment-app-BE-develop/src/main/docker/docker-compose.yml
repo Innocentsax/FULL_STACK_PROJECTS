@@ -1,0 +1,22 @@
+services:
+  app:
+    image: 'fintech-app:latest'
+    build:
+      context: .
+    ports:
+      - "8081:8080"
+    container_name: fintechApp
+    depends_on:
+      - fintechDb
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://fintechAppDb:5432/fintechDb
+      - SPRING_DATASOURCE_USERNAME=fintechDb
+      - SPRING_DATASOURCE_PASSWORD=fintechDb
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  fintechDb:
+    image: 'postgres:latest'
+    container_name: fintechDb
+    environment:
+      - POSTGRES_USER=fintechDb
+      - POSTGRES_PASSWORD=fintechDb

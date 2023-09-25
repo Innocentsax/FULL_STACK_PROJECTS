@@ -1,0 +1,85 @@
+.profilePage .profilePage__wrapper{
+    margin-top: 6rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+    width: 60%;
+    margin: auto;
+}
+
+.profilePage__side{
+    display: flex;
+    margin-bottom: 30px;
+    width: 60%;
+    
+}
+
+.side_link{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 19px;
+    width: 65px;
+    height: 19px;
+    color: #012A4A;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.profilePage .profilePage__top{
+    background: rgba(0, 0, 0, 0.08);
+    width: 63%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.profilePage__top p{
+    color: #012A4A;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.profilePage .profilePage__body{
+    background-color: #fff;
+    width: 60%;
+    padding: 1rem .9rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+
+.profilePage__body .profilePage__content{
+    display: flex;
+    flex-direction: column;
+}
+
+.profilePage__content label{
+    font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+color: #012A4A;
+margin-bottom: .2rem;
+line-height: 19.36px;
+}
+
+.profilePage__content input{
+    padding: 8px .3rem;
+    margin-bottom: 1rem;
+    color: #D9D9D9;
+    border: 1px solid #D9D9D9;
+}
+
+.profilePage__content input:disabled{
+    background-color:#fff;
+}
+
+
+.profilePage__content input:focus{
+    outline: none;
+}

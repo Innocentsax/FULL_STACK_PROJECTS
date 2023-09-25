@@ -1,0 +1,30 @@
+server:
+  port: ${PORT:9005}
+spring:
+  devtools:
+    add-properties: false
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://ec2-52-204-195-41.compute-1.amazonaws.com:5432/da052c4o4tldgm}
+    username: ${DB_USERNAME:nuhhwfwlyugmqp}
+    password: ${DB_PASSWORD:bcc6d3858fe96205ecf884712b6dde8bd1f705a1e30b83020924c0645edd82e7}
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: false
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${SENDER_MAIL}
+    password: ${SENDER_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+FLW_SECRET_KEY: ${FLW_SECRET_KEY}
+
+
+callback_url: https://mentorship-payment-app.herokuapp.com/api/v1/transfers/verify
+fundWallet_webhook_url: https://mentorship-payment-app.herokuapp.com/api/v1/wallet/fund

@@ -1,0 +1,127 @@
+.mail-container{
+    display: flex;
+    background: rgba(216, 187, 255, 0.3);
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 453px;
+    left: -2px;
+    top: 3202px;
+
+}
+.mail-container > h1{
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: 0em;
+    width: 755px;
+    height: 65px;
+    text-align: center;
+
+}
+
+.lore-p-1{
+    line-height: 26px;
+    width: 600px;
+    height: 52px;
+    color: #012A4A;
+    font-size: 16px;
+    font-weight: 400;
+    top:182.5px;
+    text-align: center;
+    margin: 0px;
+    width: 628px;
+
+
+}
+.lore-p-2{
+    line-height: 19px;
+    width: 484px;
+    height: 19px;
+    color: #012A4A;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: -0.288889px;
+
+}
+.email-input-style{
+    display:flex;
+    justify-content:space-between;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    gap: 16px;
+    width: 542px;
+    height: 58px;
+    flex-direction: row;
+}
+.subscribe-btn{
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    width: 263px;
+    height: 58px;
+    margin-left: 5px;
+    background: linear-gradient(96.53deg, #4361EE 34.8%, #3A0CA3 90.68%);
+
+}
+.email-port{
+    
+    width: 263px;
+    font-size: 16px;
+    height: 58px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 0%;
+    padding: 10px;
+    margin-right: 5px;
+    }
+    
+
+    @media only screen and (max-width: 1000px) {
+        .section6-container {
+            width: 100%;
+        }
+        .mail-container{
+            width: 100%;
+            height: 160px;
+        }
+        .mail-container > h1{
+            width: 100%;
+            font-size: 20px;
+            margin: 0;
+        }
+        .lore-p-1 {
+            display: none;
+            width: 100%;
+            font-size: 16px;
+        }
+        .email-port{
+            width: 57%;
+            margin-left: 20px;
+            padding: 5px;
+            height: 40px;
+            border: none;
+        }
+        .subscribe-btn{
+            width: 30%;
+            height: 40px;
+            margin: 0px;
+            padding: 0px;
+            border: none;
+        }
+        .email-input-style{
+            width: 100%;
+            justify-content: normal;
+            padding: 0px;
+        }
+        .lore-p-2{
+            font-size: 11px;
+            width: 90%;
+        }
+    }

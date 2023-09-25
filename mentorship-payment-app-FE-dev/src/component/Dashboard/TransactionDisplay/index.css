@@ -1,0 +1,108 @@
+.wallet-and-body {
+    display: flow;
+}
+
+
+
+.transaction--head{
+    background-image: url(./images/Background.svg);
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 400px 250px;
+    width: 697px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 206px;
+    flex-direction: row;
+    color: #012A4A;
+}
+.transaction-body{
+    text-align: left;
+    padding-left: 10px;
+    margin-left: 10px; 
+}
+.wallet{
+    display: flex;
+    align-content: center;
+    width: 67px;
+    background:  #4361EE0D;
+    height: 68px;
+    left: 0px;
+    top: 0px;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-top: 50px;
+    
+}
+.wallet-group{
+    align-self: center;
+    left: 64.75%;
+    right:27.04%;
+    top: 54.57%;
+    bottom:37.48%;
+    margin: 0 auto;
+    font-size: 2rem;
+
+}
+.icon-account{
+    font-size: 2.5rem;
+    padding-right: 15px;
+    
+}
+.eye-image{ 
+    margin-right: 40px;
+}
+
+.eyeicons{
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.row-effect{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 568px) {
+    .transaction--head{
+        background-image: url(./images/Background.svg);
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 400px 250px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        height: 206px;
+        flex-direction: row;
+        color: #012A4A;
+    }
+
+    .transaction-body h1{
+        font-size: 20px;
+    }
+
+    .wallet{
+        width: 55px;
+        height: 55px;
+    }
+
+    .wallet .wallet-group{
+        font-size: 1.5rem;
+    }
+
+    .row-effect .icon-account{
+        font-size: 2rem;
+        
+    }
+
+}

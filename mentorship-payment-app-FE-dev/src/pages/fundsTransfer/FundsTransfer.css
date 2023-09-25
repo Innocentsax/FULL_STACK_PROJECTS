@@ -1,0 +1,43 @@
+.top_section {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    width: 40%;
+    margin: 20px 30% 0 30%;
+}
+
+.transfer_btn {
+    width: 100%;
+    text-align: center;
+    background: gainsboro;
+    padding: 20px 0;
+    color: #012A4A;
+
+}
+
+.line {
+    width: 50%;
+    text-align: center;
+    color: #012A4A;
+
+}
+
+.line.active {
+    border-bottom: 2px solid blue !important;
+    color: blue !important;
+}
+
+.side_link {
+    width: 100%;
+    font-size: large;
+    cursor: pointer;
+}
+.side_link > span{
+    margin-right: 5px;
+}
+
+.tx_type {
+    display: flex;
+    margin-top: 15px;
+    cursor: pointer;
+}

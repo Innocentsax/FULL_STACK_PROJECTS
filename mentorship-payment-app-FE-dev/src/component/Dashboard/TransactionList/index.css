@@ -1,0 +1,95 @@
+.note-tag > p {
+    display: flex;
+    align-items: center;
+    color: #012A4A;
+    width: 697px;
+    height: 48px;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 10px;
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.name--tag{
+    display: flex;
+   flex-direction: column;
+}
+.mother{
+    display: flex;
+    border: 1px;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    width: 697px;
+    justify-content: space-between;
+}
+
+.frank{ 
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: green;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.transaction-history-middle {
+    margin-top: .5rem;
+
+}
+
+.transaction-history-middle  p{
+    color: #012A4A;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    margin: .2rem;
+}
+
+.transaction-history-bottom{
+    display: flex;
+    align-items: center;
+}
+
+.transaction-history-bottom p{
+    color: #979797;
+    font-size: 15px;
+}
+
+.transaction-history-right  p{
+    color: #34A853;
+    font-size: 15px;
+    padding-right: .5rem;
+}
+
+@media (max-width: 568px) {
+
+    .mother{
+        display: flex;
+        border: 1px;
+        flex-direction: row;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .transaction-history-middle  p{
+        color: #012A4A;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19px;
+        margin: .2rem;
+    }
+    
+    .transaction-history-bottom p{
+        color: #979797;
+        font-size: 14px;
+    }
+    .note-tag > p {
+        width: auto;
+    }
+}

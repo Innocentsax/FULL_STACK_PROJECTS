@@ -1,0 +1,86 @@
+/* SECTION3 styles */
+
+.section3{
+    display: flex;
+    background: white;
+    position: relative;
+    padding-bottom: 30px;
+    width: 100vw;
+}
+
+.section3-a{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20%;
+}
+
+.section3-a img{
+    height: 450px;
+    width: 500px;
+}
+
+.section3-b{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 60%;
+    top: 31%;
+}
+
+.section3-b h1{
+    font-weight: 700;
+    font-size: 40px;
+    padding-right: 20px;
+    color: #3A0CA3;
+}
+
+.section3-b p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .section3{
+        width: 100%;
+    }
+    .section3-container {
+        width: 100%;
+        padding-left: 0;
+    }
+    .section3-a{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        margin: 0;
+    } 
+    .section3-b{
+        position: relative;
+        left: 0;
+        top: 100%;
+        padding-left: 20px;
+        
+    }
+    .section3-b h1{
+        padding-right: 0;
+        margin: 0;
+        font-size: 25px;
+    }
+    .section3-a img{
+    width: 50%;
+    padding-right: 30px;
+    height: 50%;
+    }
+    .section3-b p{
+        font-size: 15px;
+        margin-top: 12px;
+        max-width: 100%;
+        line-height: 18px;
+    }
+}

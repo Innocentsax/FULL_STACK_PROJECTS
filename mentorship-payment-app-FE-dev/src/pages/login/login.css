@@ -1,0 +1,110 @@
+.app__Login-container {
+  /* background-color: red; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.app__Login-details {
+  background-color: white;
+  flex: 4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+.app__Login-banner {
+  background-color: yellow;
+  flex: 6;
+  background-image: url(../../assets/loginPicture.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.app__Login-Label {
+  color: #012a4a;
+  padding-top: 20px;
+}
+.app__Login-details h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #012a4a;
+  margin-top: 70px;
+}
+.inputField input {
+  width: 395px;
+  height: 40px;
+  display: block;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px 0.3rem;
+  border-color: lightgray;
+  border-top: 0.1rem solid;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.app__create-account {
+  text-decoration: none;
+  font-size: 12px;
+}
+.loginSpan {
+  font-size: 12px;
+}
+.app__forgotPassword {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #1d6adc;
+  text-decoration: none;
+}
+.app__login-buttonDiv .app__login-Button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 8px 0.3rem;
+  margin-bottom: 1rem;
+  width: 396px;
+  height: 48px;
+  margin-top: 10px;
+}
+.app__login-Button {
+  background: linear-gradient(
+    105.38deg,
+    #4361ee 19.05%,
+    #3a0ca3 82.03%,
+    #3a0ca3 82.03%
+  );
+  color: white;
+  border:none;
+  cursor: pointer;
+}
+.fa-solid {
+  color: #c4c4c4;
+  width: 16px;
+  height: 12px;
+}
+.inputField {
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .app__Login-details{
+    width: 100%;
+    padding-left: 20px;
+  }
+  .app__Login-input-container{
+    width: 100%;
+  }
+  .inputField input{
+    max-width: 85%;
+  }
+  .app__Login-banner{
+    display: none;
+  }
+  .app__login-buttonDiv{
+    width: 90%;
+  }
+  .app__login-buttonDiv .app__login-Button{
+    width: 95%;
+  }
+}

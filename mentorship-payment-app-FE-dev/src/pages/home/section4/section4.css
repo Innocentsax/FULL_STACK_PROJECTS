@@ -1,0 +1,164 @@
+/* SECTION4 styles */
+
+.section4{
+    display: flex;
+    position: relative;
+    background: whitesmoke;
+    padding-top: 80px;
+    padding-bottom: 500px;
+    width: 100vw;
+}
+
+.section4-a{
+   margin-left: 50px;
+   margin-bottom: 40px;
+   top: 20%;
+
+}
+.section4-a h1{
+    font-weight: 700;
+    font-size: 40px;
+    padding-right: 20px;
+    padding-bottom: 1 0px;
+    color: #3A0CA3;
+}
+
+.section4-a p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+
+.section4-b img{
+    height: 80px;
+}
+
+.section4-b1{
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    row-gap: 70px;
+    column-gap: 0px;
+    position: absolute;
+    margin-left: 50px;
+}
+
+.section4-b-div1 p{
+    position: absolute;
+    font-size: 13px;
+    bottom: 92.5%;
+}
+.section4-b-div1 h2{
+    position: absolute;
+    bottom: 80%;
+}
+#text1{
+    position: absolute;
+    bottom: 70%;
+}
+
+.section4-b-div2 p{
+    position: absolute;
+    font-size: 13px;
+    bottom: 53%;
+}
+.section4-b-div2 h2{
+    position: absolute;
+    bottom: 41.5%;
+}
+#text2{
+    position: absolute;
+    bottom: 32%;
+}
+
+.stuborn-section p{
+    position: absolute;
+    font-size: 13px;
+    bottom: 14%;
+}
+.stuborn-section h2{
+    margin-top: 27px;
+}
+#text3{
+    position: absolute;
+    bottom: -7%;
+}
+
+.section4-img{
+    position: absolute;
+    left: 175%;
+    top: -43%;
+    background: linear-gradient(to top, rgb(220, 234, 243), #e7dbf7);
+    height: 600px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.section4-img > img{
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 900px) {
+    .section4-container {
+        width: 100%;
+    }
+    .section4{
+        padding: 0;
+    }
+    .section4-b1{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 0;
+        padding-left: 20px;
+        padding-bottom: 18px;
+        row-gap: 0;
+    }
+    .section4-b1 img{
+        display: none;
+    }
+    .section4-img{
+        display: none;
+    }
+    .section4-b-div1 p, .stuborn-section p, .section4-b-div2 p{
+        margin: 0;
+        padding-top: 15px;
+        font-weight: 700;
+    }
+    #text3, #text2, #text1{
+        font-weight: 400;
+        padding-top: 15px;
+    }
+    .section4-b-div1 h2, .stuborn-section h2, .section4-b-div2 h2{
+        font-weight: 700;
+        font-size: 20px;
+        color: #3A0CA3;
+        margin-top: 9px;
+        margin-bottom: 0;
+    }
+
+    .section4-a h1, .section4-a p, .section4-b-div2 p,
+    .section4-b-div2 h2, #text3, #text2, #text1,
+    .stuborn-section h2, .stuborn-section p, 
+    .section4-b-div1 h2, .section4-b-div1 p{
+        position: relative;
+    }
+    .section4-a{
+        margin: 0;
+        padding-left: 20px;
+    }
+    .section4-a h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .section4-a p{
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0px;
+    }
+    .section4-b-div1 p{
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,72 @@
+.app__OtherBankTransfer-container {
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  width: 763px;
+  height: 602px;
+  background: #f1f1f1;
+  margin: 100px auto 0;
+  word-break: break-all;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.app__OtherBankTransfer-tabs {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tab {
+  padding: 15ppx;
+  text-align: center;
+  width: 50%;
+
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+
+.activeTab {
+  border-bottom: 3px solid purple;
+  padding: 3px;
+}
+
+.app__OtherBankTransfer-tabContent {
+  flex-grow: 1;
+}
+
+.content {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.active-content {
+  display: block;
+}
+
+.sendMoney {
+  width: 100%;
+  height: 30px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 6px;
+  background: linear-gradient(
+    105.38deg,
+    #4361ee 19.05%,
+    #3a0ca3 82.03%,
+    #3a0ca3 82.03%
+  );
+}
+
+.app__OtherBankTransfer-input {
+  width: 697px;
+  height: 48px;
+  margin-bottom: 2rem;
+} 

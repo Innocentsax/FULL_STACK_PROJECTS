@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:ital,wght@0,200;0,400;0,600;1,200;1,300;1,400&family=Smooch&display=swap');
+body{
+    background-color: #E5E5E5;
+}
+.app__forgotPassword-parent{
+    background-color:white;
+    height: 400px;
+    width: 500px;
+    margin: auto;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex-align{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app__forgotPassword-pTag{
+    font-weight: 400;
+    font-size: 16px;
+    line-height:19.36px;
+    text-align: center;
+    color: #C4C4C4;
+    font-size: normal;
+    text-align: left;
+    margin-top: 20px;
+}
+.app__forgotPassword-parent label{
+  padding-left: 50px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.app__forgotPassword-h1{
+    font-size: 32px;
+    line-height:38.7px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 50px;
+}
+.app__forgotPassword-input{
+height: 48px;
+width: 395px;
+left: 0px;
+top: 28px;
+border-radius: 6px;
+padding: 9px, 16px, 8px, 16px;
+color: #000000;
+border: 1px solid black;
+}
+.app__forgotPassword-resetBtn{
+     background: linear-gradient(to right, #3146e7, #0a195e); 
+    color: white;
+    width:395px;
+    font-weight: bold;
+    height: 48px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+.app__forgotPassword-backToLoginBtn{
+    /* background-color:  rgb(251, 245, 245);   */
+    color: black;
+    width:104px;
+    height: 19px;
+    font-size: 12px; 
+    font-weight: bold;
+    height: 30px;
+    margin-top: 40px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}

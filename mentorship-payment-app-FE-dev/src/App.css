@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html{
+  height: 100%;
+}
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+/* min-height: 100%; */
+}
+
+footer {
+ background-color: #012A4A;
+  margin-top: auto;
+  grid-column: 1/-1;
+   padding: 0.5em; 
+}

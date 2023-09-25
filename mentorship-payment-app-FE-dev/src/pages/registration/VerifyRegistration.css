@@ -1,0 +1,47 @@
+.ver-reg{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.ver-reg .verify-icon{
+    width: 100px;
+    height: 100px;
+    background: beige;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ver-reg h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.ver-reg h3{
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+.ver-reg-btn{
+    width: 250px;
+    padding: 25px 45px;
+    background: linear-gradient(to right, #4361EE, #3A0CA3, #3A0CA3);
+    border-radius: 15px;
+    /* border:nonw; */
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}

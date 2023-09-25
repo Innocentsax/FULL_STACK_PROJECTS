@@ -1,0 +1,87 @@
+.TransactionBtn{
+    background: #F5F5F5; 
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 697px;
+    height: 90px;
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    
+}
+
+.profile{
+    justify-content: center;
+    width: 50%;
+    padding: 10px 0px;
+    margin-right: 20%;
+    text-align: center;
+    font-size: 16px;
+    color: #012A4A;
+    background: #8f9fef;
+    border: none;
+}
+
+.profile:hover{
+    cursor: pointer;
+    background: #8f9fef;
+    border: 2px solid gray;
+}
+
+.profile:focus{
+    background: #8f9fef;
+    border: 1px solid gray;
+
+}
+
+.transfer{
+    justify-content: center;
+    width: 50%;
+    padding: 10px 0px;
+    margin-left: 20%;
+    text-align: center;
+    font-size: 16px;
+    color: #012A4A;
+    box-sizing: content-box;
+    background: #8f9fef;
+    border: none;
+}
+
+.transfer:hover{
+    cursor: pointer;
+    background: #8f9fef;
+    border: 2px solid gray;
+
+
+}
+
+.transfer:focus{
+    background: #8f9fef;
+    border: none;
+
+}
+
+@media (max-width: 568px) {
+
+    .TransactionBtn{
+        background: #F5F5F5; 
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        gap: 1rem;
+    }
+
+    .transfer{
+    width: 189px;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 16px; 
+    }
+}

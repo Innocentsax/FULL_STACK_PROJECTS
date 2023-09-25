@@ -1,0 +1,45 @@
+.css-q8hpuo-MuiFormControl-root,
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  width: 90%;
+  height: 48px;
+  background: #ffffff;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+  
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #d9d9d9;
+}
+
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #000 !important;
+  border-width: 1px !important;
+}
+.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon,
+.css-bpeome-MuiSvgIcon-root-MuiSelect-icon {
+  color: #6bffca !important;
+}
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  background: #fff !important;
+  width: inherit !important;
+}
+.drop_wrapper {
+  margin-bottom: 0.5rem;
+}

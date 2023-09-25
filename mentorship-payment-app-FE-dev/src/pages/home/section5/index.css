@@ -1,0 +1,106 @@
+
+.setter-top{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+
+} 
+.setter-top > h1{
+    color: #3A0CA3;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+}
+.setter-top >p{
+    color:#012A4A;
+    height: 48px;
+    width: 400px;
+    left: 37.5px;
+    top: 72px;
+    text-align: center;
+}
+.lore--grid{
+    column-gap:15px;
+    row-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto ;
+    color: #012A4A;
+    padding: 0 90px 80px 90px;
+}
+.lore--container > h2{
+    margin-bottom: 24px;
+    margin-top: 0px;
+}
+.lore--container p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    width: 326px;
+    height: 104px;
+}
+
+.lore--container{
+    border-radius: nullpx;
+    background: rgba(0, 0, 0, 0.04);
+    text-align:justify;
+    padding: 32px 24px;
+    width: 326px;
+    height: 150px;
+} 
+
+
+@media only screen and (max-width: 1000px) {
+    .section5-container {
+        width: 100%;
+    }
+    .setter-top{
+        width: 90%;
+        margin-right: 0;
+        align-items: normal;
+        padding: 25px 20px 10px 20px;
+    }
+    .setter-top > h1{
+        font-size: 25px;
+        margin: 0;
+        text-align: center;
+    }
+    .setter-top > p{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        font-size: 16px;
+    }
+    .lore--grid{
+        display: flex;
+        flex-direction: column;
+        padding: 0; 
+        row-gap: 0;
+        width: 100%;
+    }
+    .lore--container{
+        width: 100%;
+        padding: 0;
+        padding-bottom: 20px;
+       
+    }
+    .lore--container h2{
+        width: 100%;
+        text-align: center;
+        padding-top: 12px;
+        margin: 0;
+    }
+    .lore--container > p{
+        width: 95%;
+        max-width: 90%;
+        text-align: center;
+        margin: 13px 0 0;
+        padding-left: 20px;
+    }
+    .lore--container.ckc5, .lore--container.ckc6{
+        display: none;
+    }
+}

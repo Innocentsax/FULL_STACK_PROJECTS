@@ -1,0 +1,161 @@
+/* SECTION1 styles*/
+.section1{
+    display: flex;
+    background: linear-gradient(to right, #D8F3DC, #FFEEDD, #D8BBFF);
+    position: relative;
+    padding-bottom: 120px;
+    width: 100vw;
+
+}
+
+.section1-a{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    margin-top: 170px;
+}
+.section1-a h1{
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60.51px;
+    padding-right: 20px;
+    color: #3A0CA3;
+}
+.section1-a p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 20px;
+    margin-top: 30px;
+    max-width: 80%;
+}
+
+.section1-a button{
+    border-radius: 10px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(to right, #4361EE, #3A0CA3, #3A0CA3);
+    cursor: pointer;
+    margin-top: 20px;
+    width: 30%;
+    border: none;
+}
+
+.section1-b{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 53%;
+    top: 46%;
+    padding-left: -40px;
+    background: white;
+    z-index: 3;
+    border-radius: 35px;
+}
+
+.transfericon{
+    position: absolute;
+    top: 18%;
+    left: 8%;
+}
+
+.verifiedtick{
+    position: absolute;
+    top: 44%;
+    left: 8%;
+}
+
+.cardicon{
+    position: absolute;
+    top: 71%;
+    left: 8%;
+}
+
+.section1-b li{
+    list-style: none;
+    line-height: 35px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.polygon{
+    position: absolute;
+    top: 97%;
+    left: 80%;
+}
+
+.section1-c{
+    position: absolute;
+    margin-right: 100px;
+    left: 60%;
+    top: 20%;
+
+}
+
+.section1-c img{
+    width: 420px;
+    height: 440px;
+    background: #decbf7;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.section1-d{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 78%;
+    top: 18%;
+    background: white;
+    padding-left: 30px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.paymentTick{
+    position: absolute;
+    height: 18px;
+    top: 27%;
+    right: 87%;
+}
+
+.section1-d p{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 500px) {
+    
+    .section1-container {
+        width: 100%;
+    }
+    .section1{
+        padding-bottom: 50px;
+    }
+    .section1-c img, .section1-b, .section1-d{
+        display: none;
+    }
+    .section1-a{
+        margin-top: 90px;
+        padding: 0 25px;
+    }
+    .section1-a h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .section1-a p{
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 0px;
+    }
+    .section1-a button{
+        font-size: 14px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        width: 50%;
+    }
+
+}

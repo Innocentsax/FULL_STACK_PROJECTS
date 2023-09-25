@@ -1,0 +1,94 @@
+.reg{
+    display: flex;
+    width: 100vw;
+}
+
+.register{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    padding: 80px;
+}
+
+.register-logo{
+    font-size: 30px;
+}
+
+.register-header{
+    margin-bottom: 20px;
+}
+
+.register-form input{
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.register-form button{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #4361EE, #3A0CA3, #3A0CA3);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.reg-input-div p{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.register-form h3{
+    margin-top: 40px;
+    font-weight: 330;
+}
+
+.btn-span{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.register-img{
+    position: relative;
+    flex-basis: 75%;
+}
+.register-img img{
+    width: 100%;
+    height: 143.5vh;
+    object-fit: cover;
+}
+
+.error-astx {
+    color: red;
+}
+
+#error-msg {
+    color: red;
+    font-size: 12px;
+}
+
+#error {
+    color: red;
+    font-size: 13px;
+    text-align: center;
+
+}
+
+.spinner {
+    background-color: rgba(255, 255, 255, 0.61);
+    backdrop-filter: blur(1px);
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 30%;
+    padding-right: 55%;
+}
