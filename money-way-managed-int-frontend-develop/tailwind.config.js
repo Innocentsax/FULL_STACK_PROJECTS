@@ -1,0 +1,63 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors:{
+        'text-color':'#101828',
+        'primaryColor':'#0E82F6',
+        'landingFooter' :'#1D2939',
+        'lightFont' : '#98A2B3',
+        'mainBackground' : '#f2f4f7',
+        'cardcolor':'#0E82F6',
+        'white':'#FFFFFF',
+        'viewcalendarborder':"#D0D5DD",
+        'dashboardbg':"#f2f4f7",
+        'ongoing':"#FEF0C7",
+        'completed':"#D1FADF",
+        "pending":"#F2F4F7",
+        "canceled":"#FEE4E2",
+        "total":"#D1E9FF",
+        'award':"#FEDF89",
+        "grey":"#98A2B3",
+        "red":"#FF0000",
+        "bg":"#f2f4f7",
+      },
+      height: {
+        61: '61px',
+        44: '44px',
+        76: '76px',
+        261: '261px',
+        351: '351px',
+        404: '404px',
+        443: '443',
+        490: '490px',
+        580: '580px',
+        1024: '1024px',
+      },
+      width: {
+        135: '135px',
+        250: '250px',
+        400: '400px',
+        451: '451px',
+        478: '478px',
+        678: '678px',
+        737: '737px',
+        760: '760px',
+        780: '780px',
+        800: '800px',
+        880: '880px',
+        812: '812px',
+        1000: '1000px',
+        1200: '1200px',
+        1400: '1400px',
+      },
+      minWidth:{
+        250: '250px',
+      }
+    },
+  },
+  plugins: [],
+}
