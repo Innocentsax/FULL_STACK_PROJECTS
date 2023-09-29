@@ -1,0 +1,91 @@
+
+:root {
+    --head-color: rgb(45, 45, 45);
+    --home-btn-color: #24f5e2;
+    --message-color: rgb(132, 132, 132);
+    --sub-head-color: rgb(121, 121, 121);
+    --font-raleway: Nunito;
+}
+
+
+.section-404 {
+    margin-top: 5%;
+    display: flex;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-raleway);
+    gap: 10px;
+}
+
+.container-404 {
+    /* width: 90vw; */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+
+#head {
+    font-size: 200px;
+}
+
+#sub-heading {
+    color: var(--sub-head-color);
+    font-size: 36px;
+}
+
+#message {
+    color: var(--message-color);
+    font-size: 16px;
+    max-width: 85vw;
+}
+
+.other-text {
+    text-align: center;
+}
+
+.home-btn {
+    font-family: var(--font-raleway);
+    width: 220px;
+    margin: auto;
+    outline: none;
+    background: var(--head-color);
+    color: white;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all .3s ease-in;
+}
+
+.home-btn:hover {
+    background-color: #fff;
+    color: var(--head-color);
+    border: 1px solid var(--head-color);
+}
+
+.home-btn:active {
+    font-size: 10px;
+}
+
+@media (max-width: 600px) {
+    #head {
+        font-size: 130px;
+    }
+
+    #sub-heading {
+        text-align: center;
+    }
+
+    .div #message {
+        text-align: center;
+        margin: auto;
+        font-size: 12px;
+        width: 50%;
+    }
+}

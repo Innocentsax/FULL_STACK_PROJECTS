@@ -1,0 +1,25 @@
+input {
+    padding-right: 5px;
+}
+
+.payment-method{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.payment-method button {
+    background-color: rgb(218, 196, 161);
+    width: 50%;
+    border: 2px solid white;
+    padding: 15px;
+    border-radius: 5px;
+    border-style: double;
+}
+
+.submit{
+    margin-left: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgb(218, 196, 161);
+    padding: 3px;
+}

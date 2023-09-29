@@ -1,0 +1,91 @@
+:root {
+    --head-color: rgb(45, 45, 45);
+    --home-btn-color: #24f5e2;
+    --message-color: rgb(132, 132, 132);
+    --sub-head-color: rgb(121, 121, 121);
+    --header-color: rgb(218, 196, 161);
+}
+
+.admin-dashboard-layout {
+    margin-top: 80px;
+    height: 90vh;
+}
+
+.container {
+    margin-left: -10px;
+    display: flex;
+    height: 100%;
+}
+
+.side-nav-container {
+    margin-top: 60px;
+    height: 100%;
+
+}
+
+.children {
+    display: flex;
+    min-width: 80vw;
+    height: 100%;
+    border: 1px solid lightslategray;
+    /* margin-right: 3%; */
+}
+
+
+/* tableview */
+.table-div {
+    padding: 10px;
+    overflow: hidden;
+}
+.table-data-section {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* align-items: center; */
+    justify-content: center;
+    margin: auto;
+    background: white;
+}
+.title-head, .title-sub-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.title-head {
+    margin-bottom: 10px;
+}
+
+.site-badge-count-109, .ant-badge-count {
+  color: #999;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #d9d9d9 inset;
+  font-size: 40px;
+}
+
+.btn-count {
+    font-family: var(--font-raleway);
+    margin: auto;
+    outline: none;
+    color: var(--header-color);
+    background-color: white;
+    padding: 15px 8px;
+    border: 1px solid var(--head-color);
+    font-weight: bold;
+    transition: all .3s ease-in;
+}
+
+.btn-count:hover {
+    background-color: #fff;
+    color: var(--head-color);
+   
+}
+
+.btn-count:active {
+    font-size: 10px;
+}
+
+.layout-h2-header {
+    font-size: 30px;
+}

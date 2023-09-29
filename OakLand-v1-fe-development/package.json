@@ -1,0 +1,70 @@
+{
+  "name": "oakland-v1-fe",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.2",
+    "@mui/styled-engine-sc": "^5.11.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "antd": "^5.1.6",
+    "axios": "^1.2.3",
+    "bignumber.js": "^9.1.1",
+    "bootstrap": "^5.2.3",
+    "boxicons": "^2.1.4",
+    "jwt-decode": "^3.1.2",
+    "postcss-cli": "^10.1.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.0",
+    "react-icons": "^4.7.1",
+    "react-paginate": "^8.1.4",
+    "react-router-dom": "^6.6.2",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
+    "react-toastify": "^9.1.1",
+    "react-use-cart": "^1.13.0",
+    "recharts": "^2.3.2",
+    "sass": "^1.57.1",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.6",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.7.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "tailwindcss": "^3.2.4"
+  },
+  "proxy": "http://localhost:8080/api/v1/"
+}

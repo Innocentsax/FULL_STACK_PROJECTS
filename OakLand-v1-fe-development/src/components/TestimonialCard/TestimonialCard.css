@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=Jost:wght@200;300;400;500;600&display=swap');
+
+.testimonial-wrapper .slick-arrow.slick-prev,
+.testimonial-wrapper .slick-arrow.slick-next{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    display: none;
+
+}
+
+.slick-arrow.slick-prev{
+    margin-left: -60px;
+}
+
+.slick-arrow.slick-next{
+    margin-right: -60px;
+}

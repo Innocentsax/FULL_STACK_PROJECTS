@@ -1,0 +1,18 @@
+.checkout-order {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5px;
+    margin-top: 10px;
+}
+.checkout-order-details{
+    width: 100%;
+    margin-left: 10px;
+}
+
+.checkout-order-details p {
+    padding: 10px;
+}
+
+.checkout-left{
+    border-bottom: 2px solid white;
+}

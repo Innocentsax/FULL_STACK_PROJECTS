@@ -1,0 +1,83 @@
+
+:root {
+    --head-color: rgb(45, 45, 45);
+    --home-btn-color: #24f5e2;
+    --message-color: rgb(132, 132, 132);
+    --sub-head-color: rgb(121, 121, 121);
+    --header-color: rgb(218, 196, 161);
+    --header-content-color: rgb(169, 167, 166);
+    --border-color: rgb(217, 222, 217);
+    --font-raleway: Nunito;
+}
+
+
+.faq-section {
+    font-family: var(--font-raleway);
+    margin: 3% auto;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    width: 70vw;
+    padding: 40px;
+}
+
+.faq-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.collapse-div {
+    display: flex;
+    gap: 60px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.heading h3 {
+    font-size: 30px;
+    width: 500px;
+    color: var(--head-color);
+}
+
+.heading hr {
+    border: 1px solid var(--border-color);
+    width: 15vw;
+}
+
+[data-theme='compact'] .site-collapse-custom-collapse 
+.site-collapse-custom-panel,
+.site-collapse-custom-collapse 
+.site-collapse-custom-panel {
+  margin-bottom: 24px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 0px !important;
+  border-radius: 2px;
+  text-align: left;
+  width: 450px;
+  font-family: var(--font-raleway);
+  font-size: 15px;
+}
+
+
+.ant-collapse-header{
+  border: 1px solid var(--border-color);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-weight: bold;
+  color: var(--header-color) !important;
+}
+
+.ant-collapse-content{
+    color: var(--header-content-color) !important;
+}

@@ -1,0 +1,19 @@
+.checkout{
+    background-color: #f5f5f5;
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+}
+
+.checkout-text{
+    background-color: rgb(218, 196, 161);
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 800;
+    margin-top: 5rem;
+    padding: 10px;
+}

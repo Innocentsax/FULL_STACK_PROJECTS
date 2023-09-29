@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+.signup_bg_image {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../public/images/img5.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  /* Center and scale the image nicely */
+  background-position: center;
+}
+
+.signup_section{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: #917307;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #717ff5;
+  text-decoration: none;
+}
+
+.signup_h2 {
+  font-size: 1.5em !important;
+  font-weight: 600 !important;
+}
+.signup_span {
+  font-size: 14px;
+  text-align: center;
+}
+/* .App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+
+.signup_register {
+  max-width: 480px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border-radius: 10px;
+
+  /* border: 1px solid #e9ecef;
+   box-shadow: 1px 3px 10px #c6c7c73f; 
+  background-color: white; 
+    */
+}
+
+.signup_register span {
+  color: #483a01;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0 30px rgba(159, 164, 172, 0.538);
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 100vw;
+  margin: 0.7em auto;
+  background-color: white;
+  gap: 0.6rem;
+}
+
+
+.signupForm > input,
+.signup_btn {
+  border: 1px solid #e9e7e7;
+  padding: 0.5em 1em;
+
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+
+.signupForm > select {
+  border: 1px solid #e9e7e7;
+  padding: 0.7em 1em;
+
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+
+.signupForm> input:focus {
+  outline: none;
+}
+
+input[type="date"]::before {
+  color: #999;
+  content: attr(placeholder) ":  ";
+}
+input[type="date"]:focus::before {
+  content: "" !important;
+}
+
+.signupForm > .signup_btn {
+
+  background-color: #292929;
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.signup_flex {
+  display: flex;
+  gap: 0.5em;
+}
+
+.flex_col {
+  flex-direction: column;
+}
+
+.signup_register .col_1 {
+  margin: auto;
+  width: 500;
+  padding: 2em 3em;
+}
+
+.signup_register .col_2 img {
+  width: 480px;
+  height: 100%;
+  /* object-fit: cover; */
+  align-self: flex-end;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none;
+}
+
+@media screen and (min-width: 860px) {
+  .signup_register .col_2 img {
+    display: initial;
+  }
+}

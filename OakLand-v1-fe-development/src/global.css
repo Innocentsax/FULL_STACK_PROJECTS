@@ -1,0 +1,12 @@
+:root {
+    --head-color: rgb(45, 45, 45);
+    --home-btn-color: #24f5e2;
+    --message-color: rgb(132, 132, 132);
+    --sub-head-color: rgb(121, 121, 121);
+    --header-color: rgb(218, 196, 161);
+    --header-content-color: rgb(169, 167, 166);
+    --border-color: rgb(217, 222, 217);
+    --danger-delete-color: red;
+    --btn-hover-color: rgb(249, 251, 249);
+    --font-raleway: Nunito;
+  }

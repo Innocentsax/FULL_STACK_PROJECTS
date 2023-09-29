@@ -1,0 +1,226 @@
+:root {
+  --mainBgColor: #f1f1fb;
+  --boxBgColor: #ea4c3c;
+  --textColorLight: #9292ae;
+  --centerBgColor: #f5f5f7;
+  --gradBgColor: #E8E9FE;
+  --gradBgColor2: #c3d1db;
+
+  --blueDream:#393a62;
+  --blueDreamLight: #747399;
+  --pink: #dba09e;
+  --bodyBgColor: #e8e9fe;
+
+  --head-color: rgb(45, 45, 45);
+  --home-btn-color: #24f5e2;
+  --message-color: rgb(132, 132, 132);
+  --sub-head-color: rgb(121, 121, 121);
+  --header-color: rgb(218, 196, 161);
+  --header-content-color: rgb(169, 167, 166);
+  --border-color: rgb(217, 222, 217);
+  --danger-delete-color: red;
+  --btn-hover-color: rgb(249, 251, 249);
+  --font-raleway: Nunito;
+}
+
+.sidebar {
+  flex: 1;
+  width: 250px;
+  overflow: hidden;
+  position: sticky;
+  height: 100%;
+  background-color: white;
+  transition: all 1s ease-out;
+  box-shadow: 0px 0px 4px 4px rgba(202, 202, 202, 0.75);
+
+  .top {
+    height: 50px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0  10px;
+    color: var(--head-color);
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color:var(--head-color);
+    }
+    .icon {
+      font-size: 28px;
+    }
+  }
+
+  hr {
+    height: 0;
+    border: 0.5px solid rgb(230, 227, 227);
+  }
+
+  .center {
+    padding-left: 10px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .title {
+        font-size: 10px;
+        font-weight: bold;
+        color: #999;
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+
+      .options {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #ece8ff;
+          transition: all .1s ease-out;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          width: 80%;
+        }
+
+        .icon {
+          font-size: 28px;
+          color: var(--header-color);
+        }
+
+        p{
+            font-size: 13px;
+            font-weight: 600;
+            color: #888;
+            margin-left: 10px;
+        }
+
+      }
+    }
+  }
+
+  .bottom{
+      display: flex;
+      align-items: center;
+      margin: 10px;
+
+      .colorOption{
+          width: 20px;
+          height: 20px;
+          border-radius: 5px;
+          border: 1px solid var(--message-color);
+          cursor: pointer;
+          margin: 5px;
+
+          &:nth-child(1){
+              background-color: whitesmoke;
+          }
+          &:nth-child(2){
+              background-color: #333;
+          }
+          &:nth-child(3){
+              background-color: darkblue;
+          }
+      }
+  }
+}
+
+.sidebar-hidden {
+  flex: 0.2;
+  width: 100px;
+  align-items: center;
+  overflow: visible;
+  margin-right: 10px;
+  overflow: scroll;
+
+  .top {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .center ul {
+    align-items: center;
+  }
+
+ p {
+    text-align: left;
+  }
+  
+ .options:hover .tooltip-text {
+    opacity: 1;
+    transition: all 0.6s ease;
+    top: 20%;
+  }
+  
+ #right {
+    left: -25px;
+    top: -50px;
+    z-index: 10000;
+  }
+  
+ .profile {
+    flex-direction: column-reverse;
+    margin-top: -20px;
+    gap: 30px;
+  }
+  .options:hover {
+    width: 10%;
+  }
+ .options p {
+    display: none;
+  }
+ .top span {
+    display: none;
+  }
+
+  .hover-text {
+    position: relative;
+    text-align: center; 
+  }
+  
+  .options:hover .tooltip-text  {
+    transition: all 0.6s ease;
+    opacity: 1;
+    top: -50%;
+  }
+} 
+
+.tooltip-text {
+  opacity: 0;
+  position: absolute;
+  z-index: 40;
+  width: 90px;
+  color: var(--blueDream);
+  font-weight: bold;
+  font-size: 12px;
+  transition: 0s;
+  top: -100%;
+  background-color: var(--mainBgColor);
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(60deg, 
+  var(--centerBgColor), 
+ var(--gradBgColor2),
+ var(--gradBgColor));
+ pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+  .sidebar-hidden {
+    .top{
+      pointer-events: none;
+    }
+    .center ul {
+      align-items: center;
+    }
+  }
+}
+

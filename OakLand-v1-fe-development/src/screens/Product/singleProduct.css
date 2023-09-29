@@ -1,0 +1,173 @@
+
+:root {
+    --head-color: rgb(45, 45, 45);
+    --home-btn-color: #24f5e2;
+    --message-color: rgb(132, 132, 132);
+    --sub-head-color: rgb(121, 121, 121);
+    --header-color: rgb(218, 196, 161);
+    --header-content-color: rgb(169, 167, 166);
+    --border-color: rgb(217, 222, 217);
+    --danger-delete-color: red;
+    --btn-hover-color: rgb(249, 251, 249);
+    --font-raleway: Nunito;
+}
+
+.single-product-section {
+    margin: 8% 4vw;
+    margin-bottom: 0%;
+    min-height: 50vh;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+.single-product-section p {
+    font-size: 14px;
+}
+
+.product-preview img {
+    width: 100%;
+}
+
+.img-div {
+    overflow: hidden;
+    min-width: 500px;
+}
+
+
+.description-tab {
+    padding: 20px;
+    height: 100%;
+    min-width: 40vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+hr {
+    width: 80%;
+}
+
+.head .title {
+    color: var(--head-color);
+    font-size: 40px;
+    margin: auto;
+    align-self: center;
+}
+
+.head .price-tag {
+    color: var(--message-color);
+    font-size: 24px;
+}
+
+.description {
+    color: var(--message-color);
+}
+
+.btn-div h4 {
+    margin-top: 20px;
+}
+
+.links-div {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .links-div p {
+    font-size: 14px;
+    font-weight: thin;
+    color: var(--header-content-color);
+  }
+
+.item-count-btn {
+    border: 1px solid var(--border-color);
+    /* height: 100%; */
+    width: 20%;
+    outline: none;
+    padding: 10px;
+    margin-right: 30px;
+}
+
+
+.product-container {
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.product-container img {
+    width: 100%;
+}
+
+.product-price {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+.add-tocart-btn {
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid var(--head-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 4px;
+    width: 50%;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.delete-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    background-color: var(--danger-delete-color);;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 4px 16px;
+    transition: all .3s ease-in-out;
+    z-index: 3;
+    font-weight: bold;
+    
+
+}
+
+.delete-btn:hover {
+    color: var(--danger-delete-color);
+    background-color: var(--btn-hover-color);
+}
+
+.delete-btn:active {
+    font-size: 10px;
+}
+
+#dropdown-link {
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--head-color);
+}
+
+
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 990px) {
+  
+}

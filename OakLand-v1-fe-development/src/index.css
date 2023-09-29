@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --head-color: rgb(45, 45, 45);
+  --home-btn-color: #24f5e2;
+  --message-color: rgb(132, 132, 132);
+  --sub-head-color: rgb(121, 121, 121);
+  --header-color: rgb(218, 196, 161);
+  --header-content-color: rgb(169, 167, 166);
+  --border-color: rgb(217, 222, 217);
+  --danger-delete-color: red;
+  --btn-hover-color: rgb(249, 251, 249);
+  --font-raleway: Nunito;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=Jost:wght@200;300;400;500;600&display=swap');
+/* *, **, ::before, ::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+} */
+
+body{
+  background-color:  #f5f5f5;
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 1px; 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+textarea.form-control{
+  border: 1px solid red;
+  }
+
+
+  textarea.form-control:focus{
+    border: 1px solid #e14eca ;
+    border-radius: .4285rem;
+}
+
+textarea::placeholder{
+  color: #7a7a7a;
+}
+
+
+/* PopupConfirm */
+#components-popconfirm-demo-placement .ant-btn {
+  margin-left: 0;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  width: 70px;
+  text-align: center;
+  padding: 0;
+}
+#components-popconfirm-demo-placement .ant-btn-rtl {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+a {
+  transition: color 2s ease-out;
+}
+
+a:hover {
+ font-size: larger;
+ color: black !important;
+ font-weight: bolder;
+ animation: color-change 2s ease-in forwards;
+}
+
+@keyframes color-change {
+  from {
+    color: indigo;
+  }
+  to {
+    color: #5c6ac4;
+  }
+}
+
+.active {
+  color:crimson !important;
+}
+.dsh {
+  color: crimson !important;
+}
+
+.shop-now:hover {
+  color: #fff !important;
+}
+

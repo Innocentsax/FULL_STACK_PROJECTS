@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=Jost:wght@200;300;400;500;600&display=swap');
+
+  ul li{
+    list-style: none;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    /* color: black; */
+  }
+  
+  ul{
+    /* justify-content: space-between; */
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  ul li:hover{
+    color: #424040;
+  }
+  

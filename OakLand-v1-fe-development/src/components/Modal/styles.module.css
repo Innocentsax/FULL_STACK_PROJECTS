@@ -1,0 +1,50 @@
+.modal {
+    font-size: 14px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    background-color: rgba(196, 196, 196, 0.59);
+    font-family: 'Poppins';
+    margin-left: 13.05em;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper div {
+    background-color: #fff;
+    padding: 2em 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.wrapper .modalCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.wrapper input {
+    width: 350px;
+    height: 75px;
+    margin: auto;
+    margin-top: 40px;
+    color: rgba(0, 0, 0, 0.56);
+    padding-left: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.wrapper div p {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 0 0 -40px;
+}
