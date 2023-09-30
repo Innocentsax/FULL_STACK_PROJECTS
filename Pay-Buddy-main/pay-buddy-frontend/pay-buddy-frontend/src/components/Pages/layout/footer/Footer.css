@@ -1,0 +1,12 @@
+:root {
+--mainColor: #29335c;
+--mainColorLight: #5767aa;
+--secondaryColor: #db2b39;
+	--textColor: #eee;
+}
+
+footer{
+    background-color: var(--mainColor);
+    color: #fff;
+}
+

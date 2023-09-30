@@ -1,0 +1,321 @@
+
+.dashboard-section {    
+    border: none;
+    /* display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    height: 100%; */
+    background: white;
+    /* position: fixed; */
+}
+.dashboard-section p{
+    font-size:small ;
+    text-align: left;
+}
+.dashboard-section h5{
+    text-align: right;
+    font-size : large
+}
+
+.left-dashboard-div {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 2rem;
+    border: none;
+    background:#F5F5F5;
+    /* padding: 9rem; */
+    
+    
+}
+.left-dashboard-div , .right-dashboard-div{
+    padding: 5rem 2rem 2rem 2rem;
+} 
+
+.balance-dashboard-div{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5%;
+    width: 100%;
+
+}
+
+.total-balance-div, .card-balance-div {
+    padding: 10px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    background: white;
+
+}
+.blue, .total-balance-div h4,.card-balance-div h4  {
+    color: var(--primary600);
+}
+
+.total-balance-div div p, .card-balance-div div p{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.card-balance-icon img {
+    width: 30px;
+}
+.add-money-dashboard-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color:#F5F5F5;
+}
+
+.add-money-dashboard-div p {
+    text-align: left;
+    background:#F5F5F5 ;
+}
+.add-money {
+    border-radius: 8px;
+}
+.add-money button {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    gap: 20px;
+    border-radius: 12px;
+    border: none;
+    background: #BCDCFF;
+    padding: 1rem;
+}
+.add-money-dashboard-div, .add-money-dashboard-div p{
+    background: transparent;
+}
+
+#add-money-icon{
+    /* margin-left: 20px; */
+    height: 48px;
+    width: 48px;
+    color: #E8F1FD;
+}
+
+
+.transfer-dashboard-div {
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+}
+.transfer-dashboard-div p {
+    text-align: left;
+}
+
+
+.list-quick-transfer {
+    
+    display: flex;
+    width: 40rem;
+    overflow: scroll;
+    align-items: center;
+    
+     gap: 1rem;
+
+}
+.recipient-info{
+    display: grid;
+    gap: 0.4rem;
+    
+}
+
+.recipient-info>button {
+    height: 104px; 
+    width: 104px;
+    border-radius: 8px; 
+    background:white;
+    border: none;
+    background: white;
+}
+.recipient-info p{
+    
+    font-size: 13px;
+    font-weight: bold;
+}
+.refer-dashboard-div{
+
+    width: 100%;
+}
+.refer-dashboard-div div{ 
+
+    width: 100%;
+    border-radius: 8px;
+  
+
+}
+.refer-dashboard-div div{
+    background: #BCDCFF;
+}
+.right-dashboard-div{
+    border: none;
+    background: #BCDCFF;
+    
+    
+}
+.search {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+   
+    width: 100%;
+   
+}
+.search .search-input{
+    background: white;
+    width: 80%;
+    border-radius: 8px;
+   
+
+}
+.search input{
+    background: transparent;
+    border: none;
+    text-align: left;
+    height: 4rem;
+    /* width: 1%; */
+}
+.search input:focus{
+    outline: none;
+}
+
+.transaction-history{
+    display: grid;
+    gap: 2px;
+    padding-top: 2%;
+    /* background: green; */
+    width: 100%;
+
+    
+    
+}
+#bank-logo{
+    color: #2F80ED;
+    padding: auto;
+    width: 1rem;
+    height: 2rem;
+}
+.bank-logo{
+    background: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+}
+.transaction-description{
+    display: flex;
+    align-items: center;
+    display: flex;
+    
+    justify-content: space-between;
+
+    padding: 0 5%;
+    
+    
+    
+   
+}
+.transaction-description .user-info{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 2rem;
+    width: 70%;
+
+}
+.red{
+    color : red;
+}
+.green{
+    color: var(--primary-color-green);
+}
+.transaction-description h5{
+    width: 30%;
+    text-align: right;
+}
+
+.transaction-search-box{
+    background-color: #fff;
+    height: 45px;
+    padding-left:5px;
+    border-radius:8px;
+    width:85%;
+}
+
+.transaction-search-box input {
+    border:none;
+}
+
+.transaction-search-box input:focus{
+    outline: none;
+}
+
+
+.search-filter{
+    border: none;
+    width: 15%;
+    height: 45px;
+    background: white;
+    border-radius: 4px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.text-right{
+    text-align: right;
+    font-size: 16px;
+}
+.user-name h4{
+    font-size: 16px;
+}
+.user-name p{
+    font-size: 14px;
+    color: var(--primary-color-grey ) ;
+}
+.list-of-transaction{
+    background-color: var( --primary100);
+}
+
+.bank-logo{
+    border-radius: 8px;
+    width:50px;
+    height: 50px;
+    
+    background-color: var(--primary50);
+    padding: 10px;
+
+}
+.recipient-info button{
+    font-size: 32px;
+    font-weight: 600;
+    color: #2F80ED;
+    
+
+}
+.filter{
+    color: blue;
+}
+
+.transaction-list-box h4{
+    font-size: 0.7rem;
+}
+
+@media(min-width:768px) {
+    .transaction-list-box h4{
+    font-size: 0.9rem;
+    }
+}

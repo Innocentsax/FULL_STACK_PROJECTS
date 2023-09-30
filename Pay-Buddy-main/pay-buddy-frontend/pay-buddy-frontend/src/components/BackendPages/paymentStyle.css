@@ -1,0 +1,26 @@
+
+
+.payment-header-title {
+    font-size: 20px;
+}
+
+.payment-svg-div {
+    width: 25px;
+}
+
+.payment-svg-div img {
+    width: 100%;
+}
+
+.payment-header-p {
+    font-size: 14px;
+    font-weight: 400px;
+    color: #B3C0D0;
+
+}
+
+.payment-item {
+    height: 220px;
+    background-color: white;
+    padding: 20px;
+}

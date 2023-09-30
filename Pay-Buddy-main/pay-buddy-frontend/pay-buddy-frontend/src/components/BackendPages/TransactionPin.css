@@ -1,0 +1,31 @@
+.container_modal{
+    background: #FFFFFF;
+    padding: 8px;
+    }
+    .create-transaction-h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    }
+    .secured-transaction-p_tag{
+     font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: #737373;
+    }
+    .form-label-c{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #404040;
+    }
+    

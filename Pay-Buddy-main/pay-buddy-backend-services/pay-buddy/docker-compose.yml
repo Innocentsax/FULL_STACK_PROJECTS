@@ -1,0 +1,42 @@
+#version: '3.8'
+#services:
+#  backend:
+#    build:
+#      context: .
+#      target: development
+#    container_name: backend
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      - SPRING_DATASOURCE_USERNAME=paybuddy
+#      - SPRING_DATASOURCE_PASSWORD=paybuddy
+#      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/pay_buddy
+#      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+#
+#    volumes:
+#      - ./:/app
+#    depends_on:
+#      dbserver:
+#        condition: service_healthy
+#
+#  mysqldb:
+#    platform: linux/x86_64
+#    image: "mysql:8.0.29"
+#    restart: always
+#    ports:
+#      - "3306:3306"
+#    container_name: db
+#    environment:
+#      MYSQL_DATABASE: pay_buddy_db
+#      MYSQL_ROOT_PASSWORD: pay_buddy
+#      MYSQL_ROOT_USERNAME: root
+#    healthcheck:
+#      test: [ "CMD", "mysqladmin" , "ping", "-h", "localhost"]
+#      interval: 10s
+#      timeout: 5s
+#      retries: 5
+#    volumes:
+#      - db-data:/var/lib/mysql
+#volumes:
+#  db:
+#    driver:  local

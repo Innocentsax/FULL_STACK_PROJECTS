@@ -1,0 +1,24 @@
+/* .side-bar{
+    display: none;
+    line-height: 2rem;
+}
+.side-bar li{
+    list-style: none;
+}
+
+.side-bar a{
+    text-decoration: none;
+}
+
+.nav-bar-items li {
+    display: block;
+}
+
+@media (min-width: 768px){
+    .side-bar{
+        display:block;
+    }
+    .nav-bar-items li{
+        display: none;
+    }
+} */

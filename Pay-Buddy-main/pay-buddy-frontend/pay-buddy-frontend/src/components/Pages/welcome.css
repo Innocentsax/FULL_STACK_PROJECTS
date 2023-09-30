@@ -1,0 +1,58 @@
+.welcome__parent {
+    margin: 0;
+    background-image: url('../../assets/images/successScreen.svg');
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.heading {
+    color: black;
+}
+
+.welcome__content {
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+
+    padding: 0 8px;
+    padding-top: 60px;
+    position:relative;
+}
+
+.welcome__content button {
+    padding: 6px 50px;
+    color: rgb(47, 128, 237);
+    border-radius: 3px;
+    border: none;
+    background: white;
+
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.welcome__content button:hover {
+    background-color: rgb(209, 225, 244);
+}
+
+.successMessage{
+    position: absolute;
+    background-color: var(--primary600) !important;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
