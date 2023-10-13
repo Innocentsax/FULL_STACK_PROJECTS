@@ -13,7 +13,7 @@ Java, SpringBoot, Thymleaf, DevTool, Spring MVC and Spring Web(For Backend) depl
 ## Hosted Projected
 - [WakaCast](https://www.wakacast.com/)
 - [Safari Store](https://safari-store.vercel.app/home)
-- [Adire.](https://adire-decagon.netlify.app/)
+- [Adire.](https://adire1.vercel.app/)
 - [Efarm App](https://alx.pisowlab.tech/)
 - [HR Managment System](http://recruit.decagon.institute/start)
 - [AirtimeToCashApp](https://airtimetocashpodg.netlify.app/)
