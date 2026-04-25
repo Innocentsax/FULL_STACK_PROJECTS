@@ -17,3 +17,4 @@ Java, SpringBoot, Thymleaf, DevTool, Spring MVC and Spring Web(For Backend) depl
 - [Efarm App](https://alx.pisowlab.tech/)
 - [HR Managment System](http://recruit.decagon.institute/start)
 - [AirtimeToCashApp.](https://airtimetocashpodg.netlify.app/)
+- [Build your own project](https://github.com/codecrafters-io/build-your-own-x)
