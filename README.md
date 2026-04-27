@@ -5,7 +5,7 @@
 ## Front end source.
 + [Free-css.](https://www.free-css.com/free-css-templates/page1)
 
-+ HTML, CSS, JavaScript and React(For Frontend).
++ HTML, CSS, JavaScript and React
 
 ## Backend.
 Java, SpringBoot, Thymleaf, DevTool, Spring MVC and Spring Web(For Backend) deploy with [Render](https://medium.com/@redhabayuanggara/deploying-spring-boot-applications-on-render-com-for-free-86fa039bd0ce)
